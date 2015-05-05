@@ -93,7 +93,7 @@ namespace csc450Lib_linalg_base {
         static const Matrix* transpose(const Matrix *matA);
         
         /**
-         * Adds two matrices If we had plenty of time we would do some data
+         * Adds two matrices. If we had plenty of time we would do some data
          *  validation and exception handling. Here, if array a does not have
          *  the proper dimensions, just quit.
          */
@@ -101,11 +101,11 @@ namespace csc450Lib_linalg_base {
                                  const Matrix *matB);
         
         /**
-         * Multiplies two matrices If we had plenty of time we would do some
+         * Multiplies two matrices. If we had plenty of time we would do some
          *  data validation and exception handling. Here, if array a does not
          *  have the proper dimensions, just quit.
          */
-        static const Matrix* multiply(const Matrix *matA,
+        static  Matrix* multiply(const Matrix *matA,
                                       const Matrix *matB);
         
         /**
@@ -113,16 +113,8 @@ namespace csc450Lib_linalg_base {
          *  data validation and exception handling. Here, if array a does not
          *  have the proper dimensions, just quit.
          */
-        static const ColumnVector* multiply(const Matrix *matA,
-                                      const ColumnVector *matB);
-        
-        /**
-         * Multiplies two matrices If we had plenty of time we would do some
-         *  data validation and exception handling. Here, if array a does not
-         *  have the proper dimensions, just quit.
-         */
         static Matrix* multiply(float mult,
-                                      const Matrix *mat);
+                                const Matrix *mat);
         
         /**
          * Computes the outer product of two column vectors
@@ -148,7 +140,7 @@ namespace csc450Lib_linalg_base {
         /**
          * Masks the given matrix, and returns a new matrix which matches the
          *  values of the passed in matrix for elements which are 1 in mask,
-         *  all other elements being zero. Can also be used as an 
+         *  all other elements being zero. Can also be used as an
          *  element-by-element multiplication function
          */
         static const Matrix* mask(const Matrix *matA,
@@ -159,6 +151,10 @@ namespace csc450Lib_linalg_base {
          */
         static Matrix* copyOf(const Matrix *matA);
         
+        /**
+         * Creates the column vector of every element in the matrix, read left
+         *  to right, top to bottom
+         */
         static ColumnVector* column(const Matrix *matA);
         
         /**
@@ -211,11 +207,58 @@ namespace csc450Lib_linalg_base {
          */
         void set(int theRow, int theCol, float theVal);
         
+        /**
+         * Adds the given row to the bottom of the matrix
+         */
         void addRow(const RowVector *row);
+        
+        /**
+         * Adds the given column to the right hand side of the matrix
+         */
         void addColumn(const ColumnVector *col);
+        
+        /**
+         * Computes the average row in the matrix
+         */
         const RowVector* averageRow(void) const;
+        
+        /**
+         * Computes the average column in the matrix
+         */
         const ColumnVector* averageColumn(void) const;
-        const ColumnVector* eigenvector(const ColumnVector *init, int kmax, float tol) const;
+        
+        /**
+         * Computes the largest eigenvector for this matrix.
+         *
+         * @param init
+         *          Initial vector to start power iteration at
+         *
+         * @param kmax
+         *          Maximum iterations
+         *
+         * @param tol
+         *          Tolerance
+         *
+         * @return
+         *          The largest eigenvector of the matrix
+         */
+        ColumnVector* eigenvector(const ColumnVector *init, int kmax, float tol) const;
+        
+        /**
+         * Computes the largest eigenvalue for this matrix.
+         *
+         * @param init
+         *          Initial vector to start power iteration at
+         *
+         * @param kmax
+         *          Maximum iterations
+         *
+         * @param tol
+         *          Tolerance
+         *
+         * @return
+         *          The largest eigenvalue of the matrix
+         */
         float eigenvalue(const ColumnVector *init, int kmax, float tol) const;
         
         /**
