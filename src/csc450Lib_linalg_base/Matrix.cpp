@@ -46,8 +46,8 @@ const Matrix* Matrix::transpose(const Matrix *matA) {
     return t;
 }
 
-const Matrix* Matrix::add(const Matrix *matA,
-                          const Matrix *matB) {
+Matrix* Matrix::add(const Matrix *matA,
+                    const Matrix *matB) {
     if (matA->cols() != matB->cols() || matA->rows() != matB->rows())
         throw "Matrices do not match";
     
@@ -105,8 +105,8 @@ const Matrix* Matrix::outerProduct(const ColumnVector *u,
     return oProd;
 }
 
-const Matrix* Matrix::subtract(const Matrix *matA,
-                               const Matrix *matB) {
+Matrix* Matrix::subtract(const Matrix *matA,
+                         const Matrix *matB) {
     if (matA->cols() != matB->cols() || matA->rows() != matB->rows())
         throw "Matrices do not match";
     
@@ -115,6 +115,20 @@ const Matrix* Matrix::subtract(const Matrix *matA,
         for (int j = 0; j < matA->cols(); j++) {
             diff->set(i, j, matA->get(i, j) - matB->get(i, j));
         }
+    }
+    
+    return diff;
+}
+
+ColumnVector* Matrix::subtract(const ColumnVector *matA,
+                         const ColumnVector *matB) {
+    if (matA->rows() != matB->rows())
+        throw "Matrices do not match";
+    
+    ColumnVector * diff = new ColumnVector(matA->rows());
+    for (int i = 0; i < matA->rows(); i++) {
+            diff->set(i, matA->get(i) - matB->get(i));
+        
     }
     
     return diff;
@@ -329,7 +343,7 @@ float Matrix::eigenvalue(const ColumnVector *init, int kmax, float tol) const {
     // get an initial l and lastl
     const ColumnVector *y = (ColumnVector*)Matrix::multiply(this, x);
     float l = y->normInf();
-    float lastl = l + tol * 5;
+    float lastl = l + 100;
     
     // loop until converged
     for (int k = 1; k < kmax && !converged; k++) {
@@ -388,7 +402,7 @@ char* Matrix::toString(const char* theBeginArrayStr,
                                (nbCols+1)*sizeof(theBeginArrayStr)+
                                (nbCols+1)*sizeof(theEndArrayStr));
     strcpy(str, theBeginArrayStr);
-    char current[50] = "as";
+    char current[50] = "initialize";
     for (int i = 0; i < nbRows; i++) {
         strcat(str, theBeginArrayStr);
         for (int j = 0; j < nbCols; j++) {

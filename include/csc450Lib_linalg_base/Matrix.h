@@ -97,8 +97,8 @@ namespace csc450Lib_linalg_base {
          *  validation and exception handling. Here, if array a does not have
          *  the proper dimensions, just quit.
          */
-        static const Matrix* add(const Matrix *matA,
-                                 const Matrix *matB);
+        static  Matrix* add(const Matrix *matA,
+                            const Matrix *matB);
         
         /**
          * Multiplies two matrices. If we had plenty of time we would do some
@@ -106,7 +106,7 @@ namespace csc450Lib_linalg_base {
          *  have the proper dimensions, just quit.
          */
         static  Matrix* multiply(const Matrix *matA,
-                                      const Matrix *matB);
+                                 const Matrix *matB);
         
         /**
          * Multiplies two matrices If we had plenty of time we would do some
@@ -127,8 +127,16 @@ namespace csc450Lib_linalg_base {
          *  data validation and exception handling. Here, if array a does not
          *  have the proper dimensions, just quit.
          */
-        static const Matrix* subtract(const Matrix *matA,
-                                      const Matrix *matB);
+        static  Matrix* subtract(const Matrix *matA,
+                                 const Matrix *matB);
+        
+        /**
+         * Subtracts two matrices If we had plenty of time we would do some
+         *  data validation and exception handling. Here, if array a does not
+         *  have the proper dimensions, just quit.
+         */
+        static  ColumnVector* subtract(const ColumnVector *matA,
+                                       const ColumnVector *matB);
         
         /**
          * Computes the "dot product" of two column vectors

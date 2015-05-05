@@ -18,51 +18,74 @@ int main() {
      *              DECLARATIONS                *
      ********************************************/
     
+    int numImages = 16;
+    int imageWidth = 256;
+    
     // Seed the random matrix generator
     MatrixGenerator::seed();
     
     Matrix *mat;
-    ColumnVector *cols[5];
-    for (int i = 0; i < 5; i++) {
-        mat = MatrixGenerator::getRandom(8,8);
-        cols[i] = Matrix::column(mat);
+    
+    // Image vectors
+    ColumnVector *gamma[numImages];
+    for (int i = 0; i < numImages; i++) {
+        mat = MatrixGenerator::getRandom(imageWidth,imageWidth);
+        gamma[i] = Matrix::column(mat);
     }
+    
+    // Matrix of image vectors
+    Matrix *gammas = gamma[0];
+    for (int i = 1; i < numImages; i++) {
+        gammas->addColumn(gamma[i]);
+    }
+    
+    
+    // The average face
+    const ColumnVector *psi = gammas->averageColumn();
+    
+    cout << gamma[0]->rows() << ", " << psi->rows() << "\n\n";
+    
+    // Matrix of differences between image vectors and the average face
+    Matrix *A = Matrix::subtract(gamma[0], psi);
+    ColumnVector *phi[numImages];
+    for (int i = 1; i < numImages; i++) {
+        phi[i] = (ColumnVector*)Matrix::subtract(gamma[i], psi);
+        A->addColumn(phi[i]);
+    }
+    
+    cout << A->rows() << ", " << A->cols() << "\n\n";
+    Matrix *L = Matrix::multiply(Matrix::transpose(A), A);
+    cout << L->rows() << ", " << L->cols() << "\n\n";
     
     /********************************************
      *              COMPUTATION                 *
      ********************************************/
     
-    Matrix *A = cols[0];
-    for (int i = 1; i < 5; i++) {
-        A->addColumn(cols[i]);
-    }
+    const ColumnVector* init = MatrixGenerator::getRandomColumn(numImages);
     
-    const Matrix *mattmat = Matrix::multiply(Matrix::transpose(mat), mat);
-    const ColumnVector* init = MatrixGenerator::getRandomColumn(8);
+    ColumnVector *eigenvector = L->eigenvector(init, 1000000000, 0.001);
+    float eigenvalue = L->eigenvalue(init, 1000000000, 0.001);
     
-    ColumnVector *eigenvector = mattmat->eigenvector(init, 10000, 0.01);
-    float eigenvalue = mattmat->eigenvalue(init, 10000, 0.01);
-    
-    ColumnVector *diff = (ColumnVector*)Matrix::subtract(Matrix::multiply(mattmat, eigenvector),ColumnVector::multiply(eigenvalue, eigenvector));
+    ColumnVector *diff = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, eigenvector),ColumnVector::multiply(eigenvalue, eigenvector));
     
     /********************************************
      *          COMMAND LINE OUTPUT             *
      ********************************************/
     
-    cout << "A: \n";
-    cout << A->toString("",""," ",true);
-    cout << "\n\n";
+    //cout << "Gammas: \n";
+    //cout << gammas->toString("",""," ",true);
+    //cout << "\n\n";
     
-    cout << "ave col: \n";
-    cout << A->averageColumn()->toString("",""," ",true);
-    cout << "\n\n";
+    //cout << "Psi: \n";
+    //cout << psi->toString("",""," ",true);
+    //cout << "\n\n";
     
-    cout << "mat: \n";
-    cout << mat->toString("",""," ",true);
-    cout << "\n\n";
+    //cout << "A: \n";
+    //cout << A->toString("",""," ",true);
+    //cout << "\n\n";
     
-    cout << "mattmat: \n";
-    cout << mattmat->toString("",""," ",true);
+    cout << "L: \n";
+    cout << L->toString("",""," ",true);
     cout << "\n\n";
     
     cout << "eigenvalue: \n";
@@ -76,7 +99,7 @@ int main() {
     cout << "Enter into Mathematica to obtain\n";
     cout << "\t{{eigenvalue, ...}, {eigenvector, ...}}\n";
     cout << "Eigensystem[";
-    cout << mattmat->toString("{","}",",",false);
+    cout << L->toString("{","}",",",false);
     cout << "]//N\n\n";
     
     cout << "Verification :\n";
