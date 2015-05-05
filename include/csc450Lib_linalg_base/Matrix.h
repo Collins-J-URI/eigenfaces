@@ -105,14 +105,14 @@ namespace csc450Lib_linalg_base {
          *  data validation and exception handling. Here, if array a does not
          *  have the proper dimensions, just quit.
          */
-        static const Matrix* multiply(const Matrix *matA,
+        static  Matrix* multiply(const Matrix *matA,
                                       const Matrix *matB);
         
         /**
          * Multiplies a matrix by a value.
          */
-        static const ColumnVector* multiply(const Matrix *matA,
-                                      const ColumnVector *matB);
+        static  ColumnVector* multiply(const Matrix *matA,
+                                            const ColumnVector *matB);
         
         /**
          * Multiplies two matrices If we had plenty of time we would do some
@@ -120,7 +120,7 @@ namespace csc450Lib_linalg_base {
          *  have the proper dimensions, just quit.
          */
         static Matrix* multiply(float mult,
-                                      const Matrix *mat);
+                                const Matrix *mat);
         
         /**
          * Computes the outer product of two column vectors
@@ -146,7 +146,7 @@ namespace csc450Lib_linalg_base {
         /**
          * Masks the given matrix, and returns a new matrix which matches the
          *  values of the passed in matrix for elements which are 1 in mask,
-         *  all other elements being zero. Can also be used as an 
+         *  all other elements being zero. Can also be used as an
          *  element-by-element multiplication function
          */
         static const Matrix* mask(const Matrix *matA,
@@ -158,7 +158,7 @@ namespace csc450Lib_linalg_base {
         static Matrix* copyOf(const Matrix *matA);
         
         /**
-         * Creates the column vector of every element in the matrix, read left 
+         * Creates the column vector of every element in the matrix, read left
          *  to right, top to bottom
          */
         static ColumnVector* column(const Matrix *matA);
@@ -248,7 +248,7 @@ namespace csc450Lib_linalg_base {
          * @return
          *          The largest eigenvector of the matrix
          */
-        const ColumnVector* eigenvector(const ColumnVector *init, int kmax, float tol) const;
+        ColumnVector* eigenvector(const ColumnVector *init, int kmax, float tol) const;
         
         /**
          * Computes the largest eigenvalue for this matrix.

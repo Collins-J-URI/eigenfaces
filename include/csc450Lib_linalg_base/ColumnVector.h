@@ -66,7 +66,7 @@ namespace csc450Lib_linalg_base {
          *  have the proper dimensions, just quit.
          */
         static  ColumnVector* multiply(float mult,
-                                      const ColumnVector *mat);
+                                       const ColumnVector *mat);
         
     };
 }

@@ -61,8 +61,8 @@ const Matrix* Matrix::add(const Matrix *matA,
     return sum;
 }
 
-const Matrix* Matrix::multiply(const Matrix *matA,
-                               const Matrix *matB) {
+Matrix* Matrix::multiply(const Matrix *matA,
+                         const Matrix *matB) {
     if (matA->cols() != matB->rows())
         throw "Matrices do not match";
     
@@ -92,8 +92,8 @@ Matrix* Matrix::multiply(float mult,
     return prod;
 }
 
-const ColumnVector* Matrix::multiply(const Matrix *matA,
-                                     const ColumnVector *matB) {
+ColumnVector* Matrix::multiply(const Matrix *matA,
+                               const ColumnVector *matB) {
     if (matA->cols() != matB->rows())
         throw "Matrices do not match";
     
@@ -307,7 +307,7 @@ const ColumnVector* Matrix::averageColumn(void) const {
     
 }
 
-const ColumnVector* Matrix::eigenvector(const ColumnVector *init, int kmax, float tol) const {
+ColumnVector* Matrix::eigenvector(const ColumnVector *init, int kmax, float tol) const {
     // make a copy of the initial vector
     ColumnVector *x = ColumnVector::copyOf(init);
     
