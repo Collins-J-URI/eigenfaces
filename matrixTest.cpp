@@ -24,7 +24,7 @@ int main() {
     Matrix *mat;
     ColumnVector *cols[5];
     for (int i = 0; i < 5; i++) {
-        mat = MatrixGenerator::getRandom(4,4);
+        mat = MatrixGenerator::getRandom(8,8);
         cols[i] = Matrix::column(mat);
     }
     
@@ -38,13 +38,12 @@ int main() {
     }
     
     const Matrix *mattmat = Matrix::multiply(Matrix::transpose(mat), mat);
-    const ColumnVector* init = MatrixGenerator::getRandomColumn(4);
+    const ColumnVector* init = MatrixGenerator::getRandomColumn(8);
     
-    ColumnVector *eigenvector = mattmat->eigenvector(init, 10000, 0.1);
-    float eigenvalue = mattmat->eigenvalue(init, 10000, 0.1);
+    ColumnVector *eigenvector = mattmat->eigenvector(init, 10000, 0.01);
+    float eigenvalue = mattmat->eigenvalue(init, 10000, 0.01);
     
-    Matrix *verify = Matrix::multiply(mattmat, eigenvector);
-    verify->addColumn(ColumnVector::multiply(eigenvalue, eigenvector));
+    ColumnVector *diff = (ColumnVector*)Matrix::subtract(Matrix::multiply(mattmat, eigenvector),ColumnVector::multiply(eigenvalue, eigenvector));
     
     /********************************************
      *          COMMAND LINE OUTPUT             *
@@ -81,7 +80,7 @@ int main() {
     cout << "]//N\n\n";
     
     cout << "Verification :\n";
-    cout << verify->toString("",""," ",true);
+    cout << diff->toString("",""," ",true);
     cout << "\n\n";
     
     /********************************************

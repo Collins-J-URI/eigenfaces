@@ -55,19 +55,6 @@ namespace csc450Lib_linalg_base {
          */
         static const RowVector* transpose(const ColumnVector *matA);
         
-        /**
-         * Returns a copy of the passed in matrix
-         */
-        static ColumnVector* copyOf(const ColumnVector *matA);
-        
-        /**
-         * Multiplies two matrices If we had plenty of time we would do some
-         *  data validation and exception handling. Here, if array a does not
-         *  have the proper dimensions, just quit.
-         */
-        static  ColumnVector* multiply(float mult,
-                                       const ColumnVector *mat);
-        
     };
 }
 #endif /* defined(____ColumnVector_included__) */

@@ -109,12 +109,6 @@ namespace csc450Lib_linalg_base {
                                       const Matrix *matB);
         
         /**
-         * Multiplies a matrix by a value.
-         */
-        static  ColumnVector* multiply(const Matrix *matA,
-                                            const ColumnVector *matB);
-        
-        /**
          * Multiplies two matrices If we had plenty of time we would do some
          *  data validation and exception handling. Here, if array a does not
          *  have the proper dimensions, just quit.
