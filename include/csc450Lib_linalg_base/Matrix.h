@@ -93,7 +93,7 @@ namespace csc450Lib_linalg_base {
         static const Matrix* transpose(const Matrix *matA);
         
         /**
-         * Adds two matrices If we had plenty of time we would do some data
+         * Adds two matrices. If we had plenty of time we would do some data
          *  validation and exception handling. Here, if array a does not have
          *  the proper dimensions, just quit.
          */
@@ -101,7 +101,7 @@ namespace csc450Lib_linalg_base {
                                  const Matrix *matB);
         
         /**
-         * Multiplies two matrices If we had plenty of time we would do some
+         * Multiplies two matrices. If we had plenty of time we would do some
          *  data validation and exception handling. Here, if array a does not
          *  have the proper dimensions, just quit.
          */
@@ -109,9 +109,7 @@ namespace csc450Lib_linalg_base {
                                       const Matrix *matB);
         
         /**
-         * Multiplies two matrices If we had plenty of time we would do some
-         *  data validation and exception handling. Here, if array a does not
-         *  have the proper dimensions, just quit.
+         * Multiplies a matrix by a value.
          */
         static const ColumnVector* multiply(const Matrix *matA,
                                       const ColumnVector *matB);
@@ -159,6 +157,10 @@ namespace csc450Lib_linalg_base {
          */
         static Matrix* copyOf(const Matrix *matA);
         
+        /**
+         * Creates the column vector of every element in the matrix, read left 
+         *  to right, top to bottom
+         */
         static ColumnVector* column(const Matrix *matA);
         
         /**
@@ -211,11 +213,58 @@ namespace csc450Lib_linalg_base {
          */
         void set(int theRow, int theCol, float theVal);
         
+        /**
+         * Adds the given row to the bottom of the matrix
+         */
         void addRow(const RowVector *row);
+        
+        /**
+         * Adds the given column to the right hand side of the matrix
+         */
         void addColumn(const ColumnVector *col);
+        
+        /**
+         * Computes the average row in the matrix
+         */
         const RowVector* averageRow(void) const;
+        
+        /**
+         * Computes the average column in the matrix
+         */
         const ColumnVector* averageColumn(void) const;
+        
+        /**
+         * Computes the largest eigenvector for this matrix.
+         *
+         * @param init
+         *          Initial vector to start power iteration at
+         *
+         * @param kmax
+         *          Maximum iterations
+         *
+         * @param tol
+         *          Tolerance
+         *
+         * @return
+         *          The largest eigenvector of the matrix
+         */
         const ColumnVector* eigenvector(const ColumnVector *init, int kmax, float tol) const;
+        
+        /**
+         * Computes the largest eigenvalue for this matrix.
+         *
+         * @param init
+         *          Initial vector to start power iteration at
+         *
+         * @param kmax
+         *          Maximum iterations
+         *
+         * @param tol
+         *          Tolerance
+         *
+         * @return
+         *          The largest eigenvalue of the matrix
+         */
         float eigenvalue(const ColumnVector *init, int kmax, float tol) const;
         
         /**
