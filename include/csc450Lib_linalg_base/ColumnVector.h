@@ -55,6 +55,20 @@ namespace csc450Lib_linalg_base {
          */
         static const RowVector* transpose(const ColumnVector *matA);
         
+        /**
+         * Returns the value of the norm 1 for this matrix
+         */
+        float norm1(void) const;
+        
+        /**
+         * Returns the value of the norm 1 for this matrix
+         */
+        float norm2(void) const;
+        
+        /**
+         * Returns the value of the norm infinity for this matrix
+         */
+        float normInf(void) const;
     };
 }
 #endif /* defined(____ColumnVector_included__) */

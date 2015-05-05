@@ -53,3 +53,37 @@ const RowVector* ColumnVector::transpose(const ColumnVector *matA) {
     return t;
 }
 
+float ColumnVector::norm1() const {
+    float norm = 0;
+    
+    for (int i = 0; i < nbRows; i++) {
+        norm += std::abs(a[i][0]);
+    }
+    
+    return norm;
+}
+
+float ColumnVector::norm2() const {
+    float norm = 0;
+    float current;
+    
+    for (int i = 0; i < nbRows; i++) {
+        current += a[i][0] * a[i][0];
+    }
+    norm = std::sqrt(current);
+    
+    return norm;
+}
+
+float ColumnVector::normInf() const {
+    float norm = 0;
+    float current;
+    
+    for (int i = 0; i < nbRows; i++) {
+        current = std::abs(a[i][0]);
+        if (current > norm)
+            norm = current;
+    }
+    
+    return norm;
+}

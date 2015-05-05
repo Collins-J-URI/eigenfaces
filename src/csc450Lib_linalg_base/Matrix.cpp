@@ -121,13 +121,13 @@ Matrix* Matrix::subtract(const Matrix *matA,
 }
 
 ColumnVector* Matrix::subtract(const ColumnVector *matA,
-                         const ColumnVector *matB) {
+                               const ColumnVector *matB) {
     if (matA->rows() != matB->rows())
         throw "Matrices do not match";
     
     ColumnVector * diff = new ColumnVector(matA->rows());
     for (int i = 0; i < matA->rows(); i++) {
-            diff->set(i, matA->get(i) - matB->get(i));
+        diff->set(i, matA->get(i) - matB->get(i));
         
     }
     
@@ -153,6 +153,21 @@ ColumnVector* Matrix::column(const Matrix *matA) {
         }
     }
     return column;
+}
+
+Matrix* Matrix::deflate(const Matrix *matA,
+                       const Matrix *eigenvector,
+                       float eigenvalue) {
+    float norm = eigenvector->norm2();
+    ColumnVector *u = (ColumnVector*)Matrix::multiply(eigenvalue/(norm * norm),
+                                                      eigenvector);
+    
+    Matrix *deflated = Matrix::copyOf(matA);
+    deflated = Matrix::subtract(matA,
+                                Matrix::multiply(eigenvector,
+                                                 Matrix::transpose(u)));
+    
+    return deflated;
 }
 
 float Matrix::dotProduct(const ColumnVector *u,
@@ -202,6 +217,22 @@ float** Matrix::getArray() const {
 }
 
 float Matrix::norm1() const {
+    float norm = 0;
+    float current;
+    
+    for (int i = 0; i < nbRows; i++) {
+        current = 0;
+        for (int j = 0; j < nbCols; j++) {
+            current += std::abs(a[i][j]);
+        }
+        if (current > norm)
+            norm = current;
+    }
+    
+    return norm;
+}
+
+float Matrix::norm2() const {
     float norm = 0;
     float current;
     
@@ -314,7 +345,7 @@ ColumnVector* Matrix::eigenvector(const ColumnVector *init, int kmax, float tol)
     // get an initial l and lastl
     const ColumnVector *y = (ColumnVector*)Matrix::multiply(this, x);
     float l = y->normInf();
-    float lastl = l + tol * 5;
+    float lastl = l + 100;
     
     // loop until converged
     for (int k = 1; k < kmax && !converged; k++) {
