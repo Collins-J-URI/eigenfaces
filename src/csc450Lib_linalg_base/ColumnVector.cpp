@@ -53,20 +53,3 @@ const RowVector* ColumnVector::transpose(const ColumnVector *matA) {
     return t;
 }
 
-ColumnVector* ColumnVector::copyOf(const ColumnVector *matA) {
-    ColumnVector *copy = new ColumnVector(matA->rows());
-    for (int i = 0; i < matA->rows(); i++) {
-        copy->set(i, matA->get(i));
-    }
-    return copy;
-}
-
- ColumnVector* ColumnVector::multiply(float mult,
-                                           const ColumnVector *mat) {
-    ColumnVector * prod = new ColumnVector(mat->rows());
-    for (int i = 0; i < mat->rows(); i++) {
-        prod->set(i, mult * mat->get(i));
-        
-    }
-    return prod;
-}
