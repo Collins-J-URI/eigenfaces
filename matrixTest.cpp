@@ -8,6 +8,7 @@
 #include "LinearSolver_LU.h"
 #include "PolyFunction1D.h"
 #include "MatrixGenerator.h"
+#include "EigenSystem.h"
 using namespace csc450Lib_calc_base;
 using namespace csc450Lib_linalg_base;
 using namespace csc450Lib_linalg_sle;
@@ -97,6 +98,8 @@ int main() {
         diffmatrix->addColumn(diffs[i]);
     }
     
+    EigenSystem *system = new EigenSystem(L);
+    
     /********************************************
      *          COMMAND LINE OUTPUT             *
      ********************************************/
@@ -117,14 +120,6 @@ int main() {
     cout << L->toString("",""," ",true);
     cout << "\n\n";
     
-    cout << "eigenvalue: \n";
-    cout << eigenvalue;
-    cout << "\n\n";
-    
-    cout << "eigenvector: \n";
-    cout << eigenvector->toString("{","}",",",false);
-    cout << "\n\n";
-    
     cout << "Enter into Mathematica to obtain\n";
     cout << "\t{{eigenvalue, ...}, {eigenvector, ...}}\n";
     cout << "Eigensystem[";
@@ -143,10 +138,14 @@ int main() {
     
     cout << "eigenvalues: \n";
     cout << eigenvaluevector->toString("{","}",",",false);
+    cout << "\n";
+    cout << system->getEigenValues()->toString("{","}",",",false);
     cout << "\n\n";
     
     cout << "eigenvectors: \n";
     cout << eigenvectormatrix->toString("{","}",",",false);
+    cout << "\n";
+    cout << system->getEigenVectors()->toString("{","}",",",false);
     cout << "\n\n";
     
     cout << "diffs: \n";

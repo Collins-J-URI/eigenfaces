@@ -204,6 +204,17 @@ namespace csc450Lib_linalg_base {
         float get(int theRow, int theCol) const;
         
         /**
+         * Returns the value of the column at the position specified
+         *
+         * @param theCol
+         *          The column
+         *
+         * @return
+         *          The column at the specified index
+         */
+        ColumnVector* getColumn(int theCol) const;
+        
+        /**
          * Returns the two dimensional array defining this matrix
          */
         float** getArray() const;
