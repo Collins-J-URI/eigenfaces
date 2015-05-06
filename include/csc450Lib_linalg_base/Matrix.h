@@ -16,6 +16,10 @@
 
 //=================================
 // included dependencies
+#include <iostream>
+#include <fstream>
+#include <unistd.h>
+
 #include <cstring>
 #include <stdio.h>
 #include <stdlib.h>
@@ -165,6 +169,10 @@ namespace csc450Lib_linalg_base {
          */
         static ColumnVector* column(const Matrix *matA);
         
+        static Matrix* deflate(const Matrix *matA,
+                               const ColumnVector *eigenvector,
+                               float eigenvalue);
+        
         /**
          * Returns the number of columns of this matrix
          *
@@ -204,6 +212,11 @@ namespace csc450Lib_linalg_base {
          * Returns the value of the norm 1 for this matrix
          */
         float norm1(void) const;
+        
+        /**
+         * Returns the value of the norm 1 for this matrix
+         */
+        float norm2(void) const;
         
         /**
          * Returns the value of the norm infinity for this matrix

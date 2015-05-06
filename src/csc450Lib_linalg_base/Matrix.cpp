@@ -121,13 +121,13 @@ Matrix* Matrix::subtract(const Matrix *matA,
 }
 
 ColumnVector* Matrix::subtract(const ColumnVector *matA,
-                         const ColumnVector *matB) {
+                               const ColumnVector *matB) {
     if (matA->rows() != matB->rows())
         throw "Matrices do not match";
     
     ColumnVector * diff = new ColumnVector(matA->rows());
     for (int i = 0; i < matA->rows(); i++) {
-            diff->set(i, matA->get(i) - matB->get(i));
+        diff->set(i, matA->get(i) - matB->get(i));
         
     }
     
@@ -153,6 +153,21 @@ ColumnVector* Matrix::column(const Matrix *matA) {
         }
     }
     return column;
+}
+
+Matrix* Matrix::deflate(const Matrix *matA,
+                       const ColumnVector *eigenvector,
+                       float eigenvalue) {
+    float norm = eigenvector->norm2();
+    ColumnVector *u = (ColumnVector*)Matrix::multiply(eigenvalue/(norm * norm),
+                                                      eigenvector);
+    
+    Matrix *deflated = Matrix::copyOf(matA);
+    deflated = Matrix::subtract(matA,
+                                Matrix::multiply(eigenvector,
+                                                 Matrix::transpose(u)));
+    
+    return deflated;
 }
 
 float Matrix::dotProduct(const ColumnVector *u,
@@ -202,6 +217,22 @@ float** Matrix::getArray() const {
 }
 
 float Matrix::norm1() const {
+    float norm = 0;
+    float current;
+    
+    for (int i = 0; i < nbRows; i++) {
+        current = 0;
+        for (int j = 0; j < nbCols; j++) {
+            current += std::abs(a[i][j]);
+        }
+        if (current > norm)
+            norm = current;
+    }
+    
+    return norm;
+}
+
+float Matrix::norm2() const {
     float norm = 0;
     float current;
     
@@ -307,37 +338,9 @@ ColumnVector* Matrix::eigenvector(const ColumnVector *init, int kmax, float tol)
     // make a copy of the initial vector
     ColumnVector *x = (ColumnVector*)Matrix::copyOf(init);
     
-    int imax;
-    float s;
-    bool converged = false;
-    
-    // get an initial l and lastl
-    const ColumnVector *y = (ColumnVector*)Matrix::multiply(this, x);
-    float l = y->normInf();
-    float lastl = l + tol * 5;
-    
-    // loop until converged
-    for (int k = 1; k < kmax && !converged; k++) {
-        y = (ColumnVector*)Matrix::multiply(this, x);
-        l = y->normInf();
-        if (abs(l - lastl) < tol)
-            converged = true;
-        lastl = l;
-        imax = y->maxInd();
-        
-        // sign of eigenalue
-        s = (y->get(imax) * x->get(imax)) < 0 ? -1 : 1;
-        x = (ColumnVector*)Matrix::multiply(1.0 / l, y);
-    }
-    return x;
-}
-
-float Matrix::eigenvalue(const ColumnVector *init, int kmax, float tol) const {
-    // make a copy of the initial vector
-    ColumnVector *x = (ColumnVector*)Matrix::copyOf(init);
-    
-    int imax;
-    float s;
+    int k = 1;
+    int imax = 0;
+    float s = 1;
     bool converged = false;
     
     // get an initial l and lastl
@@ -346,7 +349,7 @@ float Matrix::eigenvalue(const ColumnVector *init, int kmax, float tol) const {
     float lastl = l + 100;
     
     // loop until converged
-    for (int k = 1; k < kmax && !converged; k++) {
+    for (k = 1; k < kmax && !converged; k++) {
         y = (ColumnVector*)Matrix::multiply(this, x);
         l = y->normInf();
         if (abs(l - lastl) < tol)
@@ -358,6 +361,40 @@ float Matrix::eigenvalue(const ColumnVector *init, int kmax, float tol) const {
         s = (y->get(imax) * x->get(imax)) < 0 ? -1 : 1;
         x = (ColumnVector*)Matrix::multiply(1.0 / l, y);
     }
+    if (k == kmax)
+        cout << "No convergence\n";
+    return x;
+}
+
+float Matrix::eigenvalue(const ColumnVector *init, int kmax, float tol) const {
+    // make a copy of the initial vector
+    ColumnVector *x = (ColumnVector*)Matrix::copyOf(init);
+    
+    int k = 1;
+    int imax = 0;
+    float s = 1;
+    bool converged = false;
+    
+    // get an initial l and lastl
+    const ColumnVector *y = (ColumnVector*)Matrix::multiply(this, x);
+    float l = y->normInf();
+    float lastl = l + 100;
+    
+    // loop until converged
+    for (k = 1; k < kmax && !converged; k++) {
+        y = (ColumnVector*)Matrix::multiply(this, x);
+        l = y->normInf();
+        if (abs(l - lastl) < tol)
+            converged = true;
+        lastl = l;
+        imax = y->maxInd();
+        
+        // sign of eigenalue
+        s = (y->get(imax) * x->get(imax)) < 0 ? -1 : 1;
+        x = (ColumnVector*)Matrix::multiply(1.0 / l, y);
+    }
+    if (k == kmax)
+        cout << "No convergence\n";
     float val = s * l;
     return val;
 }
