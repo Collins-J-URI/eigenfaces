@@ -19,8 +19,8 @@ int main() {
      *              DECLARATIONS                *
      ********************************************/
     
-    int numImages = 4;
-    int imageWidth = 40;
+    int numImages = 8;
+    int imageWidth = 32;
     
     // Seed the random matrix generator
     MatrixGenerator::seed();
@@ -39,7 +39,6 @@ int main() {
     for (int i = 1; i < numImages; i++) {
         gammas->addColumn(gamma[i]);
     }
-    
     
     // The average face
     const ColumnVector *psi = gammas->averageColumn();
@@ -100,21 +99,27 @@ int main() {
     
     EigenSystem *system = new EigenSystem(L);
     
+    ColumnVector *faces[numImages];
+    for (int l = 0; l < numImages; l++) {
+        faces[l] = new ColumnVector(imageWidth*imageWidth);
+        for (int j = 0; j < imageWidth*imageWidth; j++) {
+            faces[l]->set(j, 0);
+        }
+        cout << faces[l]->rows() << " = " << A->getColumn(0)->rows() << "\n";
+        for (int k = 0; k < numImages; k++) {
+            faces[l] = (ColumnVector*)Matrix::add(faces[l],Matrix::multiply(system->getEigenVector(l)->get(k), A->getColumn(k)));
+        }
+    }
+    
+    Matrix *eigenfaces = faces[0];
+    for (int i = 1; i < numImages; i++) {
+        eigenfaces->addColumn(faces[i]);
+    }
+    
     /********************************************
      *          COMMAND LINE OUTPUT             *
      ********************************************/
     cout << "\n\n";
-    //cout << "Gammas: \n";
-    //cout << gammas->toString("",""," ",true);
-    //cout << "\n\n";
-    
-    //cout << "Psi: \n";
-    //cout << psi->toString("",""," ",true);
-    //cout << "\n\n";
-    
-    //cout << "A: \n";
-    //cout << A->toString("",""," ",true);
-    //cout << "\n\n";
     
     cout << "L: \n";
     cout << L->toString("",""," ",true);
@@ -125,16 +130,6 @@ int main() {
     cout << "Eigensystem[";
     cout << L->toString("{","}",",",false);
     cout << "]//N\n\n";
-    
-    /*
-    cout << "Verification :\n";
-    cout << diff->toString("",""," ",true);
-    cout << "\n\n";
-    
-    cout << "Verification :\n";
-    cout << diff2->toString("",""," ",true);
-    cout << "\n\n";
-     */
     
     cout << "eigenvalues: \n";
     cout << eigenvaluevector->toString("{","}",",",false);
@@ -150,6 +145,10 @@ int main() {
     
     cout << "diffs: \n";
     cout << diffmatrix->toString("",""," ",true);
+    cout << "\n\n";
+    
+    cout << "EIGENFACES: \n";
+    cout << eigenfaces->toString("",""," ",true);
     cout << "\n\n";
     
     /********************************************

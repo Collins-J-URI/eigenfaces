@@ -213,8 +213,8 @@ float Matrix::get(int theRow, int theCol) const {
 }
 
 ColumnVector* Matrix::getColumn(int theCol) const {
-    ColumnVector* col = new ColumnVector(nbCols);
-    for (int i = 0; i < nbCols; i++)
+    ColumnVector* col = new ColumnVector(nbRows);
+    for (int i = 0; i < nbRows; i++)
         col->set(i, a[i][theCol]);
     return col;
 }
