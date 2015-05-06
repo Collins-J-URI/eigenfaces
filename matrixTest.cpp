@@ -19,7 +19,7 @@ int main() {
      ********************************************/
     
     int numImages = 4;
-    int imageWidth = 4;
+    int imageWidth = 40;
     
     // Seed the random matrix generator
     MatrixGenerator::seed();
@@ -65,8 +65,8 @@ int main() {
     
     ColumnVector* init = MatrixGenerator::getRandomColumn(numImages);
     
-    ColumnVector *eigenvector = L->eigenvector(init, 1000000000, 0.001);
-    float eigenvalue = L->eigenvalue(init, 1000000000, 0.001);
+    ColumnVector *eigenvector = deflated->eigenvector(init, 1000000, 0.0001);
+    float eigenvalue = deflated->eigenvalue(init, 1000000, 0.0001);
     
     //ColumnVector *diff = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, eigenvector),ColumnVector::multiply(eigenvalue, eigenvector));
     
@@ -78,11 +78,15 @@ int main() {
     //ColumnVector *diff2 = (ColumnVector*)Matrix::subtract(Matrix::multiply(delatedL, eigenvector2),ColumnVector::multiply(eigenvalue2, eigenvector2));
     
     for (int i = 0; i < numImages; i++) {
-        init = MatrixGenerator::getRandomColumn(numImages);
-        eigenvectors[i] = deflated->eigenvector(init, 100000000, 0.0001);
-        eigenvalues[i] = deflated->eigenvalue(init, 100000000, 0.0001);
-        diffs[i] = (ColumnVector*)Matrix::subtract(Matrix::multiply(deflated, eigenvectors[i]),ColumnVector::multiply(eigenvalues[i], eigenvectors[i]));
+        cout << "Calculating eigenvector " << i << "\n";
+        eigenvectors[i] = deflated->eigenvector(init, 1000000, 0.0001);
+        cout << "Calculating eigenvalue " << i << "\n";
+        eigenvalues[i] = deflated->eigenvalue(init, 1000000, 0.0001);
+        
+        diffs[i] = (ColumnVector*)Matrix::subtract(Matrix::multiply(deflated, eigenvectors[i]),Matrix::multiply(eigenvalues[i], eigenvectors[i]));
+        
         deflated = Matrix::deflate(deflated, eigenvectors[i], eigenvalues[i]);
+        init = MatrixGenerator::getRandomColumn(numImages);
     }
     
     ColumnVector *eigenvaluevector = new ColumnVector(numImages, eigenvalues);
@@ -96,7 +100,7 @@ int main() {
     /********************************************
      *          COMMAND LINE OUTPUT             *
      ********************************************/
-    
+    cout << "\n\n";
     //cout << "Gammas: \n";
     //cout << gammas->toString("",""," ",true);
     //cout << "\n\n";

@@ -16,6 +16,10 @@
 
 //=================================
 // included dependencies
+#include <iostream>
+#include <fstream>
+#include <unistd.h>
+
 #include <cstring>
 #include <stdio.h>
 #include <stdlib.h>
@@ -166,7 +170,7 @@ namespace csc450Lib_linalg_base {
         static ColumnVector* column(const Matrix *matA);
         
         static Matrix* deflate(const Matrix *matA,
-                               const Matrix *eigenvector,
+                               const ColumnVector *eigenvector,
                                float eigenvalue);
         
         /**
