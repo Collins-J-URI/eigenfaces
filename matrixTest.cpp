@@ -9,9 +9,11 @@
 #include "PolyFunction1D.h"
 #include "MatrixGenerator.h"
 #include "EigenSystem.h"
+#include "EigenSystemSolver.h"
 using namespace csc450Lib_calc_base;
 using namespace csc450Lib_linalg_base;
 using namespace csc450Lib_linalg_sle;
+using namespace csc450Lib_linalg_eigensystems;
 
 int main() {
     
@@ -97,7 +99,8 @@ int main() {
         diffmatrix->addColumn(diffs[i]);
     }
     
-    EigenSystem *system = new EigenSystem(L);
+    EigenSystemSolver *solver = new EigenSystemSolver(L);
+    const EigenSystem *system = solver->solve();
     
     ColumnVector *faces[numImages];
     for (int l = 0; l < numImages; l++) {
