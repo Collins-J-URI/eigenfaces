@@ -6,7 +6,9 @@ SRCEXT := cpp
 OBJECTS := $(SRCDIR)/*/*.$(SRCEXT)
 
 INCLUDE := include
-LINALG := include/csc450Lib_linalg_base include/csc450Lib_linalg_sle
+SLE := include/csc450Lib_linalg_base include/csc450Lib_linalg_sle 
+EIGEN := include/csc450Lib_linalg_eigensystems
+LINALG := $(SLE) $(EIGEN)
 CALC := include/csc450Lib_calc_base include/csc450Lib_calc_snle
 
 INC := $(LINALG) $(CALC)  $(INCLUDE)

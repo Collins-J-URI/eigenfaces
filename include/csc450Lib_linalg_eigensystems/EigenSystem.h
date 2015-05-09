@@ -22,20 +22,23 @@
 using namespace std;
 
 
-namespace csc450Lib_linalg_base {
+namespace csc450Lib_linalg_eigensystems {
     
     class EigenSystem {
     private:
         int size;
-        Matrix *A;
-        ColumnVector *eigenvalues;
-        Matrix *eigenvectors;
+        csc450Lib_linalg_base::Matrix *a;
+        csc450Lib_linalg_base::ColumnVector *l;
+        csc450Lib_linalg_base::Matrix *v;
         
     public:
-        EigenSystem(const Matrix *A);
-        Matrix* getEigenVectors(void) const;
-        ColumnVector* getEigenValues(void) const;
-        ColumnVector* getEigenVector(int index) const;
+        EigenSystem(void);
+        EigenSystem(const csc450Lib_linalg_base::Matrix *a,
+                    const csc450Lib_linalg_base::Matrix *v,
+                    const csc450Lib_linalg_base::ColumnVector *l);
+        csc450Lib_linalg_base::Matrix* getEigenVectors(void) const;
+        csc450Lib_linalg_base::ColumnVector* getEigenValues(void) const;
+        csc450Lib_linalg_base::ColumnVector* getEigenVector(int index) const;
         float getEigenValue(int index) const;
         
         

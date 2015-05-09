@@ -9,6 +9,7 @@
 #include "ColumnVector.h"
 #include "RowVector.h"
 
+using namespace std;
 using namespace csc450Lib_linalg_base;
 
 Matrix::Matrix(int nbRows, int nbCols, float ** a) {
@@ -213,8 +214,8 @@ float Matrix::get(int theRow, int theCol) const {
 }
 
 ColumnVector* Matrix::getColumn(int theCol) const {
-    ColumnVector* col = new ColumnVector(nbCols);
-    for (int i = 0; i < nbCols; i++)
+    ColumnVector* col = new ColumnVector(nbRows);
+    for (int i = 0; i < nbRows; i++)
         col->set(i, a[i][theCol]);
     return col;
 }
@@ -396,7 +397,7 @@ float Matrix::eigenvalue(const ColumnVector *init, int kmax, float tol) const {
         lastl = l;
         imax = y->maxInd();
         
-        // sign of eigenalue
+        // sign of eigenvalue
         s = (y->get(imax) * x->get(imax)) < 0 ? -1 : 1;
         x = (ColumnVector*)Matrix::multiply(1.0 / l, y);
     }
