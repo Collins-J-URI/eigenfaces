@@ -45,8 +45,6 @@ int main() {
     // The average face
     const ColumnVector *psi = gammas->averageColumn();
     
-    cout << gamma[0]->rows() << ", " << psi->rows() << "\n\n";
-    
     // Matrix of differences between image vectors and the average face
     Matrix *A = Matrix::subtract(gamma[0], psi);
     ColumnVector *phi[numImages];
@@ -64,7 +62,7 @@ int main() {
     /********************************************
      *              COMPUTATION                 *
      ********************************************/
-    
+    /*
     ColumnVector* init = MatrixGenerator::getRandomColumn(numImages);
     
     ColumnVector *eigenvector = deflated->eigenvector(init, 1000000, 0.0001);
@@ -93,11 +91,8 @@ int main() {
     
     ColumnVector *eigenvaluevector = new ColumnVector(numImages, eigenvalues);
     Matrix *eigenvectormatrix = eigenvectors[0];
-    Matrix *diffmatrix = diffs[0];
-    for (int i = 1; i < numImages; i++) {
-        eigenvectormatrix->addColumn(eigenvectors[i]);
-        diffmatrix->addColumn(diffs[i]);
-    }
+     */
+    
     
     EigenSystemSolver *solver = new EigenSystemSolver(L);
     const EigenSystem *system = solver->solve();
@@ -108,7 +103,6 @@ int main() {
         for (int j = 0; j < imageWidth*imageWidth; j++) {
             faces[l]->set(j, 0);
         }
-        cout << faces[l]->rows() << " = " << A->getColumn(0)->rows() << "\n";
         for (int k = 0; k < numImages; k++) {
             faces[l] = (ColumnVector*)Matrix::add(faces[l],Matrix::multiply(system->getEigenVector(l)->get(k), A->getColumn(k)));
         }
@@ -117,6 +111,14 @@ int main() {
     Matrix *eigenfaces = faces[0];
     for (int i = 1; i < numImages; i++) {
         eigenfaces->addColumn(faces[i]);
+    }
+    
+    Matrix *diffmatrix = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, system->getEigenVector(0)),Matrix::multiply(system->getEigenValue(0), system->getEigenVector(0)));
+    for (int i = 1; i < numImages; i++) {
+        diffs[i] = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, system->getEigenVector(i)),Matrix::multiply(system->getEigenValue(i), system->getEigenVector(i)));
+    }
+    for (int i = 1; i < numImages; i++) {
+        diffmatrix->addColumn(diffs[i]);
     }
     
     /********************************************
@@ -134,15 +136,15 @@ int main() {
     cout << L->toString("{","}",",",false);
     cout << "]//N\n\n";
     
-    cout << "eigenvalues: \n";
-    cout << eigenvaluevector->toString("{","}",",",false);
-    cout << "\n";
+    //cout << "eigenvalues: \n";
+    //cout << eigenvaluevector->toString("{","}",",",false);
+    //cout << "\n";
     cout << system->getEigenValues()->toString("{","}",",",false);
     cout << "\n\n";
     
-    cout << "eigenvectors: \n";
-    cout << eigenvectormatrix->toString("{","}",",",false);
-    cout << "\n";
+    //cout << "eigenvectors: \n";
+    //cout << eigenvectormatrix->toString("{","}",",",false);
+    //cout << "\n";
     cout << system->getEigenVectors()->toString("{","}",",",false);
     cout << "\n\n";
     
@@ -150,9 +152,9 @@ int main() {
     cout << diffmatrix->toString("",""," ",true);
     cout << "\n\n";
     
-    cout << "EIGENFACES: \n";
-    cout << eigenfaces->toString("",""," ",true);
-    cout << "\n\n";
+    //cout << "EIGENFACES: \n";
+    //cout << eigenfaces->toString("",""," ",true);
+    //cout << "\n\n";
     
     /********************************************
      *              WRITE TO FILE               *

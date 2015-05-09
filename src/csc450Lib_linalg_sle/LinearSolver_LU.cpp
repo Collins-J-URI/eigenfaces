@@ -7,6 +7,8 @@
 //
 
 #include "LinearSolver_LU.h"
+
+using namespace std;
 using namespace csc450Lib_linalg_sle;
 using namespace csc450Lib_linalg_base;
 

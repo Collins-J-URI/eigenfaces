@@ -16,10 +16,14 @@
 
 //=================================
 // included dependencies
+#include <iostream>
+
 #include "Matrix.h"
 #include "MatrixGenerator.h"
 #include "ColumnVector.h"
+#include "RowVector.h"
 #include "EigenSystem.h"
+#include "LinearSolver_LU.h"
 
 namespace csc450Lib_linalg_eigensystems {
     
@@ -31,8 +35,6 @@ namespace csc450Lib_linalg_eigensystems {
         
         const csc450Lib_linalg_base::Matrix *a;
         
-        const EigenSystem* rayleigh(const csc450Lib_linalg_base::Matrix *a, const csc450Lib_linalg_base::ColumnVector *v, float l) const;
-        
     public:
         
         EigenSystemSolver(void);
@@ -42,6 +44,10 @@ namespace csc450Lib_linalg_eigensystems {
         static EigenSystem* power(const csc450Lib_linalg_base::Matrix *a,
                                   const csc450Lib_linalg_base::ColumnVector *init,
                                   int iterations, float tol);
+        
+        static EigenSystem* rayleigh(const csc450Lib_linalg_base::Matrix *a,
+                                    const csc450Lib_linalg_base::ColumnVector *v,
+                                    float l, int iterations, float tol);
         
         static csc450Lib_linalg_base::Matrix* deflate(const csc450Lib_linalg_base::Matrix *a,
                                                       const csc450Lib_linalg_base::ColumnVector *v,

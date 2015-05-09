@@ -9,7 +9,9 @@
 // included dependencies
 #include "EigenSystemSolver.h"
 
+using namespace std;
 using namespace csc450Lib_linalg_base;
+using namespace csc450Lib_linalg_sle;
 using namespace csc450Lib_linalg_eigensystems;
 
 EigenSystem* EigenSystemSolver::power(const Matrix *a,
@@ -49,9 +51,49 @@ EigenSystem* EigenSystemSolver::power(const Matrix *a,
     return new EigenSystem(a, v, l);
 }
 
-const EigenSystem* EigenSystemSolver::rayleigh(const Matrix *a,
-                                               const ColumnVector *v,
-                                               float l) const {
+EigenSystem* EigenSystemSolver::rayleigh(const Matrix *a,
+                                         const ColumnVector *init,
+                                         float lambda, int iterations, float tol)  {
+    // make a copy of the initial vector
+    ColumnVector *x = (ColumnVector*)Matrix::copyOf(init);
+    RowVector *xt;
+    const Matrix *i = MatrixGenerator::getIdentity(a->rows());
+    LinearSolver *solver = new LinearSolver_LU();
+    const LinearSystemRecord *record;
+    
+    int k = 1;
+    int imax = 0;
+    bool converged = false;
+    
+    // get an initial l and lastl
+    const ColumnVector *y = (ColumnVector*)Matrix::multiply(a, x);
+    float sigma = lambda;
+    float lastsigma = sigma + 100;
+    float num, den, norm;
+    
+    // loop until converged
+    for (k = 1; k < iterations && !converged; k++) {
+        xt = (RowVector*)Matrix::transpose(x);
+        
+        num = Matrix::multiply(Matrix::multiply(xt,a),x)->get(0, 0);
+        den = Matrix::multiply(xt,x)->get(0,0);
+        sigma = num / den;
+        
+        if (abs(sigma - lastsigma) < tol)
+            converged = true;
+        lastsigma = sigma;
+        
+        record = solver->solve(Matrix::subtract(a, Matrix::multiply(sigma, i)), x);
+        y = (ColumnVector*)record->getSolution();
+        
+        norm = y->normInf();
+        
+        x = (ColumnVector*)Matrix::copyOf(Matrix::multiply(1.0f / norm, y));
+    }
+    Matrix *v = x;
+    ColumnVector *l = new ColumnVector(1);
+    l->set(0, sigma);
+    return new EigenSystem(a, v, l);
     
 }
 
@@ -69,8 +111,8 @@ EigenSystemSolver::~EigenSystemSolver(void) {
 }
 
 Matrix* EigenSystemSolver::deflate(const Matrix *a,
-                                         const ColumnVector *v,
-                                         float l) {
+                                   const ColumnVector *v,
+                                   float l) {
     float norm = v->norm2();
     ColumnVector *u = (ColumnVector*)Matrix::multiply(l/(norm * norm),
                                                       v);
@@ -85,6 +127,7 @@ const EigenSystem* EigenSystemSolver::solve(const Matrix *a) {
 
 
 const EigenSystem* EigenSystemSolver::solve(void) const {
+    MatrixGenerator::seed();
     int size = a->rows();
     
     const Matrix *deflated = Matrix::copyOf(a);
@@ -98,12 +141,15 @@ const EigenSystem* EigenSystemSolver::solve(void) const {
     for (int i = 0; i < size; i++) {
         init = MatrixGenerator::getRandomColumn(size);
         
-        currentSystem = power(deflated, init, 1000000, 0.0001);
+        currentSystem = power(deflated, init, 500, 0.001);
+        currentSystem = rayleigh(a, currentSystem->getEigenVector(0),
+                               currentSystem->getEigenValue(0),
+                               10, 0.000001);
         
         vectors[i] = currentSystem->getEigenVector(0);
         values[i] = currentSystem->getEigenValue(0);
         
-        deflated = deflate(a, vectors[i], values[i]);
+        deflated = deflate(deflated, vectors[i], values[i]);
     }
     
     ColumnVector *l = new ColumnVector(size, values);
