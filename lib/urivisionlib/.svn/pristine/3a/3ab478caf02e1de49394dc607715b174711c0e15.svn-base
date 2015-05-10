@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="../ieHack.xsl"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+<title>How to build uriVL</title>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<meta name="generator" content="Alpha X" />
+
+<style type="text/css" media="screen">
+
+td.demoName {
+  text-align: center;
+  width: 15%;
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoPurpose {
+  text-align: center;
+  width: 49%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoPlatform {
+  text-align: center;
+  width: 6%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.working {
+  text-align: center;
+  background-color: #00CC33;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.minorIssues {
+  text-align: center;
+  background-color: #FFFF90;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.majorIssues {
+  text-align: center;
+  background-color: #DD9933;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.noCompile {
+  text-align: center;
+  background-color: #DD2211;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.broken {
+  text-align: center;
+  background-color: #DD2211;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.notSupported {
+  text-align: center;
+  background-color: #CCCCCC;
+  background-image: none;  
+  color: #000000;
+ }
+</style>
+
+</head>
+
+
+
+<body>
+<p><b>Last modified:</b><br></br>&#160;&#160;&#160;
+		<!-- #lastmodified text="" form="abbrev,weekday,time" -->
+		           Fri, 13 Sep 2013 17:46
+		<!-- /#lastmodified -->
+</p>
+
+<h2>1. About this Document</h2>
+
+<p>This document reports on the state of the uriVL library (in its various 
+flavors) on the supported platforms and give directions on how to build 
+uriVL for your platform of choice (OS + compiler/IDE).</p>
+
+<h3>1.1 Platforms supported</h3>
+
+<p>The different platforms and IDEs currently supported to some degree  to 
+compile the library are:</p>
+
+<ul>
+	
+	<li>Mac OS X 10.6, 10.7, and 10.8
+	
+	<ul>
+		<li> Xcode 3.2 and 4 (Xcode 3.1 on Mac OS X 10.5 will <i>probably</i> still 
+		work, but we don't test anymore)</li>
+		
+		<li> CMake with gcc</li>
+	</ul>
+	
+	</li>
+	
+	<li>Windows XP, Vista, and 7
+	
+	<ul>
+		
+		<li> Visual Studio 8, 9, or 10 (Pro or Express)</li>
+		
+		<li> CMake with Visual Studio  8, 9, or 10</li>
+		
+		<li> CMake with MinGW</li>
+		
+	</ul>
+	
+	</li>
+	
+	<li>Linux
+	
+	<ul>
+		
+		<li>CMake with gcc</li>
+		
+	</ul>
+	
+	</li>
+	
+</ul>
+
+<p>
+The library can certainly be tweaked to work with other IDEs, but this may
+take a few edits in the main header file <tt>uriVL::uriVisionLib.h</tt>.
+</p>
+
+
+<h3>1.2 Different versions of the library</h3>
+
+<p>There are basically four different versions of the library:</p>
+
+<ul>
+	
+    <li>QuickTime version: This one uses Apple's QuickTime library for
+    internal storage, reading and writing of images, movie playing, and
+    access to a live camera.  This version is supported on Mac OS X, and
+    Windows XP/Vista/8. The uriVL SDK includes pre-built binaries of
+    the "QuickTime version of uriVL framework (for Mac OS X) and libraries (for Windows).<br></br>
+    At this point the version of QuickTime used for Mac OS X (and obviously for Windows) is still the old Carbon library, the main reasons for this being that QTKit still seems incomplete and buggy, that I hate its Objective-C syntax, and that I have not time to to master it. However, the writing is ominously on the wall, and I know that a transition to QuickTimeX will be mandatory before too long.  I expect work to that effect to start in Fall 2009 and be completed by the end of Spring 2010.</li>
+	
+    <li>"Generic" version: This one uses generic C++ code and possibly some
+    third-party open-source libraries for importing and exporting media. It
+    should build and run (in one form or another) on all platforms.</li>
+
+    <li>"iOS" version [<b>in development</b>]: This is a version of the 
+	library being developed for the iOS platform.</li>
+
+    <li>"Kinect" version [<b>in development</b>]: This is a version of the 
+	library being developed to work with Kinect data.  This version will 
+	initially not provide movie playing nor file reading functionality.  
+	An alternate future for this version of the library is to get merged 
+	with the "generic" version.</li>
+</ul>
+
+<p>There is nothing that prevents having a "Windows Media" version, except 
+current lack of time and lack of interest.</p>
+
+<p>The user can select wich version to use by setting the following constant
+(done in the project settings with Visual or in a prefix header file with
+Xcode).</p>
+<ul>
+    <li>QuickTime version (will do image input/output, movie input/output,
+    live video capture): <br></br>
+    <tt>#define URIVL_USE_QUICKTIME  1</tt></li>
+
+    <li>Generic version: <br></br>
+    <tt>#define URIVL_USE_QUICKTIME  0</tt>,and then
+    
+    <ul>
+	<li>To be able to read/write images, one and only one of:
+	
+	<ul>
+	    <li><tt>#define URIVL_USE_FREEIMAGE  1</tt> to use the
+	    FreeImage library to read and write image files in a variety of
+	    formats [at the time of this writing, support for freeimage is
+	    only a plan that has not be implemented yet]</li>
+	    
+	    <li><tt>#define URIVL_USE_HACK_RW  1</tt> to use built-in
+	    (hack) code to read images in the PPM/PGM/PBM )binary and
+	    ASCII) and TGA (uncompressed) formats.</li>
+	</ul>
+	
+	</li>
+	<li> To be able to play movies,
+	
+	<ul>
+	    <li><tt>#define URIVL_USE_LIBQUICKTIME 1</tt> to se the 
+	    <a href="http://libquicktime.sourceforge.net/">libquicktime library</a>(only choice so
+	    far)</li>
+	</ul>
+	
+	</li>
+	
+	<li> To be able to capture video from cameras,
+	
+	<ul>
+	    <li><tt>#define URIVL_USE_LIBVIDCAP 1</tt> to use the 
+	    <a href="http://sourceforge.net/projects/libvidcap">libvidcap</a>video capture library [at the time of this
+	    writing, support for libvidcap is only a plan that has not be
+	    implemented yet]</li>
+	</ul>
+	
+	You must select at least one image input/output option to be able
+	to read images, same for movie playing or video capture.  If you
+	did not select at least one data input option, then the library
+	will not compile at all.</li>
+    </ul></li>
+    
+    <li> Fast Fourier Transform calculations,
+    <ul>
+	<li><tt>#define URIVL_USE_FFTW</tt> to use the <a
+	href="http://www.fftw.org/">fftw</a> Fast Fourier 
+	transform library (fftw3-single).</li>
+	</ul></li>
+</ul>
+
+
+<h3>1.3 Current status of the library for each platform</h3>
+
+<p>Status is reported using the following color code:</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="color coding for uriVL building status report">
+	<tr>
+		<td class="working">Builds fine</td>
+		<td class="minorIssues">Minor issues</td>
+		<td class="majorIssues">Major issues</td>
+		<td class="noCompile">Broken<br></br>(forecoming)</td>
+		<td class="notSupported">Not supported</td>
+	</tr>
+	
+</table>
+
+<p>Status report for the "generic" version of the library was broken down into multiple rows 
+for the different third-party libraries that could be used to build 
+uriVL.</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="Per-platform status report for building uriVL">
+<tr><th rowspan="2" colspan="2"></th><th rowspan="2">Mac OS - Xcode</th><th 
+rowspan="2">Win32 - VS8</th><th colspan="4">CMake</th></tr>
+<tr><th>Mac OS - 
+gcc</th><th>Win32 - VS 8</th><th>Win32 - MinGW</th><th>Linux - gcc</th></tr>
+
+<tr><th colspan="2">QuickTime</th><td class="working">x</td>
+<td class="minorIssues">(1)</td><td class="working">x</td>
+<td class="working">x</td><td class="working">x</td><td 
+class="notSupported">not supported</td>
+</tr>
+
+<tr><th rowspan="5">"Generic"</th><th>"hack reader"</th><td 
+class="working">x</td>
+<td class="working">x</td><td class="working">x</td>
+<td class="working">x</td><td class="working">x</td><td 
+class="working">x</td></tr>
+
+<tr><th>freeimage</th><td class="noCompile">o</td>
+<td class="working">o</td><td class="working">o</td>
+<td class="noCompile">o</td><td class="noCompile">o</td><td 
+class="noCompile">o</td></tr>
+
+<tr><th>libquicktime</th><td class="working">x</td>
+<td class="notSupported">not supported</td><td class="working">x</td>
+<td class="notSupported">not supported</td><td class="notSupported">not supported</td><td 
+class="working">x</td></tr>
+
+<tr><th>libvidcap</th><td class="noCompile">o</td>
+<td class="noCompile">o</td><td class="noCompile">o</td>
+<td class="noCompile">o</td><td class="noCompile">o</td><td 
+class="noCompile">o</td></tr>
+
+<tr><th>fftw</th><td class="noCompile">o</td>
+<td class="noCompile">o</td><td class="noCompile">o</td>
+<td class="noCompile">o</td><td class="noCompile">o</td><td 
+class="noCompile">o</td></tr>
+
+</table>
+
+<p>Issues reported</p>
+<ol>
+    <li> QuickTime for Windows is in a sorry state, due to lack of 
+	continued development by Apple (so we will probably be forced to look 
+	seriously into the Windows Media version). Consequently:
+	<ul>
+		<li>Depending on the codec used, some movies may "play" all black 
+		in the window;</li>
+		<li>Some webcams are not supported by the old QuickTime drivers;
+		</li>
+	</ul></li>
+	
+	<li>There used to be an issue with glut for Linux that the OpenGL 
+	<tt>drawPixel</tt> function would (sometimes) fail to deliver if the pixel map 
+	extended out of the dimensions by a pixel or so.  To circumvent this 
+	problem, many 
+	of the demos have a hack "linux padding" added to the size of 
+	windows.  What this means is that, if the problem is still there, then 
+	the demos that were not updated that way may still have the dmo 
+	problem, and if the problem was fixed, then in some of the demos a 
+	one-pixel-wide line may appear on the right and bottom sides of the 
+	window.</li>
+</ol>
+<h2>2. How to Build the Library </h2>
+
+<h3>2.1 Location and configuration of platform-specific project files</h3>
+
+<p>The present document should be located in the <tt>Development</tt> folder 
+found at the root of the <tt>uriVL</tt> folder hierarchy.  Project files 
+for the different platforms are found within the 
+<tt>Development/Projects</tt> folder.</p>
+
+<h3>2.2 Xcode on the Mac</h3>
+
+<p>In order to build the library, the user needs to 
+define the following source trees (in the Xcode Preferences):</p>
+<ul>
+    <li><b>uriVisionLib</b> should point to the SDK folder within the 
+    uriVisionLib folder, <i>not</i> to the uriVisionLib folder itself.</li>
+
+  <li><b>macports</b> (presumably, the way you would install FreeImage, 
+  fftw, etc.) should point to /opt/local.</li>
+
+  <li><b>libquicktime</b> points to /opt/local.</li>
+
+</ul>
+
+<p>The uriVL Xcode project has two targets:</p>
+
+<ul>
+	
+	<li><b>uriVL - QT</b> builds the "QuickTime" version of
+	the library.</li>
+	
+	<li><b>uriVL - generic</b> builds the "generic" version of
+	the library. I assume that the user will get 
+	libquicktime, freeimage, and fftw3 through MacPort, and therefore 
+	I use the absolute address in /opt/local to find these libraries.</li>
+</ul>
+
+<p>Each target has its own prefix header that you can edit to disable or 
+enable support for various third-party libraries, as indicated in Section 
+1.2.</p>
+
+<p>Simply select one of the two targets (QT or generic) and build the 
+library.  By default the framework is created in /Library/Frameworks.</p>
+
+
+	
+<h3>2.3 Visual Studio on Windows 32</h3>
+
+With Visual Studio 2010, select one of the following two configurations:
+<ul>
+	<li><b>uriVL_QT</b> builds against Apple's QuickTime.  This version 
+	will allow you to read many image types (but not all), play 
+	movie files, and capture live video.  On the downside, image writing 
+	is kinda shaky, and QuickTime for Windows has not been updating in 
+	years and is more and more and more problematic as years pass.</li>
+	
+	<li><b>uriVL_FreeImage</b> builds against the FreeImage library.  It 
+	can read and write pretty much any image format, but does not provide 
+	means to play movies or capture live video (until I actually get 
+	libquicktime or libvidcap to work in Windows).</li>
+</ul>
+
+<p>
+In order to compile the uriVL_QT project correctly you need to first install <a
+href="http://www.quicktime.com">QuickTime</a> on your PC.
+</p>
+
+<p>
+Next, depending on the confiuration you choose, you need to install a few SDKs.  You can either install them inside
+your MS Studio folder (MS-recommended solution) or create a folder named,
+say, SDKs at the root of your C: disk and copy all these SDKs there (our
+recommendation):
+</p>
+
+<ul>
+	<li>The <a
+	href="http://developer.apple.com/quicktime/download/">QuickTime SDK</a>
+	for Windows, from Apple's developer site.</li>
+	
+	<li>The <a href="http://sourceware.org/pthreads-win32/">pthreads
+	SDK</a>,</li>
+	
+	<li>The <a href="http://freeimage.sourceforge.net">FreeImage 
+	SDK</a>.</li>
+	
+	<li>To be able to run demos, either the <a
+	href="http://www.opengl.org/resources/libraries/glut/">glut sdk</a> 
+	(the old original) or the <a 
+	href="http://freeglut.sourceforge.net">freeGlut SDK</a> (newer).</li>
+	
+	<li>[optional] The <a href="http://www.fftw.org/">fftw3 SDK</a> for
+	Fast Fourier Transform computations.</li>
+</ul>
+
+<p>
+Finally, the following environmental variables must be defined: QTSDK,
+URIVL_SDK, and PTHREADS.
+</p>
+
+<ul>
+	<li>The QT_SDK variable should point to the root directory of wherever
+	it is that you installed the QuickTime SDK.</li>
+	
+	<li>The PTHREADS_SDK variable should point to the root directory of
+	wherever it is that you installed the pthreads SDK.</li>
+	
+	<li>The FREEIMAGE_SDK variable should point to the root directory of
+	wherever it is that you installed the FreeImage SDK.</li>
+	
+	<li>The GLUT_SDK variable should point to the root directory of
+	wherever it is that you installed the glut/freeGlut SDK.</li>
+	
+	<li>The URIVL_SDK variable must point to the SDK folder of the URI
+	Vision Library.  In order to accomplish this, there are two ways that I
+	am aware of:
+	
+	<ol>
+		<li>Create a global user defined environmental variable in the
+		windows system control panel.</li>
+		<li>Create a user defined environmental variable under the settings
+		of Visual Studio.</li>
+	</ol>
+	
+	In general the second option is preferrable to the first option as it
+	confines the scope of these variables to Visual Studio.</li>
+</ul>
+
+<p>
+Very important: The paths associated to your environment variables
+<b>must</b> end with a backslash '\', otherwise Visual will not find the
+header files and you will get hundreds of errors.
+</p>
+
+
+<h3>2.4 Cmake</h3>
+
+<p>Simply cd to the folder "Projects/CMake" and do:</p>
+
+<p><tt>cmake .<br></br>
+make all<br></br></tt></p>
+
+
+<p>After the library has built you can go to the "SDK/Demos" folder and try 
+to compile some demos.</p>
+<p><br></br></p>
+<hr></hr>
+<p>
+<a href="http://validator.w3.org/"><img style="border:0;width:88px;height:31px"
+src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" /></a>
+
+<a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+</body>
+
+</html>
+

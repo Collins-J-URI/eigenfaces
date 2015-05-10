@@ -1,0 +1,34 @@
+/*  NAME:
+        uriVL_QT_Prefix.pch
+
+    DESCRIPTION:
+        Precompiled header for the QuickTime version of the framework
+
+    COPYRIGHT:
+        (c) 2003-2007, 3D Group for Interactive Visualization
+                       University of Rhode Island.
+
+        Licensed under the Academic Free License - v. 3.0
+        For more information see http://opensource.org/licenses/academic.php
+*/
+
+#ifndef MAC_QT_FRAMEWORK
+    #define MAC_QT_FRAMEWORK
+    //
+    #define URIVL_USE_QUICKTIME		1
+    //
+    #define URIVL_LIBRARY			1
+    #define URIVL_USE_SOURCE		0
+    #define URIVL_DEBUG_ASSERT		1
+	#define URIVL_VALID_RECT_SAFE	1
+    //
+    #define URIVL_USE_GLUT			0
+    //
+    #define	DEBUG_VERSION			1
+    //
+    #include <Carbon/Carbon.h>
+    #include <OpenGL/gl.h>
+    //
+    #include "uriVisionLib.h"
+    #include "ErrorReport.h"
+#endif

@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="uriVL_QuickTime|Win32">
+      <Configuration>uriVL_QuickTime</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="uriVL_FreeImageDBG|Win32">
+      <Configuration>uriVL_FreeImageDBG</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2520856E-C22A-4744-A211-540D921EED4E}</ProjectGuid>
+    <RootNamespace>uriVisionLib_v2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='uriVL_QuickTime|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='uriVL_FreeImageDBG|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='uriVL_QuickTime|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='uriVL_FreeImageDBG|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\SDK\Libraries\Win32\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='uriVL_FreeImageDBG|Win32'">..\..\..\SDK\Libraries\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='uriVL_FreeImageDBG|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\SDK\Libraries\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='uriVL_QuickTime|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='uriVL_QuickTime|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(PTHREADS)include\;$(QTSDK)RIncludes\;$(QTSDK)ComponentIncludes\;$(QTSDK)CIncludes\;$(URIVL_SDK)Headers\uriVideoSources\;$(URIVL_SDK)Headers\uriNumerical\;$(URIVL_SDK)Headers\uriImageProcessing\;$(URIVL_SDK)Headers\uriComputerVision\;$(URIVL_SDK)Headers\uriTracking\;$(URIVL_SDK)Headers\uriMovieEditing\;$(URIVL_SDK)Headers\uriGraphics\;$(URIVL_SDK)Headers\uriBase\;$(FREE_IMAGE_SDK)FreeImageBinaries\Dist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;URIVL_LIBRARY;URIVL_USE_FREEIMAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>qtmlclient.lib;pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(PTHREADS)lib\;$(QTSDK)Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='uriVL_FreeImageDBG|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(PTHREADS_SDK)include\;$(URIVL_SDK)Headers\uriVideoSources\;$(URIVL_SDK)Headers\uriNumerical\;$(URIVL_SDK)..\Development\Source\C++\_uriPrivateClasses\Headers\;$(URIVL_SDK)Headers\uriImageProcessing\;$(URIVL_SDK)Headers\uriComputerVision\;$(URIVL_SDK)Headers\uriTracking\;$(URIVL_SDK)Headers\uriMovieEditing\;$(URIVL_SDK)Headers\uriGraphics\;$(URIVL_SDK)Headers\uriBase\;$(FREE_IMAGE_SDK)Dist\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;URIVL_LIBRARY;URIVL_USE_FREEIMAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>$(PTHREADS_SDK)\lib\x86\pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(PTHREADS_SDK)\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FREE_IMAGE_SDK)\FreeImageBinaries\Dist;$(PTHREADS)include\;$(QTSDK)RIncludes\;$(QTSDK)ComponentIncludes\;$(QTSDK)CIncludes\;$(URIVL_SDK)Headers\uriVideoSources\;$(URIVL_SDK)Headers\uriNumerical\;$(URIVL_SDK)Headers\uriImageProcessing\;$(URIVL_SDK)Headers\uriComputerVision\;$(URIVL_SDK)Headers\uriTracking\;$(URIVL_SDK)Headers\uriMovieEditing\;$(URIVL_SDK)Headers\uriGraphics\;$(URIVL_SDK)Headers\uriBase\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;URIVL_LIBRARY;URIVL_USE_FREEIMAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>qtmlclient.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTSDK)Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='uriVL_QuickTime|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(PTHREADS_SDK)include\;$(QT_SDK)RIncludes\;$(QT_SDK)ComponentIncludes\;$(QT_SDK)CIncludes\;$(URIVL_SDK)Headers\uriVideoSources\;$(URIVL_SDK)Headers\uriNumerical\;$(URIVL_SDK)Headers\uriImageProcessing\;$(URIVL_SDK)Headers\uriComputerVision\;$(URIVL_SDK)Headers\uriTracking\;$(URIVL_SDK)Headers\uriMovieEditing\;$(URIVL_SDK)Headers\uriGraphics\;$(URIVL_SDK)Headers\uriBase\;$(URIVL_SDK)..\Development\Source\C++\_uriPrivateClasses\Headers\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;URIVL_LIBRARY;URIVL_USE_QUICKTIME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>qtmlclient.lib;$(PTHREADS_SDK)\lib\x86\pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(PTHREADS_SDK)lib\;$(QT_SDK)Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\C++\uriBase\ColorImageHistogram.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\DrawableObject2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\ErrorReport.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\GraphWorld.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\Histogram.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\ImageHistogram.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\ImagePoint.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\ImagePoint_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\ImageRect.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_aRGB16.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_binary.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_gray.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_gray_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_HSV.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_RGB.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_RGBa.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_RGBa_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\Vector2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\Vector2D_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\VectorField.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\VectorField_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriBase\VectorField_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Calibration3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Calibration3D_Kim.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Calibration3D_TsaiW.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Camera.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\DepthMap.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Disparity.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\ElevationMap.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Entity3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters_CCD.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters_pinhole.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters_TsaiW.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\NormalFlowCalculator.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\OrthographicCamera.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\PerspectiveCamera.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Point3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\RangeMap.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\ReferenceFrame3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\RigidTransformation3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Rotation3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Transformation3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Translation3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Vector3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualFace3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualObject3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualObjectLoader.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualPart3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualPoint3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\WeakPerspectiveCamera.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Box3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Cone3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Cylinder3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\GraphicComponent3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\HalfCone3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\HalfCylinder3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\PolyMesh3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Prism3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\SimpleGraphicObject2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\TubularSection3D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ActiveContourDetector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ActiveContourDetector_balloon.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ActiveContourDetector_GVF.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Blob.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\BlobFinder.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorGaussianFilter.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorGaussianFilter_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorGaussianFilter_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient_Gaussian_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient_Gaussian_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient_Sobel.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorInverseThresholdLabeler.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorMedianFilter.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorMedianFilter_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorMedianFilter_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorSegParams.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorThresholdLabeler.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Contour.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ContourDetector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ContourForce.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Contour_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Contour_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\EdgeDetector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\FeatureDetector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GaussianFilter.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GaussianFilter_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GaussianFilter_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GrayThresholdLabeler.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\HistogramCalculator.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\HysteresisLabeler.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageArithmetics.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageFeature.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient_Gaussian_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient_Gaussian_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient_Sobel.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian_Gaussian_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian_Gaussian_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian_Sobel.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageOperator.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageTransformation.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageWarper.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageWarper_GL.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Labeler.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\LabelRaster.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\MedianFilter.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\MedianFilter_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\MedianFilter_I.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\NonMaximumSuppressor.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2DMatchRecord.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2DMatchRecord_part.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2DMatchRecord_scale.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_corr.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_medianDiff.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_partCorr.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_scaledDiff.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D_ICP.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D_LMICP.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D_LPCD.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\RigidTransformation2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Rotation2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Segmenter.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Transformation2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Translation2D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\VectorOperator.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ZeroCrossingDetector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\ConfidenceRecord.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Function1D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Function1D_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionND.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionNDSection1D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionNDSection1D_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionND_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\HomogeneousMatrix.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\IterationStatus.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolverRecord.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_Cholesky.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_GaussSeidel.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_Jacobi.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_LU.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_QR.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_SOR.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_SVD.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Matrix.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D_Brent.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D_gss.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D_parab.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizerND.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizerND_conjDir.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\OptimizerRecord1D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\OptimizerRecordND.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\PolynomialFunction1D.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\PolynomialFunction1D_F.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Quaternion.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_C.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_Knuth.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_MT.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_R250_521.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RowVector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\FrameGrabber.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\ImageReader.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\MoviePlayer.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\VideoSource.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriMovieEditing\ImageWriter.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriMovieEditing\VideoDestination.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriNumerical\ColumnVector.cpp" />
+    <ClCompile Include="..\..\Source\C++\uriGraphics\GlUtils.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_FrameGrabber_gen.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_FrameGrabber_QT.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_GraphWorld_gen.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_GraphWorld_QT.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageReader_FreeImage.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageReader_hack.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageReader_QT.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageTransformation_FreeImage.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageTransformation_QT.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageWriter_FreeImage.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageWriter_hack.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageWriter_QT.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_MoviePlayer_libquicktime.cpp" />
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_MoviePlayer_QT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\DrawableObject2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ErrorReport.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\GraphWorld.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\Histogram.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImageHistogram.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImagePoint.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImagePoint_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImageRect.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_aRGB16.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_binary.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_gray.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_gray_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_HSV.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_HSV24.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_Lab.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_RGB.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_RGBa.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_RGBa_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\uriVisionLib.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\Vector2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\Vector2D_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\VectorField.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\VectorField_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\VectorField_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D_dyn.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D_Kim.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D_TsaiW.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Camera.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\DepthMap.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Disparity.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\ElevationMap.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Entity3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_CCD.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_DLT.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_pinhole.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_TsaiW.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\NormalFlowCalculator.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Object3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\OrthographicCamera.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\PerspectiveCamera.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Point3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RangeMap.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoDisparity.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatch.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatcher.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatcher_corr.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatcher_JJL.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoPair.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\ReferenceFrame3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Registration3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RigidTransformation3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Rotation3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoDisparity.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoMatcher.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoMatchRecord.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoPair.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Transformation3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Translation3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Vector3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualFace3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualObject3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualObjectLoader.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualPart3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualPoint3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\WeakPerspectiveCamera.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Box3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Cone3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Cylinder3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\GlUtils.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\GraphicComponent3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\HalfCone3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\HalfCylinder3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectLoader3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectLoader3D_3jy.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectLoader3D_obj.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectParser3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\PolyMesh3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Prism3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\SimpleGraphicObject2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\TubularSection3D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ActiveContourDetector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ActiveContourDetector_balloon.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ActiveContourDetector_GVF.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\BlobFinder.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorGaussianFilter.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorGaussianFilter_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorGaussianFilter_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient_Gaussian_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient_Gaussian_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient_Sobel.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian_Gaussian_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian_Gaussian_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian_Sobel.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorInverseThresholdLabeler.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorMedianFilter.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorMedianFilter_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorMedianFilter_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorRegions.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorSegParams.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorThresholdLabeler.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Contour.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ContourDetector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ContourForce.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Contour_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Contour_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Corner.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\EdgeDetector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\EdgeDetector_Canny_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\EdgeDetector_Canny_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\FeatureDetector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GaussianFilter.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GaussianFilter_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GaussianFilter_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GrayThresholdLabeler.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\HistogramCalculator.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\HysteresisLabeler.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageArithmetics.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageFeature.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient_Gaussian_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient_Gaussian_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient_Sobel.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian_Gaussian_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian_Gaussian_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian_Sobel.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageOperator.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImagePyramid.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageStitcher.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageTransformation.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageWarper.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageWarper_GL.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Labeler.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\LabelRaster.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ManualStitcher.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\MedianFilter.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\MedianFilter_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\MedianFilter_I.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\NonMaximumSuppressor.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2DMatchRecord.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2DMatchRecord_part.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2DMatchRecord_scale.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_corr.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_medianDiff.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_partCorr.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_scaledDiff.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D_ICP.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D_LMICP.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D_LPCD.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\RigidTransformation2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Rotation2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Segmenter.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ThresholdLabeler.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Transformation2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Translation2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\VectorOperator.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ZeroCrossingDetector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\ColumnVector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\ConfidenceRecord.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Function1D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Function1D_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionND.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionNDSection1D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionNDSection1D_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionND_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\HomogeneousMatrix.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\IterationStatus.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolverRecord.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_Cholesky.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_GaussSeidel.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_Jacobi.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_LU.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_QR.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_SOR.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_SVD.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Matrix.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D_Brent.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D_gss.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D_parab.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizerND.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizerND_conjDir.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\OptimizerRecord1D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\OptimizerRecordND.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\PolynomialFunction1D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\PolynomialFunction1D_F.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Quaternion.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_C.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_Knuth.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_MT.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_R250_521.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RowVector.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\BlobTracker2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriMovieEditing\ImageWriter.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriMovieEditing\VideoDestination.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\BlobTracker2DController.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\BlobTrackingState.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\CornerTrackingState.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\PatternTracker2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\PatternTracker2DController.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\PatternTrackingState.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\SegmentTrackingState.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\ShapeTrackingState.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\Tracker2D.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\Tracker2DController.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\Tracker2D_PID.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\TrackingState.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\BufferRing.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Blob.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ColorImageHistogram.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\FrameGrabber.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\ImageReader.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\MoviePlayer.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\SequenceGrabber.h" />
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\VideoSource.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_FrameGrabber_libvidcap.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_FrameGrabber_QT.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_GraphWorld_gen.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_GraphWorld_QT.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageReader_FreeImage.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageReader_hack.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageReader_QT.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageTransformation_FreeImage.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageTransformation_QT.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageWriter_FreeImage.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageWriter_hack.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageWriter_QT.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_MoviePlayer_libquicktime.h" />
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_MoviePlayer_QT.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\..\..\uriVisionLib license.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

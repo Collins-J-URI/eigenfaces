@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\uriBase">
+      <UniqueIdentifier>{2b34aa52-2265-415f-9b52-661ed7863d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uriComputerVision">
+      <UniqueIdentifier>{da6df507-fb0f-4710-b716-40d0b414ef21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uriImageProcessing">
+      <UniqueIdentifier>{9748f44b-325c-4aed-b45c-fdffafec7066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uriVideoSources">
+      <UniqueIdentifier>{742b85d0-d844-4a80-a48d-7046657e0f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uriMovieEditing">
+      <UniqueIdentifier>{82f0502b-3b1a-46f5-90fb-873386c3d347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uriNumerical">
+      <UniqueIdentifier>{cc184fd9-0c7a-43f6-844e-2132d26a93d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uriGraphics">
+      <UniqueIdentifier>{bf4dee9f-7064-4284-a590-b9ddaa1f3b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\uriGraphics">
+      <UniqueIdentifier>{ba7c4434-992d-41ca-b8a5-0ae158bca911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriNumerical">
+      <UniqueIdentifier>{a7c98ad4-47ad-42d9-8169-12746abe247e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriTracking">
+      <UniqueIdentifier>{0997057e-bb33-4f7a-ba3d-d6980c1eff40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriMovieEditing">
+      <UniqueIdentifier>{43dd68c6-ce50-4698-8abf-3c50f3f4be91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriVideoSources">
+      <UniqueIdentifier>{6b465f60-3d81-4be7-bd61-243d5f4112ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriImageProcessing">
+      <UniqueIdentifier>{ad20b4ce-59c2-426c-9982-ea04623b4eae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriComputerVision">
+      <UniqueIdentifier>{7d3e1108-ed7b-47e1-b499-c4d281a288b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uriBase">
+      <UniqueIdentifier>{592e8ede-65a4-4265-92fd-d5c3e801a2b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_uriPrivateClasses">
+      <UniqueIdentifier>{c3d174cd-959c-4ade-b7e8-1404101c7a50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_uriPrivateClasses">
+      <UniqueIdentifier>{38bc4dbc-580c-4fbc-96ae-b80c3e44a049}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\C++\uriBase\ColorImageHistogram.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ZeroCrossingDetector.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\FrameGrabber.cpp">
+      <Filter>Source Files\uriVideoSources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\ImageReader.cpp">
+      <Filter>Source Files\uriVideoSources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\VideoSource.cpp">
+      <Filter>Source Files\uriVideoSources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriMovieEditing\ImageWriter.cpp">
+      <Filter>Source Files\uriMovieEditing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriMovieEditing\VideoDestination.cpp">
+      <Filter>Source Files\uriMovieEditing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\ColumnVector.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\GlUtils.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\PolyMesh3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Prism3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\SimpleGraphicObject2D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\TubularSection3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Box3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Cone3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\Cylinder3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\GraphicComponent3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\HalfCone3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriGraphics\HalfCylinder3D.cpp">
+      <Filter>Source Files\uriGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionNDSection1D_F.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\HomogeneousMatrix.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\IterationStatus.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_Cholesky.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_GaussSeidel.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_Jacobi.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_LU.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_QR.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_SOR.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolver_SVD.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\LinearSolverRecord.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Matrix.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D_Brent.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D_gss.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizer1D_parab.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizerND.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\NonlinearOptimizerND_conjDir.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\OptimizerRecord1D.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\OptimizerRecordND.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\PolynomialFunction1D.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\PolynomialFunction1D_F.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Quaternion.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_C.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_Knuth.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_MT.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RandomGenerator_R250_521.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\RowVector.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\ConfidenceRecord.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Function1D.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\Function1D_F.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionND.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionND_F.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriNumerical\FunctionNDSection1D.cpp">
+      <Filter>Source Files\uriNumerical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\DrawableObject2D.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\ErrorReport.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\GraphWorld.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\Histogram.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\ImageHistogram.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\ImagePoint.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\ImagePoint_F.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\ImageRect.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_aRGB16.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_binary.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_gray.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_gray_F.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_HSV.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_RGB.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_RGBa.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\RasterImage_RGBa_F.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\Vector2D.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\Vector2D_F.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\VectorField.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\VectorField_F.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriBase\VectorField_I.cpp">
+      <Filter>Source Files\uriBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\ReferenceFrame3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\RigidTransformation3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Rotation3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Transformation3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Translation3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Vector3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualFace3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualObject3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualObjectLoader.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualPart3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\VirtualPoint3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\WeakPerspectiveCamera.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Calibration3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Calibration3D_Kim.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Calibration3D_TsaiW.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Camera.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\DepthMap.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Disparity.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\ElevationMap.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Entity3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters_CCD.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters_pinhole.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\IntrinsicParameters_TsaiW.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\NormalFlowCalculator.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\OrthographicCamera.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\PerspectiveCamera.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\Point3D.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriComputerVision\RangeMap.cpp">
+      <Filter>Source Files\uriComputerVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ActiveContourDetector.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ActiveContourDetector_balloon.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ActiveContourDetector_GVF.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Blob.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\BlobFinder.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorGaussianFilter.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorGaussianFilter_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorGaussianFilter_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient_Gaussian_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient_Gaussian_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorImageGradient_Sobel.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorInverseThresholdLabeler.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorMedianFilter.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorMedianFilter_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorMedianFilter_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorSegParams.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ColorThresholdLabeler.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Contour.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Contour_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Contour_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ContourDetector.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ContourForce.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\EdgeDetector.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\FeatureDetector.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GaussianFilter.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GaussianFilter_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GaussianFilter_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\GrayThresholdLabeler.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\HistogramCalculator.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\HysteresisLabeler.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageArithmetics.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageFeature.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient_Gaussian_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient_Gaussian_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageGradient_Sobel.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian_Gaussian_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian_Gaussian_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageLaplacian_Sobel.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageOperator.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageTransformation.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageWarper.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\ImageWarper_GL.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Labeler.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\LabelRaster.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\MedianFilter.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\MedianFilter_F.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\MedianFilter_I.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\NonMaximumSuppressor.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2DMatchRecord.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2DMatchRecord_part.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Pattern2DMatchRecord_scale.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_corr.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_medianDiff.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_partCorr.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\PatternMatcher2D_scaledDiff.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D_ICP.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D_LMICP.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Registration2D_LPCD.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\RigidTransformation2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Rotation2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Segmenter.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Transformation2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\Translation2D.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriImageProcessing\VectorOperator.cpp">
+      <Filter>Source Files\uriImageProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\uriVideoSources\MoviePlayer.cpp">
+      <Filter>Source Files\uriVideoSources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageTransformation_QT.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageWriter_FreeImage.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageWriter_hack.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageWriter_QT.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_MoviePlayer_libquicktime.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_MoviePlayer_QT.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_FrameGrabber_gen.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_FrameGrabber_QT.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_GraphWorld_gen.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_GraphWorld_QT.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageReader_FreeImage.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageReader_hack.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageReader_QT.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\C++\_uriPrivateClasses\Source\_ImageTransformation_FreeImage.cpp">
+      <Filter>Source Files\_uriPrivateClasses</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\ColumnVector.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\BlobTracker2D.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriMovieEditing\ImageWriter.h">
+      <Filter>Header Files\uriMovieEditing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriMovieEditing\VideoDestination.h">
+      <Filter>Header Files\uriMovieEditing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\BufferRing.h">
+      <Filter>Header Files\uriVideoSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Blob.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ColorImageHistogram.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageTransformation_FreeImage.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageTransformation_QT.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageWriter_FreeImage.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageWriter_hack.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageWriter_QT.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_MoviePlayer_libquicktime.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_MoviePlayer_QT.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_FrameGrabber_libvidcap.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_FrameGrabber_QT.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_GraphWorld_gen.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_GraphWorld_QT.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageReader_FreeImage.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageReader_hack.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\C++\_uriPrivateClasses\Headers\_ImageReader_QT.h">
+      <Filter>Header Files\_uriPrivateClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\DrawableObject2D.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ErrorReport.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\GraphWorld.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\Histogram.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImageHistogram.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImagePoint.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImagePoint_F.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\ImageRect.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_aRGB16.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_binary.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_gray.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_gray_F.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_HSV.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_HSV24.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_Lab.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_RGB.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_RGBa.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\RasterImage_RGBa_F.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\uriVisionLib.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\Vector2D.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\Vector2D_F.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\VectorField.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\VectorField_F.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriBase\VectorField_I.h">
+      <Filter>Header Files\uriBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\ElevationMap.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Entity3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_CCD.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_DLT.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_pinhole.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\IntrinsicParameters_TsaiW.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\NormalFlowCalculator.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Object3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\OrthographicCamera.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\PerspectiveCamera.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Point3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RangeMap.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoDisparity.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatch.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatcher.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatcher_corr.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoMatcher_JJL.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RectifiedStereoPair.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\ReferenceFrame3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Registration3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\RigidTransformation3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Rotation3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoDisparity.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoMatcher.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoMatchRecord.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\StereoPair.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Transformation3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Translation3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Vector3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualFace3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualObject3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualObjectLoader.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualPart3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\VirtualPoint3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\WeakPerspectiveCamera.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D_dyn.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D_Kim.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Calibration3D_TsaiW.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Camera.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\DepthMap.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriComputerVision\Disparity.h">
+      <Filter>Header Files\uriComputerVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\HalfCylinder3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectLoader3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectLoader3D_3jy.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectLoader3D_obj.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\ObjectParser3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\PolyMesh3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Prism3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\SimpleGraphicObject2D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\TubularSection3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Box3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Cone3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\Cylinder3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\GlUtils.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\GraphicComponent3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriGraphics\HalfCone3D.h">
+      <Filter>Header Files\uriGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian_Gaussian_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian_Gaussian_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageLaplacian_Sobel.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorInverseThresholdLabeler.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorMedianFilter.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorMedianFilter_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorMedianFilter_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorRegions.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorSegParams.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorThresholdLabeler.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Contour.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Contour_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Contour_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ContourDetector.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ContourForce.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Corner.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\EdgeDetector.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\EdgeDetector_Canny_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\EdgeDetector_Canny_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\FeatureDetector.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GaussianFilter.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GaussianFilter_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GaussianFilter_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\GrayThresholdLabeler.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\HistogramCalculator.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\HysteresisLabeler.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageArithmetics.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageFeature.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient_Gaussian_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient_Gaussian_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageGradient_Sobel.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian_Gaussian_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian_Gaussian_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageLaplacian_Sobel.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageOperator.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImagePyramid.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageStitcher.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageTransformation.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageWarper.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ImageWarper_GL.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Labeler.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\LabelRaster.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ManualStitcher.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\MedianFilter.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\MedianFilter_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\MedianFilter_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\NonMaximumSuppressor.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2DMatchRecord.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2DMatchRecord_part.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Pattern2DMatchRecord_scale.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_corr.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_medianDiff.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_partCorr.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\PatternMatcher2D_scaledDiff.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D_ICP.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D_LMICP.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Registration2D_LPCD.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\RigidTransformation2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Rotation2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Segmenter.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ThresholdLabeler.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Transformation2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\Translation2D.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\VectorOperator.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ZeroCrossingDetector.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ActiveContourDetector.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ActiveContourDetector_balloon.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ActiveContourDetector_GVF.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\BlobFinder.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorGaussianFilter.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorGaussianFilter_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorGaussianFilter_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient_Gaussian_F.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient_Gaussian_I.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriImageProcessing\ColorImageGradient_Sobel.h">
+      <Filter>Header Files\uriImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionND_F.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionNDSection1D.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionNDSection1D_F.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\HomogeneousMatrix.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\IterationStatus.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_Cholesky.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_GaussSeidel.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_Jacobi.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_LU.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_QR.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_SOR.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolver_SVD.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\LinearSolverRecord.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Matrix.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D_Brent.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D_gss.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizer1D_parab.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizerND.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\NonlinearOptimizerND_conjDir.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\OptimizerRecord1D.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\OptimizerRecordND.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\PolynomialFunction1D.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\PolynomialFunction1D_F.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Quaternion.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_C.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_Knuth.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_MT.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RandomGenerator_R250_521.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\RowVector.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\ConfidenceRecord.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Function1D.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\Function1D_F.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriNumerical\FunctionND.h">
+      <Filter>Header Files\uriNumerical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\ShapeTrackingState.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\Tracker2D.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\Tracker2D_PID.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\Tracker2DController.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\TrackingState.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\BlobTracker2DController.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\BlobTrackingState.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\CornerTrackingState.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\PatternTracker2D.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\PatternTracker2DController.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\PatternTrackingState.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriTracking\SegmentTrackingState.h">
+      <Filter>Header Files\uriTracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\ImageReader.h">
+      <Filter>Header Files\uriVideoSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\MoviePlayer.h">
+      <Filter>Header Files\uriVideoSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\SequenceGrabber.h">
+      <Filter>Header Files\uriVideoSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\VideoSource.h">
+      <Filter>Header Files\uriVideoSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SDK\Headers\uriVideoSources\FrameGrabber.h">
+      <Filter>Header Files\uriVideoSources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\..\..\uriVisionLib license.html" />
+  </ItemGroup>
+</Project>

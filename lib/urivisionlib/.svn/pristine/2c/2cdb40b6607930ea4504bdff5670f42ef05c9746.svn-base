@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="../ieHack.xsl"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+<title>uriVL: Issues, Bugs, and To-do Lists</title>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<meta name="generator" content="Alpha X" />
+
+<style type="text/css" media="screen">
+
+td.demoName {
+  text-align: center;
+  width: 15%;
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoPurpose {
+  text-align: center;
+  width: 49%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoPlatform {
+  text-align: center;
+  width: 6%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.working {
+  text-align: center;
+  background-color: #00CC33;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.minorIssues {
+  text-align: center;
+  background-color: #FFFF90;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.majorIssues {
+  text-align: center;
+  background-color: #DD9933;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.noCompile {
+  text-align: center;
+  background-color: #DD2211;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.broken {
+  text-align: center;
+  background-color: #DD2211;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.notSupported {
+  text-align: center;
+  background-color: #CCCCCC;
+  background-image: none;  
+  color: #000000;
+ }
+</style>
+
+</head>
+
+
+
+<body>
+<p><b>Last modified:</b><br></br>&#160;&#160;&#160;
+		<!-- #lastmodified text="" form="abbrev,weekday,time" -->
+		           Thu, 24 Mar 2011 11:03
+		<!-- /#lastmodified -->
+</p>
+
+<h2>1. Current Development Status</h2>
+
+<p>Right now I (jyh) am back as sole developer of the library.  There are several 
+users of uriVL (for the CSC583 vision class, the various KSU projects, and the driver 
+assistance project, for example) but these users currently only contribute to the 
+library through bug reports.  Hopefully this will change soon, in particular for the 
+iOS and Kinect versions of the library.</p>
+
+<p>Currently I am in the middle of a major cleanup of uriVL.  This is done on a separate 
+branch of the code that will be merged back once the demos build and run at a level 
+comparable or better to the current level.  The changes being made 
+concern:</p>
+<ul>
+	<li>Pervasive use of const modifiers,</li>
+	<li>Consistent use of member initialization lists in constructors,</li>
+	<li>Much more consistent exception handling,</li>
+	<li>Uniformization of naming conventions,</li>
+	<li>Elimination of member redeclarations by moving back a lot of members (after 
+	renaming) into the parent classes,</li>
+	<li>Generally a lot of debugging of improper intialization and memory 
+	leaks.</li>
+</ul>
+
+<h2>2. Highest Priority Development</h2>
+
+<h3>2.1 Finish overhaul</h3>
+<p>As discussed above.  This is highest priority, would it be only because 
+it has been going on since August. :-)</p>
+
+<h3>2.2 Implement 12-bit and 16-bit gray-level images</h3>
+
+<p>This is the only new development that should be taking place before the 
+overhaul is over, because this class is needed by both the CTEM and 
+Kinect-based projects.</p>
+
+<h2>3. Major Issues and Bugs</h2>
+
+<h3>3.1 Video grabbing broken on Windows with LogiTech (and other?) webcams</h3>
+<p>The problem was discovered Jan. 15 during work for the PILI project.  
+It seems to be that the webcam is seen as SECAM [???].  The QTCap 
+application seems to be grabbing to a window just fine, but previews in 
+the video setting window are afflicted with the same problem (including 
+SECAM setting).</p>
+
+<h3>3.2 Cmake projects</h3>
+<p>The whole cmake setup needs a major cleanup.  I don't think that it 
+really works on Linux anymore.</p>
+
+
+<h2>4. To-do List</h2>
+
+<p>Items that it would be nice to take care of, but that in the meantime 
+do not seriously impede use of the library for useful projects.  These 
+items are listed in no particular order.  Feel free to tackle when you 
+have free time.</p>
+
+<h3>4.1 Mac OS X framework</h3>
+<p>Xcode project still does not produce a usable framework (really 
+embarrassing).  </p>
+
+<h3>4.2 Doxygen documentation</h3>
+<p>Many functions have broken Doxygen documentation.  Needs a 
+refresh/cleanup.</p>
+
+<h3>4.3 Update Windows demo projects</h3>
+<p>Most demos still only have a Visual 8 project.</p>
+
+<h3>4.4 Visual Studio demos</h3>
+<p>Windows studio projects still produce their output in the SDK/Library 
+subfolder.  No good reason for that.</p>
+
+<h3>4.5 Centroid/Center of mass info</h3>
+<p>When the object is translated the centroid, center of mass, etc. should 
+just be translated as well.  Now they are (forced to be) recomputed.</p>
+
+<h3>4.6 Temp raster of an ImageOperator or VectorOperator</h3>
+<p>Some operators that are going to work on a numebr of images with the same 
+dimensions (typically in the case of video processing) may need to preallocate
+a temporary raster to do some calculations in (e.g. GaussianFilter 
+classes).  That allocation/freeing should be done in the root classes 
+ImageOperator and VectorOperator rather than replicated in the subclasses. 
+This means that the handling of RasterImage_gray vs. RasterImage_gray_F 
+vs. RasterImage_RGBa vs. RasterImage_RGBa_F for the temp raster (and 
+associated raster getters) must be handled there as well.</p>
+
+<h2>5. Future Development and Classes in Need of Recoding</h2>
+
+<h3>5.1 Color Regions</h3>
+<p>Currenlty color regions are only defined in HSV space.  Definition in 
+other color spaces should be added to the library.</p>
+
+<h3>5.2 Reference up to date</h3>
+<p>The whole "x is reference" and "reference is up to date" organization 
+needs serious rethinking.</p>
+
+<h3>5.3 Pervasive multithreading</h3>
+<p>Many of the operators can be coded with multithreaded computation support.  This 
+would take yet another setting in the precompiled headers, for example</p>
+
+<tt>URIVL_THREADING_LEVEL      8</tt>
+
+<p>indicating 8 threads for every operator suitable to multithreading.  
+Default value is 1.</p>
+
+<p>The doxygen documentation should indicate which classes are 
+multithreading-ready.</p>
+
+<h3>5.4 CUDA and/or OpenCL</h3>
+<p>Similarly, some classes could/should be implemented with CUDA and/or 
+OpenCL support.  Selection of this computation mode would be activated by 
+a precompiler statement</p>
+<ul>
+	<li><tt>URIVL_USE_CUDA</tt></li>
+	<li><tt>URIVL_USE_OPEN_CL</tt></li>
+</ul>
+
+
+<p><br></br></p>
+<hr></hr>
+<p>
+<a href="http://validator.w3.org/"><img style="border:0;width:88px;height:31px"
+src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" /></a>
+
+<a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+</body>
+
+</html>
+
