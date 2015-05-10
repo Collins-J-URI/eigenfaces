@@ -22,5 +22,4 @@ all: $(SOURCES)
 	$(CC) $(INC_PARAMS) $(LIB) $^ $(TESTER) -o $(TARGET)
 
 clean:
-	rm build/*
-	rm output/*.txt
+	rm $(TARGET)
