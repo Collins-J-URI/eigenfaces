@@ -1,0 +1,76 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 934F7BBF10B49F0600AAB8AD /* texture demo */;
+		activeTarget = 8DD76F620486A84900D96B5E /* texture demo */;
+		codeSenseManager = 934F7BD610B49F0E00AAB8AD /* Code sense */;
+		executables = (
+			934F7BBF10B49F0600AAB8AD /* texture demo */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 378371209;
+			PBXWorkspaceStateSaveDate = 378371209;
+		};
+		sourceControlManager = 934F7BD510B49F0E00AAB8AD /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	165AFBAC1007AC0B00603252 /* textureExample.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {851, 8892}}";
+			sepNavSelRange = "{6041, 0}";
+			sepNavVisRange = "{5150, 1199}";
+		};
+	};
+	8DD76F620486A84900D96B5E /* texture demo */ = {
+		activeExec = 0;
+		executables = (
+			934F7BBF10B49F0600AAB8AD /* texture demo */,
+		);
+	};
+	934F7BBF10B49F0600AAB8AD /* texture demo */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "texture demo";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	934F7BD510B49F0E00AAB8AD /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	934F7BD610B49F0E00AAB8AD /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

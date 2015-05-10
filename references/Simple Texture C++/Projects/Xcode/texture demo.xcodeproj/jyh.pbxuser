@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 165AFB8C1007ABC700603252 /* texture demo */;
+		activeTarget = 8DD76F620486A84900D96B5E /* texture demo */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* texture demo */,
+		);
+		codeSenseManager = 165AFB951007ABC900603252 /* Code sense */;
+		executables = (
+			165AFB8C1007ABC700603252 /* texture demo */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 268938238;
+			PBXWorkspaceStateSaveDate = 268938238;
+		};
+		sourceControlManager = 165AFB941007ABC900603252 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	165AFB8C1007ABC700603252 /* texture demo */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "texture demo";
+		sourceDirectories = (
+		);
+	};
+	165AFB941007ABC900603252 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	165AFB951007ABC900603252 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	165AFBA91007AC0B00603252 /* fileIO_PPM.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {552, 3322}}";
+			sepNavSelRange = "{67, 0}";
+			sepNavVisRange = "{0, 214}";
+		};
+	};
+	165AFBAA1007AC0B00603252 /* fileIO_SGI.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {756, 1837}}";
+			sepNavSelRange = "{69, 0}";
+			sepNavVisRange = "{0, 1581}";
+		};
+	};
+	165AFBAC1007AC0B00603252 /* textureExample.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {594, 6622}}";
+			sepNavSelRange = "{18330, 0}";
+			sepNavVisRange = "{18328, 280}";
+		};
+	};
+	8DD76F620486A84900D96B5E /* texture demo */ = {
+		activeExec = 0;
+		executables = (
+			165AFB8C1007ABC700603252 /* texture demo */,
+		);
+	};
+}
