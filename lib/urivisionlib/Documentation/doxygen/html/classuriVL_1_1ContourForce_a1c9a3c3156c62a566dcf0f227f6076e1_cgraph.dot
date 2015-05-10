@@ -1,0 +1,13 @@
+digraph "uriVL::ContourForce::addForce"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ContourForce\l::addForce",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ContourForce\l::getContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ContourForce.html#a0a645c4f5106656ddf2b4ec78bca1cec",tooltip="Returns a read-only pointer to the contour force&#39;s geometric contour (list of points) ..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ContourForce\l::getForce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ContourForce.html#a3feabd49930e13e8d29c0e4f90bc0541",tooltip="Returns a writable pointer to the contour force&#39;s geometric contour (list of points) ..."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Contour_F::getNbPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#aa0b25033e2deeffcce76f9f5230d1f7e",tooltip="Gives the number of points along the contour. "];
+}

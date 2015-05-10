@@ -1,0 +1,11 @@
+digraph "uriVL::BufferRing::write"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::BufferRing::\lwrite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::BufferRing::\lcycle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1BufferRing.html#a5b1d9ae5781777afdcabe9e5b5cddc82",tooltip="Cycles the pointers into the array to facilitate frame grabbing. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::BufferRing::\lisLocked",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1BufferRing.html#a93b715081d8089ab4a0c4ef44a66602c",tooltip="Determines whether or not a given index is free to be written to. "];
+}

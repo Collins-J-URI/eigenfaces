@@ -1,0 +1,13 @@
+digraph "uriVL::RandomGenerator_C"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="uriVL::RandomGenerator_C",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RandomGenerator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator.html",tooltip="Pure virtual parent class for pseudorandom number generators. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" INT_IS_LONG" ,fontname="Helvetica"];
+  Node3 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FULL_IN_ULONG\nseed_\nRES_TO_UINT\nFULL_IN_UINT\nRES_TO_ULONG" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rg_" ,fontname="Helvetica"];
+}

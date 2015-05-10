@@ -1,0 +1,22 @@
+digraph "uriVL::StereoDisparity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="uriVL::StereoDisparity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Disparity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Disparity.html",tooltip="Generic class for all sort of disparities (stereo, motion in particular). "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" score_" ,fontname="Helvetica"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" isSubpixelDisparity_" ,fontname="Helvetica"];
+  Node4 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" disparity_" ,fontname="Helvetica"];
+  Node5 [label="uriVL::Vector2D_F",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Vector2D__F.html",tooltip="Implements the Vector2D_F class. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::Vector2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Vector2D.html",tooltip="Implements the Vector2D class. "];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" y_\nx_" ,fontname="Helvetica"];
+  Node7 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xf_\nyf_" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type_" ,fontname="Helvetica"];
+  Node8 [label="StereoDisparityType",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" isRectifiedStereoDisparity_" ,fontname="Helvetica"];
+}

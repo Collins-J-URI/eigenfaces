@@ -1,0 +1,15 @@
+digraph "uriVL::WarpMatchScoreFunctionND::WarpMatchScoreFunctionND"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::WarpMatchScoreFunction\lND::WarpMatchScoreFunctionND",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImageWarper\l::getBorderWarpingMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageWarper.html#ab1d8f66147f1c11cc4fe0f11056bb461",tooltip="Returns the warper&#39;s border warping mode. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImageWarper\l::getInnerWarpingMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageWarper.html#a699bf4cbc900089a6cca0202626f3ccb",tooltip="Returns the warper&#39;s inner warping mode. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImageWarper\l::getNbGridCols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageWarper.html#a5fb800a8daf0b0b0fc0bb3c0262520aa",tooltip="Returns the number of columns on this warper&#39;s grid. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::ImageWarper\l::getNbGridRows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageWarper.html#a75f21d2ea79fb18d02b7c855ee00ef29",tooltip="Returns the number of rows on this warper&#39;s grid. "];
+}

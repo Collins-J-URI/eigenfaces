@@ -1,0 +1,13 @@
+digraph "uriVL::Disparity::setDisparity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Disparity::setDisparity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Vector2D::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Vector2D.html#adf68cdb1ee4f2893901a8e2a8ddb0222",tooltip="Returns the pixel&#39;s x coordinate. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Vector2D::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Vector2D.html#a628cfb743cef10647c281626f42a3eb0",tooltip="Returns the pixel&#39;s y coordinate. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Vector2D_F::\lsetCoordinates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Vector2D__F.html#a5d575f09840f67079c468d58a8738998",tooltip="Assigns new coordinates to the vector. "];
+}

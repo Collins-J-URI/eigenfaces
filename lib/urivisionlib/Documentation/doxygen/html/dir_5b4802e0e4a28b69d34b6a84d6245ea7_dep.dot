@@ -1,0 +1,11 @@
+digraph "uriVideoSources" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3ed09e8ce6640af79318ee4a8db1ede0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Headers" fontname="Helvetica", fontsize="10", URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"]
+  dir_5b4802e0e4a28b69d34b6a84d6245ea7 [shape=box, label="uriVideoSources", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5b4802e0e4a28b69d34b6a84d6245ea7.html"];
+  }
+  dir_26171669b93c5a18bd4e2e3169ff538c [shape=box label="uriBase" URL="dir_26171669b93c5a18bd4e2e3169ff538c.html"];
+  dir_5b4802e0e4a28b69d34b6a84d6245ea7->dir_26171669b93c5a18bd4e2e3169ff538c [headlabel="7", labeldistance=1.5 headhref="dir_000026_000032.html"];
+}

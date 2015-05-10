@@ -1,0 +1,15 @@
+digraph "uriVL::ActiveContourDetector_balloon::setImageProperties"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ActiveContourDetector\l_balloon::setImageProperties",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ContourForce\l::mapToContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ContourForce.html#aa90a9e0bae67c24951571bcf169cf2f7",tooltip="Assigns a contour to which the force is currently applied to. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Contour_F::getNbPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#aa0b25033e2deeffcce76f9f5230d1f7e",tooltip="Gives the number of points along the contour. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ActiveContourDetector\l::setContour_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ActiveContourDetector.html#ae782aaca56b44a8242aff0885f67dd46",tooltip="Assigns a contour object, typically, to start an iteration. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::ActiveContourDetector\l::setGradientRasters_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ActiveContourDetector.html#abbd196fef70f14f43a8a47ba4763581e",tooltip="This function should be called for video-rate applications that must re-use the same rasters for perf..."];
+}

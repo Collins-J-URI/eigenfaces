@@ -1,0 +1,10 @@
+digraph "LinearSolver_GaussSeidel.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="LinearSolver_GaussSeidel.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LinearSolver_GaussSeidel.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LinearSolver__GaussSeidel_8cpp.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SLE_Solvers_main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SLE__Solvers__main_8cpp.html"];
+}

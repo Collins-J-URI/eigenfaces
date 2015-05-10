@@ -1,0 +1,32 @@
+digraph "C++" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f85d67bd6e0abf70e0998e74fa3ab6d3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Source" fontname="Helvetica", fontsize="10", URL="dir_f85d67bd6e0abf70e0998e74fa3ab6d3.html"]
+  subgraph clusterdir_07288473c820508e899cc0bb782c9764 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_07288473c820508e899cc0bb782c9764.html"];
+    dir_07288473c820508e899cc0bb782c9764 [shape=plaintext label="C++"];
+    dir_5265caff195cc8a0352ba37c3aeb5be2 [shape=box label="_uriPrivateClasses" color="red" fillcolor="white" style="filled" URL="dir_5265caff195cc8a0352ba37c3aeb5be2.html"];
+    dir_818bd33151d5645c417154e4eaae640b [shape=box label="uriBase" color="black" fillcolor="white" style="filled" URL="dir_818bd33151d5645c417154e4eaae640b.html"];
+    dir_3f77098029f2cbacfa59f40d239c14f7 [shape=box label="uriComputerVision" color="black" fillcolor="white" style="filled" URL="dir_3f77098029f2cbacfa59f40d239c14f7.html"];
+    dir_06a6cc4e09f5c823b7f534f0035de842 [shape=box label="uriGraphics" color="black" fillcolor="white" style="filled" URL="dir_06a6cc4e09f5c823b7f534f0035de842.html"];
+    dir_78121c6f5226e10f78dbf96475c2a39c [shape=box label="uriImageProcessing" color="black" fillcolor="white" style="filled" URL="dir_78121c6f5226e10f78dbf96475c2a39c.html"];
+    dir_ebac020ecaa771f32090f7a2e3a3181d [shape=box label="uriMovieEditing" color="black" fillcolor="white" style="filled" URL="dir_ebac020ecaa771f32090f7a2e3a3181d.html"];
+    dir_cf9cbb88bc0d94d1d92d335c4450b2c4 [shape=box label="uriNumerical" color="black" fillcolor="white" style="filled" URL="dir_cf9cbb88bc0d94d1d92d335c4450b2c4.html"];
+    dir_f316e4d444ec19ade729a00667b8f4cb [shape=box label="uriTracking" color="black" fillcolor="white" style="filled" URL="dir_f316e4d444ec19ade729a00667b8f4cb.html"];
+    dir_688c02fe62a86f200227273a22a0951e [shape=box label="uriVideoSources" color="black" fillcolor="white" style="filled" URL="dir_688c02fe62a86f200227273a22a0951e.html"];
+  }
+  }
+  dir_ca6309d378ceffb9970caf11a0592736 [shape=box label="SDK" fillcolor="white" style="filled" color="red" URL="dir_ca6309d378ceffb9970caf11a0592736.html"];
+  dir_78121c6f5226e10f78dbf96475c2a39c->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="140", labeldistance=1.5 headhref="dir_000006_000007.html"];
+  dir_f316e4d444ec19ade729a00667b8f4cb->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="16", labeldistance=1.5 headhref="dir_000021_000007.html"];
+  dir_3f77098029f2cbacfa59f40d239c14f7->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="60", labeldistance=1.5 headhref="dir_000010_000007.html"];
+  dir_06a6cc4e09f5c823b7f534f0035de842->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="12", labeldistance=1.5 headhref="dir_000023_000007.html"];
+  dir_ebac020ecaa771f32090f7a2e3a3181d->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="7", labeldistance=1.5 headhref="dir_000041_000007.html"];
+  dir_688c02fe62a86f200227273a22a0951e->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="10", labeldistance=1.5 headhref="dir_000025_000007.html"];
+  dir_cf9cbb88bc0d94d1d92d335c4450b2c4->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="51", labeldistance=1.5 headhref="dir_000034_000007.html"];
+  dir_5265caff195cc8a0352ba37c3aeb5be2->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="13", labeldistance=1.5 headhref="dir_000003_000007.html"];
+  dir_818bd33151d5645c417154e4eaae640b->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="66", labeldistance=1.5 headhref="dir_000031_000007.html"];
+  dir_818bd33151d5645c417154e4eaae640b->dir_5265caff195cc8a0352ba37c3aeb5be2 [headlabel="1", labeldistance=1.5 headhref="dir_000031_000003.html"];
+}

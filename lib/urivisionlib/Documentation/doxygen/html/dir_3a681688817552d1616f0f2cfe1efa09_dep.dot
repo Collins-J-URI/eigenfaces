@@ -1,0 +1,15 @@
+digraph "WXGL_IO" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fff1b91a0428f70ca6ccff656ee7b826 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Basic" fontname="Helvetica", fontsize="10", URL="dir_fff1b91a0428f70ca6ccff656ee7b826.html"]
+  subgraph clusterdir_3a681688817552d1616f0f2cfe1efa09 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3a681688817552d1616f0f2cfe1efa09.html"];
+    dir_3a681688817552d1616f0f2cfe1efa09 [shape=plaintext label="WXGL_IO"];
+    dir_cf94daa4ba28a55becfa6e95aa426d36 [shape=box label="Sources" color="black" fillcolor="white" style="filled" URL="dir_cf94daa4ba28a55becfa6e95aa426d36.html"];
+  }
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_cf94daa4ba28a55becfa6e95aa426d36->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="10", labeldistance=1.5 headhref="dir_000075_000008.html"];
+}

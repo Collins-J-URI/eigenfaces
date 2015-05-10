@@ -1,0 +1,25 @@
+digraph "mySpecialKeys"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="mySpecialKeys",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="applyOverlays",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$spriteOverlay__main_8cpp.html#aba7f2ba7dfbe1e965de6f9219216a317"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l::copyInto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a945167dba31cc4a0ae359ab273dcdfea",tooltip="Copies this image into the one received as parameter. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::overlay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#aa46b05f6f33f7510953091cb0f8876a6",tooltip="Writes another image over part of this image. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RasterImage\l::writeInto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ad167ffbf9fec39d6d5c9c874cc48e20f",tooltip="Writes this image into another image. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::DrawableObject2D\l::getValidRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ad654c2c5da02b3b20298c3eef4153874",tooltip="Returns the object&#39;s valid data rectangle. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::computeValidRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a9eb135fd212d80a8fbc3caa7e242d9dd",tooltip="Calculates the object&#39;s valid box. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ImagePoint::\lshiftX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a688de98c79a64a7a9851ebe88f18b77d",tooltip="Shifts the existing x coordinate by the amount specified. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::ImagePoint::\lshiftY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a9f0a0672eac1b0967ca9be7e2e7a7e9a",tooltip="Shifts the existing y coordinate by the amount specified. "];
+}

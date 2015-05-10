@@ -1,0 +1,11 @@
+digraph "WXGL_IO_App::OnInit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WXGL_IO_App::OnInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="WXGL_IO_Frame::InitCanvas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWXGL__IO__Frame.html#a2a968fcb9c5e016319ea7fc073e6dd5e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="WXGL_IO_Canvas::SetUpCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWXGL__IO__Canvas.html#a7fe0924e87495aab68f29cb9adc8d7b5"];
+}

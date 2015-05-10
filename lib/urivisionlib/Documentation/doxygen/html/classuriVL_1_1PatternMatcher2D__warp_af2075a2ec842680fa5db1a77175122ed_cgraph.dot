@@ -1,0 +1,19 @@
+digraph "uriVL::PatternMatcher2D_warp::reverseWarp_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::PatternMatcher2D\l_warp::reverseWarp_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Pattern2D::getBlob",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#a5112f133a39e81cc645749b2828f90d3",tooltip="Returns a reference to the pattern&#39;s blob data. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Blob::getContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a744ca76a2de366741f983c05328714d8",tooltip="Get the contour of the blob. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Blob::computeContour_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a0247a7596de1e42f020bf9c416189f7b",tooltip="Computes the contour of the blob. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Contour_I::getPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__I.html#a18e36fbce32f2cbe067187306027eb1f",tooltip="Returns the contour&#39;s private list of image points. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+}

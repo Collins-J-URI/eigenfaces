@@ -1,0 +1,15 @@
+digraph "uriVL::ColorGaussianFilter_I::initializeFilter_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ColorGaussianFilter\l_I::initializeFilter_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ColorGaussianFilter\l::getScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorGaussianFilter.html#a44beacc9b27a218d34e5d1936ab05143",tooltip="Returns the scale of the filter. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ColorGaussianFilter\l::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorGaussianFilter.html#a3ddfa7f102e78c98ed4b7318686de49b",tooltip="Returns the width of the filter. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImageOperator\l::getRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageOperator.html#a5cde96bc2c983f75d57b85c6a080c245",tooltip="Returns a pointer to this operator&#39;s operation rectangle. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::ImageRect::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a1081dc6f638b33ebf30d0a43d51289ef",tooltip="Returns the width of the rectangle. "];
+}

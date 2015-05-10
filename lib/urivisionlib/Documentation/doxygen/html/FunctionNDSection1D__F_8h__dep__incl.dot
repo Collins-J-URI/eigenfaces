@@ -1,0 +1,18 @@
+digraph "FunctionNDSection1D_F.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="FunctionNDSection1D_F.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="FunctionNDSection1D\l_F.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$FunctionNDSection1D__F_8cpp.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="NonlinearOptimizerND\l_conjDir.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$NonlinearOptimizerND__conjDir_8h.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="NonlinearOptimizerND\l_conjDir.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$NonlinearOptimizerND__conjDir_8cpp.html"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="optimization_main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$optimization__main_8cpp.html"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PatternMatcher2D_warp.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$PatternMatcher2D__warp_8h.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PatternMatcher2D_warp.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$PatternMatcher2D__warp_8cpp.html"];
+}

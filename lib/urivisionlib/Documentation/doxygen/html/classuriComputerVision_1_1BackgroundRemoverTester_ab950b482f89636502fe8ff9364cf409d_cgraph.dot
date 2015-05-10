@@ -1,0 +1,13 @@
+digraph "uriComputerVision::BackgroundRemoverTester::test0_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriComputerVision::\lBackgroundRemoverTester\l::test0_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l::getShiftedRaster2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#afb1e270b389600fc0784f6c746d76ce4",tooltip="Returns the shifted base raster as a read-only 2D array. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l_gray_F::setFloatConversionMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__gray__F.html#afc47ce2ce7f6780f034236373b844989",tooltip="Sets an individual conversion mode from float to gray for this image. "];
+}

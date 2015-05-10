@@ -1,0 +1,11 @@
+digraph "uriVL::LabelRaster::setOrigin"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::LabelRaster\l::setOrigin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImageRect::setOrigin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a0f750ba1c9683f7358c8106001ba526b",tooltip="Sets the origin of the rectangle. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImagePoint::\lsetCoordinates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a253b7c2ab33d684a29059591f107802a",tooltip="Assigns new coordinates to the pixel. "];
+}

@@ -1,0 +1,11 @@
+digraph "Color_Gaussian_and_Median" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5bb2369b5f7fa649cc93423e9de5b920 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Image_Processing" fontname="Helvetica", fontsize="10", URL="dir_5bb2369b5f7fa649cc93423e9de5b920.html"]
+  dir_b1ef16bbfee95d1504598cfe83881019 [shape=box, label="Color_Gaussian_and_Median", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b1ef16bbfee95d1504598cfe83881019.html"];
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_b1ef16bbfee95d1504598cfe83881019->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="8", labeldistance=1.5 headhref="dir_000029_000008.html"];
+}

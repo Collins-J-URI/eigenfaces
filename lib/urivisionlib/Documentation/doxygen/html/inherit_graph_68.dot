@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::StereoMatchRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1StereoMatchRecord.html",tooltip="A StereoMatchRecord stores a matching point and matching score resulting from a call to a stereo matc..."];
+}

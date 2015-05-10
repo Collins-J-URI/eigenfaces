@@ -1,0 +1,11 @@
+digraph "uriVL::RandomGenerator_R250_R521::setSeed"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RandomGenerator\l_R250_R521::setSeed",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lrand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$RandomGenerator__R250__521_8cpp.html#a24e99a51ba47d4d77d9f2fc9b231d8fc"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RandomGenerator\l_R250_R521::nextULong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__R250__R521.html#a13df64332b76ab496cce48794ce251d0",tooltip="Returns a new uniformly-distributed unsigned long pseudo-random number in the full range of the data ..."];
+}

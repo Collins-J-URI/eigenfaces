@@ -1,0 +1,25 @@
+digraph "uriVL::DrawableObject2D::overlaps"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::DrawableObject2D\l::overlaps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImageRect::overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a707979de0d8a0079379467712866e200",tooltip="Indicates whether this rectangle and the one received as parameter overlap. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImageRect::getBottom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#acb34c902550ecb25f7fa6ffb620aea71",tooltip="Returns the maximum y coordinate of the rectangle. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::ImageRect::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a2715b0a7b291354fd839a95ece0e0aba",tooltip="Returns the minimum y coordinate of the rectangle. "];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::ImageRect::getRight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a89884bd1866a1b7ffb67d4cc1ec1a052",tooltip="Returns the maximum x coordinate of the rectangle. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::ImageRect::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a38bd531df6bd6c4892bca1a690feda13",tooltip="Returns the minimum x coordinate of the rectangle. "];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

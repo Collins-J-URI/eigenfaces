@@ -1,0 +1,13 @@
+digraph "loadImage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="loadImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cleanupAndQuit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$colorImageGradients_8cpp.html#ab5774c0c168c63ad4c75e9bf6f09e72b"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImageReader\l::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageReader.html#a1b063b6fc4451a0c59547f387085c0e1",tooltip="Get an image frame from the preselected source. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+}

@@ -1,0 +1,15 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RandomGenerator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator.html",tooltip="Pure virtual parent class for pseudorandom number generators. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RandomGenerator_C",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__C.html",tooltip="Pseudorandom number generator wrapper class for the awful standard C function. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RandomGenerator\l_Knuth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__Knuth.html",tooltip="Random number generator class that implements Knuth&#39;s algorithm (by way of the Numerical Recipes in C..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RandomGenerator_MT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__MT.html",tooltip="Random number generator class that uses the Mersenne Twister algorithm of Matsumoto and Nishimura imp..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RandomGenerator\l_R250_R521",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__R250__R521.html",tooltip="Random number generator class that uses the combined R250-R521 algorithm implemented by Michael Brund..."];
+}

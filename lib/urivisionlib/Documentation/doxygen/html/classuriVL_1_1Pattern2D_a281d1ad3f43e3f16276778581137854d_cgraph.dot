@@ -1,0 +1,35 @@
+digraph "uriVL::Pattern2D::render_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Pattern2D::render_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::DrawableObject2D\l::render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ac8e503cfade891e7ac2a25467cb7d24a",tooltip="Renders the object at the default depth and (0, 0) location. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Pattern2D::render\lBlobPattern_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#ac398b33d2a1faf328e7db7d9a5d3d7a1",tooltip="Renders a blob pattern. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RasterImage\l::graphWorldIsReference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ac6190461f1bd30c426fc3d183b74429b",tooltip="Indicates whether or not the raster stored in the GraphWorld (if it exists) contains the reference va..."];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::RasterImage\l::referenceHasChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a8d10dedd31a0e59925bdf31a37d03097",tooltip="Indicates whether or not the reference raster for this image has been modified. "];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::RasterImage\l::requestRasterUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a2e69dc24a21cffe1fc8a00431f109a2b",tooltip="Forces a refresh of nonreference raster according to the reference raster. "];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::RasterImage\l::getRaster2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a750ea09662cf38e5013a6d3f76a44a89",tooltip="Returns the base raster as a read-only 2D array. "];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::DrawableObject2D\l::getRenderingScaleX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a04c9f82864357bfdab57e2511552331b",tooltip="Returns the horizontal rendering scale set for this object. "];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::DrawableObject2D\l::getRenderingScaleY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a65b319f6134dfa96c08b00503e5dc279",tooltip="Returns the horizontal rendering scale set for this object. "];
+  Node3 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::Blob::getSegDeque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a2075d06742e561d4d0c547bb8a5b3b59",tooltip="returns a read-only reference to this blob&#39;s private segments structure. "];
+  Node3 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::Blob::renderContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a2a6c7647c09586c113941730e9971edb",tooltip="Renders the blob&#39;s contour at the depth and location specified. "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="uriVL::Blob::getContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a744ca76a2de366741f983c05328714d8",tooltip="Get the contour of the blob. "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="uriVL::Blob::computeContour_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a0247a7596de1e42f020bf9c416189f7b",tooltip="Computes the contour of the blob. "];
+  Node12 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

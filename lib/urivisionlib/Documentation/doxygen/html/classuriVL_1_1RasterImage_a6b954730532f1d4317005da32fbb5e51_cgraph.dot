@@ -1,0 +1,13 @@
+digraph "uriVL::RasterImage::setAsImporterGraphWorld"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l::setAsImporterGraphWorld",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::GraphWorld::\lsetAsImporterGraphWorld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphWorld.html#aa98a31c5e9a02ab8ca8514a2a21d3bbe",tooltip="Sets this GraphWorld object as destination for a graphic importer. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::_GraphWorld\l_gen::setAsImporterGraphWorld_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__GraphWorld__gen.html#aedd9d05fbcffa5d4cb86e44484e0b322",tooltip="Sets this _GraphWorld_QT object as destination for a graphic importer. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::updateRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ae4a051897d08b9dcc9fa9cd4756460e6",tooltip="Updates the image&#39;s base raster (if it is not the reference). "];
+}

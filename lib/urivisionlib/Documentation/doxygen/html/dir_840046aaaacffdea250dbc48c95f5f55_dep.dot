@@ -1,0 +1,11 @@
+digraph "MoviePlayer_VideoGrabber_Hybrid" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fff1b91a0428f70ca6ccff656ee7b826 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Basic" fontname="Helvetica", fontsize="10", URL="dir_fff1b91a0428f70ca6ccff656ee7b826.html"]
+  dir_840046aaaacffdea250dbc48c95f5f55 [shape=box, label="MoviePlayer_VideoGrabber_Hybrid", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_840046aaaacffdea250dbc48c95f5f55.html"];
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_840046aaaacffdea250dbc48c95f5f55->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000051_000008.html"];
+}

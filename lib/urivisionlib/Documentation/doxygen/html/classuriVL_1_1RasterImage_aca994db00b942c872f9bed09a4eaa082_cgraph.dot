@@ -1,0 +1,23 @@
+digraph "uriVL::RasterImage::render_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l::render_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::GraphWorld::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphWorld.html#a113aa43f3f69b0ba3e8e9268f087146e",tooltip="Renders the raster, using the OpenGL drawPixel function. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::_GraphWorld\l_gen::draw_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__GraphWorld__gen.html#ac9e42740a7464a06372bd3c3c461a0bd",tooltip="Renders the raster, using the OpenGL drawPixel function. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::_GraphWorld\l_gen::getEffectiveNbCols_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__GraphWorld__gen.html#aa2587b8a601ff4829e01f2f6fd6a6678",tooltip="Returns the effectivenumber of columns in the GraphWorld. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::_GraphWorld\l_gen::getRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__GraphWorld__gen.html#a6f73902cf1f062f7d7f81bbf0b94521b",tooltip="Returns the base address of the Graphworld&#39;s raster (QuickDraw PixMap) "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::getRenderingScaleX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a04c9f82864357bfdab57e2511552331b",tooltip="Returns the horizontal rendering scale set for this object. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DrawableObject2D\l::getRenderingScaleY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a65b319f6134dfa96c08b00503e5dc279",tooltip="Returns the horizontal rendering scale set for this object. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::RasterImage\l::updateRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ae4a051897d08b9dcc9fa9cd4756460e6",tooltip="Updates the image&#39;s base raster (if it is not the reference). "];
+}

@@ -1,0 +1,15 @@
+digraph "Source" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_576187522c208298cdcbb28dcf7d7358 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Development" fontname="Helvetica", fontsize="10", URL="dir_576187522c208298cdcbb28dcf7d7358.html"]
+  subgraph clusterdir_f85d67bd6e0abf70e0998e74fa3ab6d3 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f85d67bd6e0abf70e0998e74fa3ab6d3.html"];
+    dir_f85d67bd6e0abf70e0998e74fa3ab6d3 [shape=plaintext label="Source"];
+    dir_07288473c820508e899cc0bb782c9764 [shape=box label="C++" color="red" fillcolor="white" style="filled" URL="dir_07288473c820508e899cc0bb782c9764.html"];
+  }
+  }
+  dir_ca6309d378ceffb9970caf11a0592736 [shape=box label="SDK" fillcolor="white" style="filled" color="red" URL="dir_ca6309d378ceffb9970caf11a0592736.html"];
+  dir_07288473c820508e899cc0bb782c9764->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="375", labeldistance=1.5 headhref="dir_000002_000007.html"];
+}

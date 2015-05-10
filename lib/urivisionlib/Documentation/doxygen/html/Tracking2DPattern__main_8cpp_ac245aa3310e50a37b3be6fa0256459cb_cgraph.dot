@@ -1,0 +1,13 @@
+digraph "printBlobs"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="printBlobs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Pattern2D::getBlob",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#a5112f133a39e81cc645749b2828f90d3",tooltip="Returns a reference to the pattern&#39;s blob data. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::PatternTracker2DController\l::getCurrTrackerList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternTracker2DController.html#a22038de601e8edbe6bda8c982f2bb44a",tooltip="Get current list<PatternTracker2D*> "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Blob::getSegDeque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a2075d06742e561d4d0c547bb8a5b3b59",tooltip="returns a read-only reference to this blob&#39;s private segments structure. "];
+}

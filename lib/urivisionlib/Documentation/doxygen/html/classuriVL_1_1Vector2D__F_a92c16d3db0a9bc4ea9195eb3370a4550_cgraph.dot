@@ -1,0 +1,15 @@
+digraph "uriVL::Vector2D_F::setCoordinates"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Vector2D_F::\lsetCoordinates",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImagePoint_F\l::getXF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint__F.html#a261fcd13a1a07d024b45cae02dfc0c69",tooltip="Returns the pixel&#39;s x coordinate. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Vector2D::setCoordinates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Vector2D.html#a124ed4f3d9ae986d07824d2cbf5ea825",tooltip="Assigns new coordinates to the vector. "];
+}

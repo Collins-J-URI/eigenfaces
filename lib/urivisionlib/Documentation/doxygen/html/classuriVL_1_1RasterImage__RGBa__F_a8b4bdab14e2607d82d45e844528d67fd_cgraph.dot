@@ -1,0 +1,9 @@
+digraph "uriVL::RasterImage_RGBa_F::convertToGray_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l_RGBa_F::convertToGray_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l::getDefaultConversionWeights",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a222a3a4ff3cbc8060a9c7a1c67b32a79",tooltip="Returns the default to-gray conversion coefficients for this image. "];
+}

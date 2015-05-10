@@ -1,0 +1,21 @@
+digraph "uriVL::ContourForce::applyForceToContour"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ContourForce\l::applyForceToContour",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Contour_F::getNbPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#aa0b25033e2deeffcce76f9f5230d1f7e",tooltip="Gives the number of points along the contour. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Contour_F::getPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#a34c536647edac278d2070a7168113458",tooltip="Returns the contour&#39;s private list of image points. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Contour::pointsHave\lMoved",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour.html#a7e864473c73cefdd26e2802f20d5425d",tooltip="To be called by a user who has modified the list of points or the points themselves. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::DrawableObject2D\l::setBoundingRectIsUpToDate_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a309cd8f2e35863c018f38a4234db1d10",tooltip="Allows a child class whose content has been changed to force recomputation of the bounding rectangle..."];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::DrawableObject2D\l::setCenterOfMassIsUpToDate_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ab8a7aea3fe0aded7516849a167b5ee00",tooltip="Allows a child class whose content has been changed to force recomputation of the center of mass..."];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::setCentroidIsUpToDate_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a3506587c62cb4944c5475e4b8ba93d8c",tooltip="Allows a child class whose content has been changed to force recomputation of the centroid..."];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DrawableObject2D\l::setValidRectIsUpToDate_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a6a0f166ba6cfd7e279b925e6aeb8222c",tooltip="Allows a child class whose content has been changed to force recomputation of the valid rectangle..."];
+}

@@ -1,0 +1,41 @@
+digraph "loadImage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="loadImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ColorThresholdLabeler\l::applyInto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorThresholdLabeler.html#a5f65b75faba5f01be9d09363e248de8c",tooltip="Applies this operator to an image, returns the result as a LabelRaster. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::DrawableObject2D\l::getValidRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ad654c2c5da02b3b20298c3eef4153874",tooltip="Returns the object&#39;s valid data rectangle. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::DrawableObject2D\l::computeValidRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a9eb135fd212d80a8fbc3caa7e242d9dd",tooltip="Calculates the object&#39;s valid box. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="detectAllBlobs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$patternCreation__main_8cpp.html#a7e7d1972d7d427496999e3ea8f293e2c"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::BlobFinder::\lfindAllBlobs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1BlobFinder.html#a7404aa90e173beb8b83136ba46485db7",tooltip="Detect all the blobs in the input label raster from a list of target indices. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::LabelRaster\l::getValidRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LabelRaster.html#af9c034eafd1e2c27e80a4143aa2f22d3",tooltip="Returns the label raster&#39;s valid data rectangle. "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::ImageRect::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a38bd531df6bd6c4892bca1a690feda13",tooltip="Returns the minimum x coordinate of the rectangle. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::ImageRect::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a2715b0a7b291354fd839a95ece0e0aba",tooltip="Returns the minimum y coordinate of the rectangle. "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="uriVL::ImageReader\l::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageReader.html#a1b063b6fc4451a0c59547f387085c0e1",tooltip="Get an image frame from the preselected source. "];
+  Node13 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="uriVL::DrawableObject2D\l::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a0fa48af9667c5a4b53bd2a9bf0eea240",tooltip="Returns the number of rows for the image. "];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="uriVL::ImageRect::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#aa757d85ab5d5230bc0ca53f5960e14f3",tooltip="Returns the height of the rectangle. "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="uriVL::DrawableObject2D\l::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a01127dbd10a99cdbb7596e48539068c9",tooltip="Returns the number of columns for the image. "];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="uriVL::ImageRect::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a1081dc6f638b33ebf30d0a43d51289ef",tooltip="Returns the width of the rectangle. "];
+}

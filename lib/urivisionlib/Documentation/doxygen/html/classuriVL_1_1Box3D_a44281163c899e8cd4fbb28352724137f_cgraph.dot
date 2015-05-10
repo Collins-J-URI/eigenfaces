@@ -1,0 +1,21 @@
+digraph "uriVL::Box3D::Box3D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Box3D::Box3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Box3D::deleteArrays_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Box3D.html#ace8717c235ddce74b795bc7a480168e4",tooltip="Delete all allocated arrays. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::GlUtils::free\l_glfMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GlUtils.html#a19adc54e9b98b136b3a995faadbca6a6",tooltip="Frees the 2D array of GLfloat elements received as parameter. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Box3D::init_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Box3D.html#a2c6335659808aee2673c1fde05ab7f45",tooltip="Initialize the box. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::GraphicComponent3\lD::commonNormalVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a7bf254f498811a614107b316c8b4e313"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::GraphicComponent3\lD::normalizeVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#af099e3ae8ec18639dc520c69119df36b"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::GraphicComponent3\lD::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a1ac3c968a0834a059e3df89b9fb99bea"];
+}

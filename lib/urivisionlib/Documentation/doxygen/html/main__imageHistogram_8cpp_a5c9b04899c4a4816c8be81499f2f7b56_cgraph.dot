@@ -1,0 +1,9 @@
+digraph "myHistogramAxesColorSubmenu"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="myHistogramAxesColorSubmenu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Histogram::setAxes\lColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Histogram.html#a690dbcb92753264d6c5943782e5e6bb5",tooltip="Specifies the a color for the histogram&#39;s axes, when rendered. "];
+}

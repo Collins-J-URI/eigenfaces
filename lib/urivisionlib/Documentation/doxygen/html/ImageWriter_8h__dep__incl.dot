@@ -1,0 +1,24 @@
+digraph "ImageWriter.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ImageWriter.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="_ImageWriter_FreeImage.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__ImageWriter__FreeImage_8h.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RectifiedStereoMatcher\l_corr.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$RectifiedStereoMatcher__corr_8cpp.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ImageWriter.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageWriter_8cpp.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PatternTracker2D.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$PatternTracker2D_8cpp.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PatternTracker2DController.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$PatternTracker2DController_8cpp.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="main_IO.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Basic_2Simple__IO_2main__IO_8cpp.html"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="WXGL_IO_canvas.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$WXGL__IO__canvas_8cpp.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="main_IO.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Computer__Vision_2Calibration__3D_2Projects_2XCode_2main__IO_8cpp.html"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="main_GameOfLife.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main__GameOfLife_8cpp.html"];
+}

@@ -1,0 +1,9 @@
+digraph "uriVL::VectorField::setVectResolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::VectorField\l::setVectResolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::VectorField\l::prepareVectFieldForRendering_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VectorField.html#a0a3049bfdf62a8887372335d5adb78fa",tooltip="Computes the shifting and scaling factors to properly render the vectors as needles the next time ren..."];
+}

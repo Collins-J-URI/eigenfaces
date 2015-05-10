@@ -1,0 +1,44 @@
+digraph "uriVL::RigidTransformation3D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RigidTransformation3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Transformation3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Transformation3D.html",tooltip="Virtual base class for all 3D transformation that can be represented by a 4 by 4 homogenous matrix..."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" homMat_" ,fontname="Helvetica"];
+  Node3 [label="uriVL::HomogeneousMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1HomogeneousMatrix.html",tooltip="Implements 4x4 homogeneous matrices used to represent 3D transformations. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html",tooltip="Implements the Matrix class of Linear Algebra matrices. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nbStorageRows_\nnbStorageCols_\nnbCols_\nnbRows_" ,fontname="Helvetica"];
+  Node5 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" beginArrayStr_\nendArrayStr_\nelmtSepStr_" ,fontname="Helvetica"];
+  Node6 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" eolAtEor_\nstorageIsLocal_" ,fontname="Helvetica"];
+  Node7 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" isFullRank_\nisUpperTriangular\l_\nisNormalizedInf\l_\nisOrthogonal\l_\nisAntisymmetric\l_\nisSymmetric\l_\nisLowerTriangular\l_\nisNormalized2\l_\nisIdentity\l_\nisNormalized1\l_\n..." ,fontname="Helvetica"];
+  Node8 [label="TriState",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MATRIX_PROP_REL_TOL\nMATRIX_PROP_ABS_TOL" ,fontname="Helvetica"];
+  Node9 [label="static const double",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mat_" ,fontname="Helvetica"];
+  Node10 [label="double **",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" glMat_" ,fontname="Helvetica"];
+  Node11 [label="GLfloat",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" referenceHasChanged\l_\nmatrixIsReference_" ,fontname="Helvetica"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rot_" ,fontname="Helvetica"];
+  Node12 [label="uriVL::Rotation3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Rotation3D.html",tooltip="A Rotation3D is a component of any RigidTransformation3D. "];
+  Node4 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mat_" ,fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" euler_\nrollPitchYaw_" ,fontname="Helvetica"];
+  Node13 [label="double *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ref_" ,fontname="Helvetica"];
+  Node14 [label="RotationRef",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node15 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quat_" ,fontname="Helvetica"];
+  Node15 [label="uriVL::Quaternion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Quaternion.html",tooltip="Quaternion Class. "];
+  Node16 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quat_" ,fontname="Helvetica"];
+  Node16 [label="double",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" isNormalized_" ,fontname="Helvetica"];
+  Node7 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quaternionIsUpToDate\l_\nmatrixIsUpToDate\l_\nrollPitchYawIsUpTo\lDate_\neulerIsUpToDate_" ,fontname="Helvetica"];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" trans_" ,fontname="Helvetica"];
+  Node17 [label="uriVL::Translation3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Translation3D.html",tooltip="A Translation object is always stored as an array of three double numbers for the X..."];
+  Node16 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tXYZ_" ,fontname="Helvetica"];
+}

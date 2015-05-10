@@ -1,0 +1,18 @@
+digraph "uriVL::RasterImage_binary::getRaster"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l_binary::getRaster",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l_binary::getGrayRasterImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__binary.html#acf578688884e06b76440ce5e968c3dd6",tooltip="Returns the gray-level form of this image. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l::setOtherRasterAsReference_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a12b85f0f0e80ca9f692797538111af70",tooltip="Called by a subclass that provides another type of raster (for example, RasterImage_binary), when that other raster becomes the reference. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::setReferenceHasChanged_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a6c62baac612cff6df7be87dce2dfc5fb",tooltip="To be called by a child class that has modified the graphworld or one of the secondary rasters..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RasterImage\l::getRaster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a6939ed1c413bb24bc5241009cb4b586b",tooltip="Returns the base raster as a read-only 1D array. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

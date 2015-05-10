@@ -1,0 +1,25 @@
+digraph "uriVL::LabelRaster::coincidesWith"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::LabelRaster\l::coincidesWith",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImageRect::coincidesWith",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a0f31e7e8c7488f00f492b43c692f7ea1",tooltip="Indicates whether this rectangle and the one received as parameter coincide. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImageRect::getBottom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#acb34c902550ecb25f7fa6ffb620aea71",tooltip="Returns the maximum y coordinate of the rectangle. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::ImageRect::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a38bd531df6bd6c4892bca1a690feda13",tooltip="Returns the minimum x coordinate of the rectangle. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::ImageRect::getRight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a89884bd1866a1b7ffb67d4cc1ec1a052",tooltip="Returns the maximum x coordinate of the rectangle. "];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ImageRect::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a2715b0a7b291354fd839a95ece0e0aba",tooltip="Returns the minimum y coordinate of the rectangle. "];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::LabelRaster\l::getBoundRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LabelRaster.html#af143d20cc3b0f8896ea4e4c76e42ce46",tooltip="Returns the label raster&#39;s bounding rectangle. "];
+}

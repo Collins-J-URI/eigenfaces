@@ -1,0 +1,23 @@
+digraph "uriVL::VectorField_I::getShiftedRasterX2D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::VectorField\l_I::getShiftedRasterX2D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::DrawableObject2D\l::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a9c92e6b3d3b0753514e677080c762ef0",tooltip="Returns the minimum x coordinate of the bounding rectangle. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ImageRect::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a38bd531df6bd6c4892bca1a690feda13",tooltip="Returns the minimum x coordinate of the rectangle. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::DrawableObject2D\l::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a01508a3886015ab55449c46989af2277",tooltip="Returns the minimum y coordinate of the bounding rectangle. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::ImageRect::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a2715b0a7b291354fd839a95ece0e0aba",tooltip="Returns the minimum y coordinate of the rectangle. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::VectorField\l::setRasterAsReference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VectorField.html#ab09efbe29aca0b18a9160add8be33109",tooltip="Sets this vector field&#39;s base raster as the reference. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::VectorField\l::setReferenceHasChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VectorField.html#adfa22db1b2b6f31925684ec1cf6969a4",tooltip="To be called by a child class that has modified the raster or one of the secondary rasters..."];
+}

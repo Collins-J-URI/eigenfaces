@@ -1,0 +1,11 @@
+digraph "uriGraphics" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3ed09e8ce6640af79318ee4a8db1ede0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Headers" fontname="Helvetica", fontsize="10", URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"]
+  dir_4b1a0d35fc4221c370713681c8372ec0 [shape=box, label="uriGraphics", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4b1a0d35fc4221c370713681c8372ec0.html"];
+  }
+  dir_26171669b93c5a18bd4e2e3169ff538c [shape=box label="uriBase" URL="dir_26171669b93c5a18bd4e2e3169ff538c.html"];
+  dir_4b1a0d35fc4221c370713681c8372ec0->dir_26171669b93c5a18bd4e2e3169ff538c [headlabel="12", labeldistance=1.5 headhref="dir_000024_000032.html"];
+}

@@ -1,0 +1,11 @@
+digraph "uriVL::ColorMedianFilter_F::applyTo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ColorMedianFilter\l_F::applyTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::DrawableObject2D\l::getValidRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ad654c2c5da02b3b20298c3eef4153874",tooltip="Returns the object&#39;s valid data rectangle. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::DrawableObject2D\l::computeValidRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a9eb135fd212d80a8fbc3caa7e242d9dd",tooltip="Calculates the object&#39;s valid box. "];
+}

@@ -1,0 +1,23 @@
+digraph "uriVL::Prism3D::init_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Prism3D::init_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::GraphicComponent3\lD::faceAverageNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#ad64714f059d409974284a7158e4430db"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::GraphicComponent3\lD::commonNormalVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a7bf254f498811a614107b316c8b4e313"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::GraphicComponent3\lD::normalizeVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#af099e3ae8ec18639dc520c69119df36b"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::GraphicComponent3\lD::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a1ac3c968a0834a059e3df89b9fb99bea"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::GraphicComponent3\lD::dotProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#accae84bd730aefdf62534f5b00be1ba8"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::GlUtils::glfMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GlUtils.html#a90ced760d48287d333171d2a46ad691a",tooltip="Allocates a 2D array of GLfloat elements that uses the index range specified by the parameters receiv..."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::GraphicComponent3\lD::vertexAverageNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a2da27f30d74f3cacabd00b2e8c157be5"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

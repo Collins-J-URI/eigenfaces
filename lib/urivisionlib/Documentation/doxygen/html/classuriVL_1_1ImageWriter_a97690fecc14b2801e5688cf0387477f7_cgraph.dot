@@ -1,0 +1,11 @@
+digraph "uriVL::ImageWriter::writeImage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ImageWriter\l::writeImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::_ImageWriter\l_FreeImage::writeImage_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__ImageWriter__FreeImage.html#a29c05db5a4e8908f5a7c3304cee13f3c",tooltip="Write the image to the assigned destination. "];
+}

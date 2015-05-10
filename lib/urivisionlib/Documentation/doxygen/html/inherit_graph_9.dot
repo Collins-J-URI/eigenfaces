@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Calibration3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Calibration3D.html",tooltip="The base virtual Calibration3D class. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Calibration3D_dyn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Calibration3D__dyn.html",tooltip="Class that implements a dynamic algorithm for the calibration of a camera. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Calibration3D_Kim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Calibration3D__Kim.html",tooltip="Class that implements the Kim algorithm for the calibration of a camera. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Calibration3D\l_TsaiW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Calibration3D__TsaiW.html",tooltip="Class that implements the Tsai-Wilsson algorithm for the calibration of a camera. ..."];
+}

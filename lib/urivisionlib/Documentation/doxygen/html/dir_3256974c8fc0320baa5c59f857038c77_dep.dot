@@ -1,0 +1,11 @@
+digraph "SLE_Solvers" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b9d6c5a67226cd7af5f97dfb65d7b7b8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Numerical" fontname="Helvetica", fontsize="10", URL="dir_b9d6c5a67226cd7af5f97dfb65d7b7b8.html"]
+  dir_3256974c8fc0320baa5c59f857038c77 [shape=box, label="SLE_Solvers", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3256974c8fc0320baa5c59f857038c77.html"];
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_3256974c8fc0320baa5c59f857038c77->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000064_000008.html"];
+}

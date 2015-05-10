@@ -1,0 +1,22 @@
+digraph "uriVL::Registration2D_ICP::registerPoints_lin_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Registration2D\l_ICP::registerPoints_lin_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RigidTransformation2\lD::getAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RigidTransformation2D.html#aa7ff28b48d2ce3b07ca117b11ff1f55c",tooltip="Returns the rotation&#39;s angle. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RigidTransformation2\lD::getTransX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RigidTransformation2D.html#ab90739261bbfa45aef38fc95714326ef",tooltip="Returns the x component of the translation. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Transformation2D\l::getMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Transformation2D.html#aa6f3c3b2a82aa4788d442c5d922573b8",tooltip="Returns a read-only pointer to the transformation&#39;s matrix data. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RigidTransformation2\lD::getTransY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RigidTransformation2D.html#a1e7b23e20efa0e4475e3e5a9b6eaa71a",tooltip="Returns the y component of the translation. "];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::RigidTransformation2\lD::setAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RigidTransformation2D.html#a450872f23f51aad7241da6ece3da5419",tooltip="Sets the rotation&#39;s angle (in radians) "];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::RigidTransformation2\lD::setTranslation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RigidTransformation2D.html#a835aa66d5869020b4ed9a75eb8c6f7ee",tooltip="Sets the translation component of this transformation. "];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

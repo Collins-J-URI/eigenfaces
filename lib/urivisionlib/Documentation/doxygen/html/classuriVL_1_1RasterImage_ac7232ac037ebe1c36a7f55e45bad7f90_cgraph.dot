@@ -1,0 +1,13 @@
+digraph "uriVL::RasterImage::setAsCurrentGraphWorld"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l::setAsCurrentGraphWorld",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::GraphWorld::\lsetGraphWorld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphWorld.html#a9c98d4f156980b476c412d1428316408",tooltip="Sets this GraphWorld as destination for a video capture. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::_GraphWorld\l_gen::setGraphWorld_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__GraphWorld__gen.html#a799f0456debd55cf0cd237f3ed14be87",tooltip="Sets this GraphWorld as destination for a video capture. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::updateRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ae4a051897d08b9dcc9fa9cd4756460e6",tooltip="Updates the image&#39;s base raster (if it is not the reference). "];
+}

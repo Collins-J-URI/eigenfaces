@@ -1,0 +1,37 @@
+digraph "uriVL::BackgroundRemover_dynamic_MW::updateBackground"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::BackgroundRemover\l_dynamic_MW::updateBackground",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l::floatRasterIsReference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a1b4d9b5005f06201335b9060fe31625e",tooltip="Indicates whether or not the float raster (for a raster that does have a float raster, eg Raster_Image_gray_F stores the reference values for the raster image. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::BackgroundRemover\l_dynamic::getFirstBackground_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1BackgroundRemover__dynamic.html#a945cbfd6daaab3fe01482cd639553333",tooltip="Returns a pointer to the first background image. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RasterImage\l::hasFloatRaster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a406019c6e34b2e8c3d81a72769723d98",tooltip="Indicates whether or not the raster image stores a float raster (eg this would be true for a Raster_I..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::BackgroundRemover\l_dynamic_MW::updateBackground_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1BackgroundRemover__dynamic__MW.html#a7fc40b83d3b0d688da8629745be09abe",tooltip="Overloaded func Update background_. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::getBoundRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a1d910add62acd9ad51986f3502a721de",tooltip="Returns the object&#39;s bounding rectangle. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DrawableObject2D\l::computeBoundingRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a569f0abdc2b5f708543cee537b9809ff",tooltip="Calculates the object&#39;s bounding rect. "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::ImageRect::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a2715b0a7b291354fd839a95ece0e0aba",tooltip="Returns the minimum y coordinate of the rectangle. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::ImageRect::getBottom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#acb34c902550ecb25f7fa6ffb620aea71",tooltip="Returns the maximum y coordinate of the rectangle. "];
+  Node11 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::ImageRect::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a38bd531df6bd6c4892bca1a690feda13",tooltip="Returns the minimum x coordinate of the rectangle. "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node6 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="uriVL::ImageRect::getRight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a89884bd1866a1b7ffb67d4cc1ec1a052",tooltip="Returns the maximum x coordinate of the rectangle. "];
+  Node14 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="uriVL::Matrix::getMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a29c91cadbe9ad1e2ec93d51711348f77",tooltip="Returns a read-only pointer to the matrix data. "];
+}

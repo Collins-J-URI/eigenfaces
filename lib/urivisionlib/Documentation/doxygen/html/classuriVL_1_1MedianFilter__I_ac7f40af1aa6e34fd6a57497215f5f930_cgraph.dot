@@ -1,0 +1,23 @@
+digraph "uriVL::MedianFilter_I::applyTo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::MedianFilter\l_I::applyTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::MedianFilter\l_I::applyInto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1MedianFilter__I.html#a687f4c912b75d4ef69d9e9b5b02bbda5",tooltip="Applies this operator to a RasterImage and writes the result into a second RasterImage received as pa..."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::DrawableObject2D\l::getValidRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ad654c2c5da02b3b20298c3eef4153874",tooltip="Returns the object&#39;s valid data rectangle. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::DrawableObject2D\l::computeValidRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a9eb135fd212d80a8fbc3caa7e242d9dd",tooltip="Calculates the object&#39;s valid box. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::getBoundRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a1d910add62acd9ad51986f3502a721de",tooltip="Returns the object&#39;s bounding rectangle. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DrawableObject2D\l::computeBoundingRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a569f0abdc2b5f708543cee537b9809ff",tooltip="Calculates the object&#39;s bounding rect. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::RasterImage\l::hasFloatRaster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a406019c6e34b2e8c3d81a72769723d98",tooltip="Indicates whether or not the raster image stores a float raster (eg this would be true for a Raster_I..."];
+}

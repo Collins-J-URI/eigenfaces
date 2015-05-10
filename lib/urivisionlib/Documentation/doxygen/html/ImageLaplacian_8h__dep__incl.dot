@@ -1,0 +1,37 @@
+digraph "ImageLaplacian.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ImageLaplacian.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ColorImageLaplacian.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian_8cpp.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ImageLaplacian.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian_8cpp.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ColorImageLaplacian\l_Gaussian_F.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian__Gaussian__F_8h.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ColorImageLaplacian\l_Gaussian_I.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian__Gaussian__I_8h.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ColorImageLaplacian\l_Sobel.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian__Sobel_8h.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ImageLaplacian_Gaussian_F.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian__Gaussian__F_8h.html"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="ColorImageLaplacian\l_Gaussian_F.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian__Gaussian__F_8cpp.html"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="ImageLaplacian_Gaussian\l_F.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian__Gaussian__F_8cpp.html"];
+  Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="edgePixels.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$edgePixels_8cpp.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="ImageLaplacian_Gaussian_I.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian__Gaussian__I_8h.html"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="ColorImageLaplacian\l_Gaussian_I.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian__Gaussian__I_8cpp.html"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="ImageLaplacian_Gaussian\l_I.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian__Gaussian__I_8cpp.html"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="ImageLaplacian_Sobel.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian__Sobel_8h.html"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="ColorImageLaplacian\l_Sobel.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ColorImageLaplacian__Sobel_8cpp.html"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="ImageLaplacian_Sobel.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImageLaplacian__Sobel_8cpp.html"];
+  Node14 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

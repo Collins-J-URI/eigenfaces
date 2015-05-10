@@ -1,0 +1,37 @@
+digraph "Basic" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a18362ea1cb878d54e49c72fda0e3b4b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="C++" fontname="Helvetica", fontsize="10", URL="dir_a18362ea1cb878d54e49c72fda0e3b4b.html"]
+  subgraph clusterdir_fff1b91a0428f70ca6ccff656ee7b826 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_fff1b91a0428f70ca6ccff656ee7b826.html"];
+    dir_fff1b91a0428f70ca6ccff656ee7b826 [shape=plaintext label="Basic"];
+    dir_a4bdd6f8f4c08d7e9426eba536903c27 [shape=box label="Binary_Image" color="black" fillcolor="white" style="filled" URL="dir_a4bdd6f8f4c08d7e9426eba536903c27.html"];
+    dir_498202d539bdf54616caade4ff97bf7b [shape=box label="Image_Histogram" color="black" fillcolor="white" style="filled" URL="dir_498202d539bdf54616caade4ff97bf7b.html"];
+    dir_840046aaaacffdea250dbc48c95f5f55 [shape=box label="MoviePlayer_VideoGrabber_Hybrid" color="black" fillcolor="white" style="filled" URL="dir_840046aaaacffdea250dbc48c95f5f55.html"];
+    dir_03066b6859f5bf54514ed62c0579d0c9 [shape=box label="Play_Movie" color="black" fillcolor="white" style="filled" URL="dir_03066b6859f5bf54514ed62c0579d0c9.html"];
+    dir_b7483112aa505a2e66a922f191cace10 [shape=box label="Raster_Rectangles" color="black" fillcolor="white" style="filled" URL="dir_b7483112aa505a2e66a922f191cace10.html"];
+    dir_03f4d6bedefebaa48c569bf1f181691c [shape=box label="Scaling" color="black" fillcolor="white" style="filled" URL="dir_03f4d6bedefebaa48c569bf1f181691c.html"];
+    dir_548a207bdf3150118c1976080e3e43ca [shape=box label="Simple_IO" color="black" fillcolor="white" style="filled" URL="dir_548a207bdf3150118c1976080e3e43ca.html"];
+    dir_080a2933cac1a5b43e51ca630568ae23 [shape=box label="Simple_IP" color="black" fillcolor="white" style="filled" URL="dir_080a2933cac1a5b43e51ca630568ae23.html"];
+    dir_465bdef9bd6bdebcd00e8740ffe744da [shape=box label="Sprite_Overlay" color="black" fillcolor="white" style="filled" URL="dir_465bdef9bd6bdebcd00e8740ffe744da.html"];
+    dir_885852cf8572e94b4423b1be8bb0ab12 [shape=box label="Stereo_Disparity_Viewer" color="black" fillcolor="white" style="filled" URL="dir_885852cf8572e94b4423b1be8bb0ab12.html"];
+    dir_f75bdbd7a982d4086c605898d750283d [shape=box label="Video_Grabbing" color="black" fillcolor="white" style="filled" URL="dir_f75bdbd7a982d4086c605898d750283d.html"];
+    dir_3a681688817552d1616f0f2cfe1efa09 [shape=box label="WXGL_IO" color="red" fillcolor="white" style="filled" URL="dir_3a681688817552d1616f0f2cfe1efa09.html"];
+  }
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_498202d539bdf54616caade4ff97bf7b->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000045_000008.html"];
+  dir_080a2933cac1a5b43e51ca630568ae23->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="6", labeldistance=1.5 headhref="dir_000049_000008.html"];
+  dir_885852cf8572e94b4423b1be8bb0ab12->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="3", labeldistance=1.5 headhref="dir_000053_000008.html"];
+  dir_b7483112aa505a2e66a922f191cace10->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="5", labeldistance=1.5 headhref="dir_000063_000008.html"];
+  dir_f75bdbd7a982d4086c605898d750283d->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="6", labeldistance=1.5 headhref="dir_000071_000008.html"];
+  dir_03066b6859f5bf54514ed62c0579d0c9->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="6", labeldistance=1.5 headhref="dir_000061_000008.html"];
+  dir_548a207bdf3150118c1976080e3e43ca->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="5", labeldistance=1.5 headhref="dir_000046_000008.html"];
+  dir_465bdef9bd6bdebcd00e8740ffe744da->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="3", labeldistance=1.5 headhref="dir_000065_000008.html"];
+  dir_3a681688817552d1616f0f2cfe1efa09->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="10", labeldistance=1.5 headhref="dir_000074_000008.html"];
+  dir_a4bdd6f8f4c08d7e9426eba536903c27->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="6", labeldistance=1.5 headhref="dir_000020_000008.html"];
+  dir_03f4d6bedefebaa48c569bf1f181691c->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="4", labeldistance=1.5 headhref="dir_000052_000008.html"];
+  dir_840046aaaacffdea250dbc48c95f5f55->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000051_000008.html"];
+}

@@ -1,0 +1,13 @@
+digraph "uriVL::RasterImage_HSV::localRasterHSV"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l_HSV::localRasterHSV",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l_HSV::RasterImage_HSV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__HSV.html#a30324910ac783857a820ac7c7b3ee6d7",tooltip="Creates an undimensioned RGBa float color raster image. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l::setHasOtherRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ae95cfdcea4f84f2ba5d664ef4c28e87d",tooltip="Called by a derived class to indicate whether one of its instances has another (other than float) ras..."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::setReferenceHasChanged_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a6c62baac612cff6df7be87dce2dfc5fb",tooltip="To be called by a child class that has modified the graphworld or one of the secondary rasters..."];
+}

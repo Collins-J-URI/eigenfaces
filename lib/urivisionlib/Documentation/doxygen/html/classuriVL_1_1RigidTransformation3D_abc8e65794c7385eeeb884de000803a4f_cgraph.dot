@@ -1,0 +1,15 @@
+digraph "uriVL::RigidTransformation3D::postComposeTransformation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RigidTransformation3\lD::postComposeTransformation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Rotation3D::\lgetMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Rotation3D.html#a87b88be66389b0da2984dc77934fe2a9",tooltip="Returns a read-only reference to this rotation&#39;s matrix. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Rotation3D::\lupdateMatrix_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Rotation3D.html#a9d50016959558d3071da85aba164d725",tooltip="Updates the rotation matrix if it was not the reference. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Transformation3D\l::getMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Transformation3D.html#aba7499cabe58508cc6af1bcc5a1178de",tooltip="Returns a read-only reference frame to this transformation&#39;s matrix. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Transformation3D\l::updateMatrix_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Transformation3D.html#a706f28d6831e1f4221a71e28d0e12eba",tooltip="Updates the transformation matrix if it was not the reference. "];
+}

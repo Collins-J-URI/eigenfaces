@@ -1,0 +1,9 @@
+digraph "uriVL::Rotation3D::getEulerAngles"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Rotation3D::\lgetEulerAngles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Rotation3D::\lupdateEulerAngles_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Rotation3D.html#a0d482198e17ec91842cbcdbef7d1f5bf",tooltip="Updates the Euler angle representation if it was not up-to-date. "];
+}

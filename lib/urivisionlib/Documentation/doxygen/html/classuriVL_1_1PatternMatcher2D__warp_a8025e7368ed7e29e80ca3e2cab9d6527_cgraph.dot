@@ -1,0 +1,9 @@
+digraph "uriVL::PatternMatcher2D_warp::getWarpedImage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::PatternMatcher2D\l_warp::getWarpedImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::WarpMatchScoreFunction\lND::getWarpedImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1WarpMatchScoreFunctionND.html#a77dfe2b6719335fa1a0a5707ac5927bc",tooltip="Returns a pointer to the output image of the warper. "];
+}

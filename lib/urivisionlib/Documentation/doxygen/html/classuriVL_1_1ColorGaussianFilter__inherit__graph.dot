@@ -1,0 +1,12 @@
+digraph "uriVL::ColorGaussianFilter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="uriVL::ColorGaussianFilter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImageOperator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageOperator.html",tooltip="Virtual parent class for all image operators (operators that are applied to a raster image and produc..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ColorGaussianFilter_F",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorGaussianFilter__F.html",tooltip="Gaussian filter class (float operator). "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ColorGaussianFilter_I",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorGaussianFilter__I.html",tooltip="ColorGaussianFilter_I class. "];
+}

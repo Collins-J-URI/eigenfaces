@@ -1,0 +1,31 @@
+digraph "uriVL::PatternMatcher2D_scaledDiff::setPattern"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::PatternMatcher2D\l_scaledDiff::setPattern",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Pattern2D::getBlob",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#a5112f133a39e81cc645749b2828f90d3",tooltip="Returns a reference to the pattern&#39;s blob data. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Pattern2D::getPattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#a5003d216d0f8b9994037678ea3e82ea1",tooltip="Returns a reference to the pattern&#39;s pixel data. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::PatternMatcher2D\l_scaledDiff::setPattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternMatcher2D__scaledDiff.html#ac741fac680906101cabe62490ac27c34",tooltip="Called to define the pattern used for subsequent covariance calculations. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::PatternMatcher2D\l_scaledDiff::allocateRasters_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternMatcher2D__scaledDiff.html#a0b96745b7723e860f44b508c094b6b9a",tooltip="Allocates private computation rasters for the pattern and the image. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::PatternMatcher2D\l::allocateRasters_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternMatcher2D.html#a6c6b35d60b4459a00e53e8efe9a39cd8",tooltip="Allocates private computation rasters for the pattern and the image. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DrawableObject2D\l::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a0fa48af9667c5a4b53bd2a9bf0eea240",tooltip="Returns the number of rows for the image. "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::ImageRect::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#aa757d85ab5d5230bc0ca53f5960e14f3",tooltip="Returns the height of the rectangle. "];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::DrawableObject2D\l::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a01127dbd10a99cdbb7596e48539068c9",tooltip="Returns the number of columns for the image. "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::ImageRect::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a1081dc6f638b33ebf30d0a43d51289ef",tooltip="Returns the width of the rectangle. "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,45 @@
+digraph "myDisplay2"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="myDisplay2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::PatternTracker2DController\l::getCurrTrackerList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternTracker2DController.html#a22038de601e8edbe6bda8c982f2bb44a",tooltip="Get current list<PatternTracker2D*> "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::DrawableObject2D\l::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a0fa48af9667c5a4b53bd2a9bf0eea240",tooltip="Returns the number of rows for the image. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ImageRect::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#aa757d85ab5d5230bc0ca53f5960e14f3",tooltip="Returns the height of the rectangle. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::TrackingState\l::getPos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1TrackingState.html#a00a2021bf2969596941434f48bea56c3",tooltip="get the position in state information "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DrawableObject2D\l::render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ac8e503cfade891e7ac2a25467cb7d24a",tooltip="Renders the object at the default depth and (0, 0) location. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::Pattern2D::setContour\lColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#a66f74ee325a08803e65e3ddb8c168378",tooltip="Assigns a rendering color to the contour (alpha is set to 1) "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::Blob::setContourColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#aa4bec181d115a2539a58842e7fbbc46f",tooltip="Assigns a rendering color to the contour (alpha is set to 1) "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::Blob::computeContour_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a0247a7596de1e42f020bf9c416189f7b",tooltip="Computes the contour of the blob. "];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::DrawableObject2D\l::setColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a1b40f274066103a117470c82fdd35658",tooltip="Assigns a rendering color to the object (alpha is set to 1) "];
+  Node9 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="uriVL::DrawableObject2D\l::setFrameColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#abb392c87ddbf456aa7302593d1b6c71b",tooltip="Specifies the a color for the frame of this object. "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="uriVL::Pattern2D::setDraw\lContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#a98f1dd64f61a6f31890d66c6116df54c",tooltip="Tells the blob whether its contour should be drawn when the pattern is rendered. "];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="uriVL::Blob::getContour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Blob.html#a744ca76a2de366741f983c05328714d8",tooltip="Get the contour of the blob. "];
+  Node15 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="uriVL::DrawableObject2D\l::setDrawFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a5a09233c99c92bb5f464c01ddd128809",tooltip="Indicates whether this image&#39;s bounding rectangle should be indicated by a color frame. "];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="uriVL::DrawableObject2D\l::setDrawValidDataFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a564ef9a17772a6858628b26af0accf6d",tooltip="Indicates whether this image&#39;s valid data rectangle should be indicated by a color frame..."];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="uriVL::Pattern2D::setRendering\lScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#ad97d2d1ae75d074596c0c55d669eebe7",tooltip="Sets a uniform scale at which this image should be rendered. "];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="uriVL::DrawableObject2D\l::setRenderingScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#acfa7793e58dce0be22f1e2fb93182073",tooltip="Sets a uniform scale at which this object should be rendered. "];
+}

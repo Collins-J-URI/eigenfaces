@@ -1,0 +1,13 @@
+digraph "uriVL::ManualStitcher::equalizeImages"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ManualStitcher\l::equalizeImages",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ManualStitcher\l::computeAverages",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ManualStitcher.html#ab12cc96eb097d7dfc3916df1f32483c4"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ManualStitcher\l::computeIntersections",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ManualStitcher.html#a5eb00b9c966e019b86f4ae8411e134b3"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ManualStitcher\l::interpolateImages",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ManualStitcher.html#a6dfe95c2a3e78b323b038ae5545f7d32"];
+}

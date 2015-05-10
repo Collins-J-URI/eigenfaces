@@ -1,0 +1,15 @@
+digraph "uriVL::RasterImage_binary::RasterImage_binary"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l_binary::RasterImage\l_binary",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l_binary::allocateGraphWorld_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__binary.html#ac9d8971f062e4de48d757b4eb06f8c87",tooltip="Alocates the GraphWorld for this object at the set dimensions. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l_binary::allocateRaster2D_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__binary.html#a70977202e3b7d73a646bafc36ae9aee8",tooltip="Allocates the 2D gray-level base raster. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l_binary::allocateShiftedRaster2D_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__binary.html#a46e8337184792f61f9d29eab9a6158bd",tooltip="Allocates the 2D shifted base raster. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::RasterImage\l::setHasOtherRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#ae95cfdcea4f84f2ba5d664ef4c28e87d",tooltip="Called by a derived class to indicate whether one of its instances has another (other than float) ras..."];
+}

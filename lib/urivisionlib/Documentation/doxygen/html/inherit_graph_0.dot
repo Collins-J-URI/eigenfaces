@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ObjectLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classObjectLoader.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ObjectLoader_3jy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ObjectLoader__3jy.html",tooltip="Implements an object loader for files in the \"3jy\" format, a file format that I created to represent ..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ObjectLoader_obj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ObjectLoader__obj.html",tooltip="Implements a virtual object loader for files in the \"obj\" format. "];
+}

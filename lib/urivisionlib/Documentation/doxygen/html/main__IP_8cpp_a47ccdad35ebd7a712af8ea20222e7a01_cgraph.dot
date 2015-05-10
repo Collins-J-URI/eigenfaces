@@ -1,0 +1,29 @@
+digraph "loadImage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="loadImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImageReader\l::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageReader.html#a1b063b6fc4451a0c59547f387085c0e1",tooltip="Get an image frame from the preselected source. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::VectorField\l::setVectResolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VectorField.html#a91754470dcf9468444a57b20b1644c8e",tooltip="Sets the resolution of the vector field&#39;s rendering (distance between needles in pixel) ..."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::VectorField\l::prepareVectFieldForRendering_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VectorField.html#a0a3049bfdf62a8887372335d5adb78fa",tooltip="Computes the shifting and scaling factors to properly render the vectors as needles the next time ren..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="simpleImageTransform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main__IP_8cpp.html#ada6073df72e7aa11aad1e626202b12c0"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a0fa48af9667c5a4b53bd2a9bf0eea240",tooltip="Returns the number of rows for the image. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ImageRect::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#aa757d85ab5d5230bc0ca53f5960e14f3",tooltip="Returns the height of the rectangle. "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::DrawableObject2D\l::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a01127dbd10a99cdbb7596e48539068c9",tooltip="Returns the number of columns for the image. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::ImageRect::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a1081dc6f638b33ebf30d0a43d51289ef",tooltip="Returns the width of the rectangle. "];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::RasterImage\l::getRaster2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a750ea09662cf38e5013a6d3f76a44a89",tooltip="Returns the base raster as a read-only 2D array. "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+}

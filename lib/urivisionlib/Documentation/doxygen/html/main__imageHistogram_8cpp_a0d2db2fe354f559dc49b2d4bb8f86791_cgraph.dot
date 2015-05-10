@@ -1,0 +1,11 @@
+digraph "myHistogramRenderModeSubmenu"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="myHistogramRenderModeSubmenu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImageHistogram\l::setRenderMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageHistogram.html#a773c666883add9db19666b5aa11511d7",tooltip="Defines the rendering mode for the image histogram. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Histogram::setRenderMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Histogram.html#a7d95a984bf21b47d7f1d43103d48c1a6",tooltip="Defines the rendering mode for the histogram. "];
+}

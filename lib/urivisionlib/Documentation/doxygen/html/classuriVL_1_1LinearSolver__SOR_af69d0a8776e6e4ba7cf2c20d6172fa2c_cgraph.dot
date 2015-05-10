@@ -1,0 +1,24 @@
+digraph "uriVL::LinearSolver_SOR::solve"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::LinearSolver\l_SOR::solve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Matrix::getMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a29c91cadbe9ad1e2ec93d51711348f77",tooltip="Returns a read-only pointer to the matrix data. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::LinearSolver\l::getMatrixIsLocal_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LinearSolver.html#a3d5eca9a5dddea576b1e9e1a650da956",tooltip="Reports whether the solver keeps a local copy of the SLE&#39;s matrix. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Matrix::getNbCols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#ad31ec31b060abc8b63e04d670acc1041",tooltip="This function returns a int corresponding to the number of columns in this "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Matrix::getNbRows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a15c065f33d719d09ec6158dc46af09aa",tooltip="This function returns a int corresponding to the number of rows in this "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::LinearSolver\l::getNbRows_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LinearSolver.html#a868b3f6b162b3fa07802280db3ed4221",tooltip="Reports the number of rows of the solver&#39;s matrix. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::LinearSolver\l::getSingularityStatus_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LinearSolver.html#a81690b71748d8228c35045ea2e38b220",tooltip="Get the singularityStatus_. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::LinearSolver\l_SOR::solve_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LinearSolver__SOR.html#a42f24b7ffcb10610ceb9d7419f854cd1",tooltip="Solves an SLE for the matrix and right-side term received as parameters. "];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

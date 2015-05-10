@@ -1,0 +1,20 @@
+digraph "uriVL::HalfCylinder3D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="uriVL::HalfCylinder3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::TubularSection3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1TubularSection3D.html",tooltip="TubularSection3D class. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::GraphicComponent3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html",tooltip="This is the parent class for all basic 3D shapes (boxes, cylinders, quad and triangle meshes..."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shiny_\nambientMat_\ndiffuseMat_\nspecularMat_" ,fontname="Helvetica"];
+  Node4 [label="GLfloat",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tubeType_" ,fontname="Helvetica"];
+  Node5 [label="TubeType",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" startAngle_\nstopAngle_\nnormalTop_\nnormal_\nnormalBottom_\nvertex_" ,fontname="Helvetica"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nbCircSegs_\nslabStep_\ncircStep_" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" normalLength_\nnormalTop_\nnormalBottom_" ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" closedLength_\nclosedSides_" ,fontname="Helvetica"];
+  Node7 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

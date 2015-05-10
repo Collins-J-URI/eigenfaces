@@ -1,0 +1,11 @@
+digraph "uriMovieEditing" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_07288473c820508e899cc0bb782c9764 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="C++" fontname="Helvetica", fontsize="10", URL="dir_07288473c820508e899cc0bb782c9764.html"]
+  dir_ebac020ecaa771f32090f7a2e3a3181d [shape=box, label="uriMovieEditing", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ebac020ecaa771f32090f7a2e3a3181d.html"];
+  }
+  dir_ca6309d378ceffb9970caf11a0592736 [shape=box label="SDK" fillcolor="white" style="filled" color="red" URL="dir_ca6309d378ceffb9970caf11a0592736.html"];
+  dir_ebac020ecaa771f32090f7a2e3a3181d->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="7", labeldistance=1.5 headhref="dir_000041_000007.html"];
+}

@@ -1,0 +1,48 @@
+digraph "myDisplayMain"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="myDisplayMain",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="myDisplay0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main__stereo_8cpp.html#a203e370232115e0fd93fae4a255d9d7d"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::DrawableObject2D\l::render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ac8e503cfade891e7ac2a25467cb7d24a",tooltip="Renders the object at the default depth and (0, 0) location. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="myDisplay1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main__stereo_8cpp.html#a7af0867a250b60f1375c843341bc40b6"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="myDisplayDepth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main__stereo_8cpp.html#a882ec2e639ebcc11b7edc99d207d0c50"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::DepthMap::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DepthMap.html#a995aa3f9b71f2694667ea9b06a58a942",tooltip="Renders the depth map as a meshed surface. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::DrawableObject2D\l::getDrawableInformationType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ae0f3b109096e3e4ffaa08881c3606ee1",tooltip="Returns the type of information stored in this object. "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::DepthMap::drawDense\lMesh_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DepthMap.html#a7d9f00cd5df839ee1e999dede1eaaa8d",tooltip="Draws the triangular mesh of a dense map. "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::DrawableObject2D\l::getValidRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#ad654c2c5da02b3b20298c3eef4153874",tooltip="Returns the object&#39;s valid data rectangle. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::DrawableObject2D\l::computeValidRect_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#a9eb135fd212d80a8fbc3caa7e242d9dd",tooltip="Calculates the object&#39;s valid box. "];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::ImageRect::getTop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a2715b0a7b291354fd839a95ece0e0aba",tooltip="Returns the minimum y coordinate of the rectangle. "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::ImagePoint::getY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4edda1ad5b1f3b39db3ac200dfddf016",tooltip="Returns the point&#39;s y coordinate. "];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="uriVL::ImageRect::getBottom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#acb34c902550ecb25f7fa6ffb620aea71",tooltip="Returns the maximum y coordinate of the rectangle. "];
+  Node13 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="uriVL::ImageRect::getLeft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a38bd531df6bd6c4892bca1a690feda13",tooltip="Returns the minimum x coordinate of the rectangle. "];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="uriVL::ImagePoint::getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint.html#a4845eb34e164c8dffd9b366cf61f3f5b",tooltip="Returns the point&#39;s x coordinate. "];
+  Node8 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="uriVL::ImageRect::getRight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImageRect.html#a89884bd1866a1b7ffb67d4cc1ec1a052",tooltip="Returns the maximum x coordinate of the rectangle. "];
+  Node16 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="uriVL::GraphicComponent3\lD::setReflectionParameters_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#ab3cdc371e0c01b126517969ecc9bef0c"];
+  Node6 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="uriVL::DepthMap::drawDense\lMeshSmooth_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DepthMap.html#a2cba3cb29bcf1082c2df3a9c14ae45b1",tooltip="Draws the smoothed triangular mesh of a dense map. "];
+  Node6 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="uriVL::DepthMap::drawSparse\lMesh_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DepthMap.html#a58cf021ff9106202cc642d42bccb61f6",tooltip="Draws the mesh of a sparse map. "];
+  Node6 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="uriVL::DepthMap::drawSparse\lMeshSmooth_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DepthMap.html#ad5b005caecbb534e31fd277994a1db9e",tooltip="Draws the smoothed mesh of a sparse map. "];
+}

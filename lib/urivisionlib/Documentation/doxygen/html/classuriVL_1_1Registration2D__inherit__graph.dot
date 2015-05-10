@@ -1,0 +1,12 @@
+digraph "uriVL::Registration2D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="uriVL::Registration2D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Registration2D_ICP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Registration2D__ICP.html",tooltip="Class for objects that register two sets of image points using the Iterated Closest Point (ICP) algor..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Registration2D\l_LMICP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Registration2D__LMICP.html",tooltip="Class for objects that register two sets of image points using the Levenberg-Marquardt formulation of..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Registration2D_LPCD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Registration2D__LPCD.html",tooltip="Class for objects that register two sets of image points using the Local Consistency of Point Data (L..."];
+}

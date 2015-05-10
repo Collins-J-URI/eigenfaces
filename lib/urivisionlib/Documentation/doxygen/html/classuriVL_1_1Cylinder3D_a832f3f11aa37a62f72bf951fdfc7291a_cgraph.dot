@@ -1,0 +1,29 @@
+digraph "uriVL::Cylinder3D::Cylinder3D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Cylinder3D::\lCylinder3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::GraphicComponent3\lD::commonNormalVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a7bf254f498811a614107b316c8b4e313"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::GraphicComponent3\lD::normalizeVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#af099e3ae8ec18639dc520c69119df36b"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::GraphicComponent3\lD::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a1ac3c968a0834a059e3df89b9fb99bea"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Cylinder3D::\ldeleteArrays_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Cylinder3D.html#a2186c57a336ce3fa7d1fab267593ba6e",tooltip="Delete all allocated arrays. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::GlUtils::free\l_glfMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GlUtils.html#a19adc54e9b98b136b3a995faadbca6a6",tooltip="Frees the 2D array of GLfloat elements received as parameter. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::GlUtils::glfMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GlUtils.html#a90ced760d48287d333171d2a46ad691a",tooltip="Allocates a 2D array of GLfloat elements that uses the index range specified by the parameters receiv..."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::Cylinder3D::\linit_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Cylinder3D.html#a2b9e867032ad620b7d3a360bbc6179e6",tooltip="Initialize the cone. "];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::GraphicComponent3\lD::crossProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GraphicComponent3D.html#a19d8c7d7b7541e2cbc050776d19252fb"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::Cylinder3D::\linitStatic_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Cylinder3D.html#ad06b6686ba6cf67b023802318378b9f8",tooltip="Initializes the classe&#39;s static variables. "];
+}

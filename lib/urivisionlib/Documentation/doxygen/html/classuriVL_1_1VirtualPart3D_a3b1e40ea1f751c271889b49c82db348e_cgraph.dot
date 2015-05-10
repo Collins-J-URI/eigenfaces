@@ -1,0 +1,15 @@
+digraph "uriVL::VirtualPart3D::render"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::VirtualPart3D\l::render",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::VirtualPart3D\l::drawReferenceFrame_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPart3D.html#ace97351e5563b825e351bca2c0877944"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::VirtualPoint3D\l::getVisibility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPoint3D.html#aeb2c788e399357bd1abad4181c7a3c90",tooltip="Reports the visibility status of the virtual point relatve to a specific camera. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::VirtualPoint3D\l::getXYZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPoint3D.html#a67a70bc730ea8b6a1bc71f0efeb68ac0",tooltip="Returns the point&#39;s coordinates vector. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Point3D::getXYZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Point3D.html#ac6f4a6c1b191e6cad5d2a84dfd369cbe",tooltip="Returns the point&#39;s coordinates vector. "];
+}

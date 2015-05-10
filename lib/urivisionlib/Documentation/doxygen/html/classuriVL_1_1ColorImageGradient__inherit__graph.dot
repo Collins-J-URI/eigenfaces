@@ -1,0 +1,15 @@
+digraph "uriVL::ColorImageGradient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ColorImageGradient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::VectorOperator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VectorOperator.html",tooltip="Virtual parent class for all vector operators (operators that are applied to a raster image and produ..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ColorImageGradient\l_Gaussian_F",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorImageGradient__Gaussian__F.html",tooltip="Vector operator that computes the gradient of a color raster image using a \"gradient of Gaussian\" fil..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ColorImageGradient\l_Gaussian_I",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorImageGradient__Gaussian__I.html",tooltip="Vector operator that computes the gradient of a raster image using a \"gradient of Gaussian\" filter..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::ColorImageGradient\l_Sobel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorImageGradient__Sobel.html",tooltip="Vector operator that computes the gradient of a raster image using Sobel-like masks. "];
+}

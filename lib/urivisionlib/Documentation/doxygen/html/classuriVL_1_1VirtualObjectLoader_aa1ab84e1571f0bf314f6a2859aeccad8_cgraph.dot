@@ -1,0 +1,17 @@
+digraph "uriVL::VirtualObjectLoader::loadObject"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::VirtualObjectLoader\l::loadObject",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::VirtualPart3D\l::addFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPart3D.html#ab996537b2b180afb9a774b02fa6b704b",tooltip="Adds a face to the part. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::VirtualPart3D\l::addFaceVertexInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPart3D.html#a111fa58fb5091a2e725da6cd725134d9"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::VirtualPart3D\l::addNormalVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPart3D.html#ac0efd61bce7f17f2571fa0fdea46d813",tooltip="Adds a normal vector to the part. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::VirtualObject3D\l::addPart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualObject3D.html#ac2ce21c24b6ee77adc4c6bf6fe12d06d",tooltip="Adds a part to this virtual object. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::VirtualPart3D\l::getVertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1VirtualPart3D.html#a65128a5c1bfe835d6e91558e0bfc738d",tooltip="Returns the vector of virtual point3D vertices related to the virtual part. "];
+}

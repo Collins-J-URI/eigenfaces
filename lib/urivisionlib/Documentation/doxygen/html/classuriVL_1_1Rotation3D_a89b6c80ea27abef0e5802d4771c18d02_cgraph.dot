@@ -1,0 +1,17 @@
+digraph "uriVL::Rotation3D::Rotation3D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Rotation3D::\lRotation3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Matrix::getMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a29c91cadbe9ad1e2ec93d51711348f77",tooltip="Returns a read-only pointer to the matrix data. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Matrix::identityMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a4fe45cc5240ee2a83a83128828bee3e1",tooltip="Produces a new identity matrix at the dimensions specified. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Matrix::diagonalMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a569368ad059f521c144b9ad4a0d0a321",tooltip="Produces a new diagonal matrix at the dimensions specified and initializes all diagonal elements with..."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Matrix::Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a8bd826b4d89d3711ceb055b6d7ca8a34",tooltip="Creates a nbRows x nbCols matrix whose elements have not been initialized. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::Matrix::allocateMatrix_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a15b24cfffe59d7bc6f1e8d9e21fb6595",tooltip="Allocates mat_ at the storage dimensions. "];
+}

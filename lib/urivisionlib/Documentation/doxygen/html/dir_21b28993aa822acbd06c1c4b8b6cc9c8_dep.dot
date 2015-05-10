@@ -1,0 +1,21 @@
+digraph "Computer_Vision" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a18362ea1cb878d54e49c72fda0e3b4b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="C++" fontname="Helvetica", fontsize="10", URL="dir_a18362ea1cb878d54e49c72fda0e3b4b.html"]
+  subgraph clusterdir_21b28993aa822acbd06c1c4b8b6cc9c8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_21b28993aa822acbd06c1c4b8b6cc9c8.html"];
+    dir_21b28993aa822acbd06c1c4b8b6cc9c8 [shape=plaintext label="Computer_Vision"];
+    dir_f8424a542a402eb688cc2bd8f3b15b9f [shape=box label="Background_Update" color="black" fillcolor="white" style="filled" URL="dir_f8424a542a402eb688cc2bd8f3b15b9f.html"];
+    dir_dbaccf0689bd873db3ae0e642db66ecd [shape=box label="Calibration_3D" color="red" fillcolor="white" style="filled" URL="dir_dbaccf0689bd873db3ae0e642db66ecd.html"];
+    dir_fcd9d44594ca8ae4b211bab07f1fd119 [shape=box label="Video_Difference" color="black" fillcolor="white" style="filled" URL="dir_fcd9d44594ca8ae4b211bab07f1fd119.html"];
+    dir_83d76161f976c30941942fad85cc3dff [shape=box label="Video_Normal_Flow" color="black" fillcolor="white" style="filled" URL="dir_83d76161f976c30941942fad85cc3dff.html"];
+  }
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_83d76161f976c30941942fad85cc3dff->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="12", labeldistance=1.5 headhref="dir_000072_000008.html"];
+  dir_dbaccf0689bd873db3ae0e642db66ecd->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="9", labeldistance=1.5 headhref="dir_000027_000008.html"];
+  dir_fcd9d44594ca8ae4b211bab07f1fd119->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="8", labeldistance=1.5 headhref="dir_000070_000008.html"];
+  dir_f8424a542a402eb688cc2bd8f3b15b9f->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="13", labeldistance=1.5 headhref="dir_000015_000008.html"];
+}

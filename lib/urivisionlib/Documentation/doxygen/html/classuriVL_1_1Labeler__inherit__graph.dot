@@ -1,0 +1,23 @@
+digraph "uriVL::Labeler"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Labeler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ColorInverseThreshold\lLabeler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorInverseThresholdLabeler.html",tooltip="A ColorInverseThresholdLabeler segments an image into regions based on a set of predefined color thre..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::ColorThresholdLabeler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ColorThresholdLabeler.html",tooltip="A ColorThresholdLabeler segments an image into regions based on a set of predefined color threshold-b..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::EdgeDetector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1EdgeDetector.html",tooltip="EdgeDetector class. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::EdgeDetector\l_Canny_F",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1EdgeDetector__Canny__F.html",tooltip="EdgeDetector_Canny_F class. "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::EdgeDetector\l_Canny_I",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1EdgeDetector__Canny__I.html",tooltip="EdgeDetector_Canny_I. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::GrayThresholdLabeler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1GrayThresholdLabeler.html",tooltip="A GrayThresholdLabeler segments an image into regions based on a set of predefined gray-level modes..."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ThresholdLabeler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ThresholdLabeler.html",tooltip="Pure virtual parent class for objects that segment an image into regions based on a set of predefined..."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::ZeroCrossingDetector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ZeroCrossingDetector.html",tooltip="ZeroCrossingDetector class. "];
+}

@@ -1,0 +1,11 @@
+digraph "uriImageProcessing" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_07288473c820508e899cc0bb782c9764 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="C++" fontname="Helvetica", fontsize="10", URL="dir_07288473c820508e899cc0bb782c9764.html"]
+  dir_78121c6f5226e10f78dbf96475c2a39c [shape=box, label="uriImageProcessing", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_78121c6f5226e10f78dbf96475c2a39c.html"];
+  }
+  dir_ca6309d378ceffb9970caf11a0592736 [shape=box label="SDK" fillcolor="white" style="filled" color="red" URL="dir_ca6309d378ceffb9970caf11a0592736.html"];
+  dir_78121c6f5226e10f78dbf96475c2a39c->dir_ca6309d378ceffb9970caf11a0592736 [headlabel="140", labeldistance=1.5 headhref="dir_000006_000007.html"];
+}

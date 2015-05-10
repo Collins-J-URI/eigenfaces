@@ -1,0 +1,43 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Function1D::\ld2func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D.html#af8c2f7ec1496ee0bc7494aced44c81c6",tooltip="Evaluates the second derivative of the function at the point specified. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Function1D::\lisDefinedAt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D.html#a2549e61d96f0afd658ed3e6b2a95efbf",tooltip="Indicates whther a point is within the domain of definition of this function. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::Function1D::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D.html#ae42553644bd3826aa4add06eb16410fc",tooltip="Evaluates the function at the point specified. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Function1D_F\l::d2func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D__F.html#a4397f5ec4b93e69b3834af05fad54416",tooltip="Evaluates the second derivative of the function at the point specified. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::Function1D_F\l::isDefinedAt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D__F.html#ad7213b669e447ace21d701aea3ad4c15",tooltip="Indicates whther a point is within the domain of definition of this function. "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::Function1D_F\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D__F.html#a7dabdc9f3e6c199dc89f297dac9fc54e",tooltip="Evaluates the function at the point specified. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="MyFunction1D::dfunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMyFunction1D.html#a95460ca71b464d45353178aa801bf354",tooltip="Evaluates the first derivative of the function at the point specified. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uriVL::Function1D_F\l::dfunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D__F.html#a74c57f65887fb17ed748ac9ca372c355",tooltip="Evaluates the first derivative of the function at the point specified. "];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uriVL::Function1D::\ldfunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Function1D.html#a9e4dd0855b490d5b1baca81aa3f58c37",tooltip="Evaluates the first derivative of the function at the point specified. "];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="uriVL::PolynomialFunction1\lD_F::dnfunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PolynomialFunction1D__F.html#aebceffd7c0bfd50343d14426ebc0a8d3",tooltip="Evaluates the nth derivative of the function at the point specified. "];
+  Node11 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="uriVL::PolynomialFunction1\lD::dnfunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PolynomialFunction1D.html#ad753008ec93d7ede997a4b0e9a16a128",tooltip="Evaluates the nth derivative of the function at the point specified. "];
+  Node12 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="MyFunction1D::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMyFunction1D.html#a014a5a9a4e8caeec067c04e4cacacdee",tooltip="Evaluates the function at the point specified. "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="YetAnotherFunction1D\l::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classYetAnotherFunction1D.html#a3c13889dee7b29aeb1847bf337300681",tooltip="Evaluates the function at the point specified. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="uriVL::ErrorReport\l::getMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#ab0e9a629dc8d1342f8c6078e5d5b2a1d",tooltip="When you call this, you&#39;re responsible for delete[]&#39;ing the returned pointer. "];
+}

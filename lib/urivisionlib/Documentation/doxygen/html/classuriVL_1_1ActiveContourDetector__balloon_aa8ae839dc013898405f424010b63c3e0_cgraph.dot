@@ -1,0 +1,21 @@
+digraph "uriVL::ActiveContourDetector_balloon::calculateShrinkForce_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ActiveContourDetector\l_balloon::calculateShrinkForce_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Contour_F::getEdgeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#a5db4be98390b8131ec04ea0675d304fb",tooltip="Computes the edges along the closed contour and returns it as a list of image points. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Contour_F::compute\lEdgeVectorList_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#a3ade0de1db39e81bac2e3f250a6b0360",tooltip="Computes the edges along the closed contour and returns it as a list of image points. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ContourForce\l::getForce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ContourForce.html#a3feabd49930e13e8d29c0e4f90bc0541",tooltip="Returns a writable pointer to the contour force&#39;s geometric contour (list of points) ..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::Contour::getInter\lPointDistances",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour.html#a858170f7fb4196a900cf0dc8a238b897",tooltip="Computes the distances between image points and returns it as a list of float numbers. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::Contour::computeInter\lPointDistances_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour.html#a81b4e1d8e6f3a24048cb581c24bece22",tooltip="Computes the distances between image points. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uriVL::Contour_F::getPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Contour__F.html#a34c536647edac278d2070a7168113458",tooltip="Returns the contour&#39;s private list of image points. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uriVL::ActiveContourDetector\l::getTimeStep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ActiveContourDetector.html#a43943e5542b95c72803bc14e48c03c6e",tooltip="Returns the value of the \"time step\" that scales the total force to produce a displacement. "];
+}

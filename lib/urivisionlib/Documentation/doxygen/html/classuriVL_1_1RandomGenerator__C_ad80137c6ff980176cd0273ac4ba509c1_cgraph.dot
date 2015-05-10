@@ -1,0 +1,11 @@
+digraph "uriVL::RandomGenerator_C::nextDouble_st"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RandomGenerator\l_C::nextDouble_st",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RandomGenerator\l_C::nextDouble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__C.html#a0db85bb5d87d0ae40d86ce75c6474498",tooltip="Returns a new uniformly distributed double pseudo-random number in the range specified. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RandomGenerator\l_C::nextULong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RandomGenerator__C.html#ae97492f68d5a9969d1b8b70634304568",tooltip="Returns a new uniformly-distributed unsigned long pseudo-random number in the full range of the data ..."];
+}

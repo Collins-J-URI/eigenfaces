@@ -1,0 +1,13 @@
+digraph "uriVL::ActiveContourDetector::iterate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::ActiveContourDetector\l::iterate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ActiveContourDetector\l::getStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ActiveContourDetector.html#ac90fa3ddb55cb2b348d159faba111603",tooltip="Returns the current iteration status without computing an iteration step. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::IterationStatus\l::hasConverged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1IterationStatus.html#ac8e440ecd5cb5822b0d7926431cfc10d",tooltip="Indicates whether the iteration has converged. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::ActiveContourDetector\l::oneStep_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ActiveContourDetector.html#ac5454dcff791334aecffc4a0eab63686",tooltip="Applies one iteration of the contour determination algorithm. "];
+}

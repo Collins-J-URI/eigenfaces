@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::StereoMatcher",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1StereoMatcher.html",tooltip="Pure virtual parent class for all classes that implement a stereo matching algorithm. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RectifiedStereoMatcher",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RectifiedStereoMatcher.html",tooltip="Pure virtual parent class for all classes that implement a stereo matching algorithm for rectified st..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RectifiedStereoMatcher_corr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RectifiedStereoMatcher__corr.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RectifiedStereoMatcher_JJL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RectifiedStereoMatcher__JJL.html"];
+}

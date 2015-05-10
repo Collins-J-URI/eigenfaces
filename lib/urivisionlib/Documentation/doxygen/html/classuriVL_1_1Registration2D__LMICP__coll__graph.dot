@@ -1,0 +1,30 @@
+digraph "uriVL::Registration2D_LMICP"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Registration2D\l_LMICP",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Registration2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Registration2D.html",tooltip="Virtual parent class for objects that register two sets of image points or (later) two image regions..."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" DEFAULT_NO_MATCH_THRESHOLD\nnoMatchPenalty_\nDEFAULT_FAIL_NEIGHBOR\l_SCALE\nDEFAULT_NO_MATCH_PENALTY\nnoMatchThreshold_\nDEFAULT_PAIR_REJECT\l_PERCENT\nDEFAULT_STANDARD_DEV\l_REJECT_MULT" ,fontname="Helvetica"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pairRejectionMode_" ,fontname="Helvetica"];
+  Node4 [label="Point2DPairRejectMode",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" solver_" ,fontname="Helvetica"];
+  Node5 [label="uriVL::LinearSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1LinearSolver.html",tooltip="Parent class to all classes that implement an algorithm for solving a system of linear equations..."];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" singularityStatus_" ,fontname="Helvetica"];
+  Node6 [label="LinearSolverRecordStatus",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nbStorageRows_\nnbStorageCols_\nnbCols_\nnbRows_" ,fontname="Helvetica"];
+  Node7 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" matrixIsLocal_" ,fontname="Helvetica"];
+  Node8 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" DEFAULT_MIN_NUMBER\l_FAIL_NEIGHBOR\nDEFAULT_NUMBER_NEIGHBOR_COMP" ,fontname="Helvetica"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" matchingMetric_" ,fontname="Helvetica"];
+  Node9 [label="Point2DMatchingMetric",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pairWeightingMode_" ,fontname="Helvetica"];
+  Node10 [label="MatchPairWeightingMode",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptSelectMode_" ,fontname="Helvetica"];
+  Node11 [label="Point2DSelectionMode",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" regType_" ,fontname="Helvetica"];
+  Node12 [label="Registration2DType",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

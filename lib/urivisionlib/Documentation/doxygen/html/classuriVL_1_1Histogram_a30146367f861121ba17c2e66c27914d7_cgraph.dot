@@ -1,0 +1,9 @@
+digraph "uriVL::Histogram::computeCenterOfMass_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::Histogram::compute\lCenterOfMass_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ImagePoint_F\l::setCoordinates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ImagePoint__F.html#a4a15dda5834fa7704f547b1719155536",tooltip="Assigns new coordinates to the pixel. "];
+}

@@ -1,0 +1,18 @@
+digraph "uriVL::FunctionND::gradient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::FunctionND::\lgradient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::ErrorReport\l::appendToMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1ErrorReport.html#a65100d12091947d1df26c38f48058569",tooltip="Appends a string to the error message. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::Matrix::getMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Matrix.html#a29c91cadbe9ad1e2ec93d51711348f77",tooltip="Returns a read-only pointer to the matrix data. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::FunctionND::\lgradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1FunctionND.html#a6d428505880114f756ea544615b73ca7",tooltip="Evaluates the gradient of the function at the point specified. "];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::FunctionND::func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1FunctionND.html#a7a0d3d96d3f562fc47f6d5c350a3b31a",tooltip="Evaluates the function at the nD point specified. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uriVL::FunctionND::\lisDefinedAt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1FunctionND.html#a21c18621419fcc5e1e094627798bcf15",tooltip="Indicates whther a point is within the domain of definition of this function. "];
+}

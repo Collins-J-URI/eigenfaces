@@ -1,0 +1,21 @@
+digraph "uriVL::NonlinearOptimizerND"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="uriVL::NonlinearOptimizerND",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fNF_" ,fontname="Helvetica"];
+  Node2 [label="uriVL::FunctionND_F",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1FunctionND__F.html",tooltip="Pure virtual parent class for all n-dimensional functions. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xLocal_\nxLocal2_\nxMax_\nxMin_" ,fontname="Helvetica"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nDim_" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" isBounded_" ,fontname="Helvetica"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nDim_" ,fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fND_" ,fontname="Helvetica"];
+  Node6 [label="uriVL::FunctionND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1FunctionND.html",tooltip="Pure virtual parent class for all n-dimensional functions. "];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xLocal_\nxLocal2_\nxMax_\nxMin_" ,fontname="Helvetica"];
+  Node7 [label="double",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nDim_" ,fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" isBounded_" ,fontname="Helvetica"];
+}

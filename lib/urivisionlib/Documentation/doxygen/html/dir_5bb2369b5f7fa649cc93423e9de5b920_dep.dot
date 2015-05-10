@@ -1,0 +1,45 @@
+digraph "Image_Processing" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a18362ea1cb878d54e49c72fda0e3b4b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="C++" fontname="Helvetica", fontsize="10", URL="dir_a18362ea1cb878d54e49c72fda0e3b4b.html"]
+  subgraph clusterdir_5bb2369b5f7fa649cc93423e9de5b920 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5bb2369b5f7fa649cc93423e9de5b920.html"];
+    dir_5bb2369b5f7fa649cc93423e9de5b920 [shape=plaintext label="Image_Processing"];
+    dir_f925a3d67f519551a64ce38ec5c301f2 [shape=box label="Blob_Filler" color="black" fillcolor="white" style="filled" URL="dir_f925a3d67f519551a64ce38ec5c301f2.html"];
+    dir_d7572e9ef407eff9f21ae15d801e7e46 [shape=box label="Blob_Pattern_Creation" color="black" fillcolor="white" style="filled" URL="dir_d7572e9ef407eff9f21ae15d801e7e46.html"];
+    dir_b1ef16bbfee95d1504598cfe83881019 [shape=box label="Color_Gaussian_and_Median" color="black" fillcolor="white" style="filled" URL="dir_b1ef16bbfee95d1504598cfe83881019.html"];
+    dir_87132c4a014f387a27cc068118286999 [shape=box label="Color_Image_Gradients" color="black" fillcolor="white" style="filled" URL="dir_87132c4a014f387a27cc068118286999.html"];
+    dir_988d9361399bd14b692b06eb42ceb1c1 [shape=box label="Color_Thresholding" color="black" fillcolor="white" style="filled" URL="dir_988d9361399bd14b692b06eb42ceb1c1.html"];
+    dir_ef8ad6d7e9ac271c0a5c7740eb52467e [shape=box label="Edge_Pixels" color="black" fillcolor="white" style="filled" URL="dir_ef8ad6d7e9ac271c0a5c7740eb52467e.html"];
+    dir_5d738428a8a33848aa490816e1aed52a [shape=box label="Game_of_Life" color="black" fillcolor="white" style="filled" URL="dir_5d738428a8a33848aa490816e1aed52a.html"];
+    dir_8e0de54df4638fc3e028d2e33d7e42c5 [shape=box label="Gaussian_and_Median" color="black" fillcolor="white" style="filled" URL="dir_8e0de54df4638fc3e028d2e33d7e42c5.html"];
+    dir_850804d3da4080f272f05d84d4b30c95 [shape=box label="Gray_Thresholding" color="black" fillcolor="white" style="filled" URL="dir_850804d3da4080f272f05d84d4b30c95.html"];
+    dir_566f569d5d894e2245f3a8e0dcce211d [shape=box label="Image_Difference" color="black" fillcolor="white" style="filled" URL="dir_566f569d5d894e2245f3a8e0dcce211d.html"];
+    dir_c196650fb7c02945b50a2419bd9cd111 [shape=box label="Image_Gradients" color="black" fillcolor="white" style="filled" URL="dir_c196650fb7c02945b50a2419bd9cd111.html"];
+    dir_b7afc61ef02cd27921c42aa91ef9cc04 [shape=box label="Image_Warping" color="black" fillcolor="white" style="filled" URL="dir_b7afc61ef02cd27921c42aa91ef9cc04.html"];
+    dir_5375219362b72adbd6a491d56d43de97 [shape=box label="Movie_Blob_Finder" color="black" fillcolor="white" style="filled" URL="dir_5375219362b72adbd6a491d56d43de97.html"];
+    dir_4bdf4a9fa9d01f10be0d8b99d24980a6 [shape=box label="Movie_Processing" color="black" fillcolor="white" style="filled" URL="dir_4bdf4a9fa9d01f10be0d8b99d24980a6.html"];
+    dir_3287b68596cd2dc1fb41bc57e09313fd [shape=box label="Rectangular_Pattern_Matching" color="black" fillcolor="white" style="filled" URL="dir_3287b68596cd2dc1fb41bc57e09313fd.html"];
+    dir_db0736fb69550a74b1170387d4e35f83 [shape=box label="Video_Blob_Finder" color="black" fillcolor="white" style="filled" URL="dir_db0736fb69550a74b1170387d4e35f83.html"];
+  }
+  }
+  dir_3ed09e8ce6640af79318ee4a8db1ede0 [shape=box label="Headers" fillcolor="white" style="filled" color="red" URL="dir_3ed09e8ce6640af79318ee4a8db1ede0.html"];
+  dir_5d738428a8a33848aa490816e1aed52a->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="8", labeldistance=1.5 headhref="dir_000044_000008.html"];
+  dir_988d9361399bd14b692b06eb42ceb1c1->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="6", labeldistance=1.5 headhref="dir_000033_000008.html"];
+  dir_4bdf4a9fa9d01f10be0d8b99d24980a6->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="10", labeldistance=1.5 headhref="dir_000055_000008.html"];
+  dir_db0736fb69550a74b1170387d4e35f83->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="5", labeldistance=1.5 headhref="dir_000054_000008.html"];
+  dir_b7afc61ef02cd27921c42aa91ef9cc04->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000073_000008.html"];
+  dir_d7572e9ef407eff9f21ae15d801e7e46->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000059_000008.html"];
+  dir_8e0de54df4638fc3e028d2e33d7e42c5->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="7", labeldistance=1.5 headhref="dir_000037_000008.html"];
+  dir_c196650fb7c02945b50a2419bd9cd111->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="10", labeldistance=1.5 headhref="dir_000040_000008.html"];
+  dir_566f569d5d894e2245f3a8e0dcce211d->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="6", labeldistance=1.5 headhref="dir_000039_000008.html"];
+  dir_ef8ad6d7e9ac271c0a5c7740eb52467e->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="18", labeldistance=1.5 headhref="dir_000036_000008.html"];
+  dir_f925a3d67f519551a64ce38ec5c301f2->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="5", labeldistance=1.5 headhref="dir_000043_000008.html"];
+  dir_850804d3da4080f272f05d84d4b30c95->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="4", labeldistance=1.5 headhref="dir_000038_000008.html"];
+  dir_b1ef16bbfee95d1504598cfe83881019->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="8", labeldistance=1.5 headhref="dir_000029_000008.html"];
+  dir_3287b68596cd2dc1fb41bc57e09313fd->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="9", labeldistance=1.5 headhref="dir_000060_000008.html"];
+  dir_87132c4a014f387a27cc068118286999->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="12", labeldistance=1.5 headhref="dir_000030_000008.html"];
+  dir_5375219362b72adbd6a491d56d43de97->dir_3ed09e8ce6640af79318ee4a8db1ede0 [headlabel="5", labeldistance=1.5 headhref="dir_000050_000008.html"];
+}

@@ -1,0 +1,9 @@
+digraph "uriVL::GraphWorld::restoreGraphWorld"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::GraphWorld::\lrestoreGraphWorld",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::_GraphWorld\l_gen::restoreGraphWorld_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1__GraphWorld__gen.html#a4123c42bdd1d5b25b4c104b4a620487b",tooltip="Restores previous current _GraphWorld_gen and graphic device settings. "];
+}

@@ -1,0 +1,11 @@
+digraph "uriVL::RasterImage_HSV24::~RasterImage_HSV24"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l_HSV24::~RasterImage_HSV24",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l_HSV24::deleteHSV_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__HSV24.html#a729d502efbfd2299dbd81ee738fac140"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::RasterImage\l_HSV24::deleteRaster2D_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage__HSV24.html#a70c51620caacb9bba2cd80e350e3bed3",tooltip="Deletes the 0-based 2D base raster. "];
+}

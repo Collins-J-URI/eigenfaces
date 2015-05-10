@@ -1,0 +1,9 @@
+digraph "uriVL::DrawableObject2D::getCenterOfMass"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::DrawableObject2D\l::getCenterOfMass",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::DrawableObject2D\l::computeCenterOfMass_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1DrawableObject2D.html#acf1c6f648709e0820d0832401fe05170",tooltip="Computes the object&#39;s center of mass by calculating the average point. "];
+}

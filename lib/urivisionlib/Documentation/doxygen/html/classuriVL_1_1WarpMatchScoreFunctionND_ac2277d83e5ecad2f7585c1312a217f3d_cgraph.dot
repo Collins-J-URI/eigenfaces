@@ -1,0 +1,16 @@
+digraph "uriVL::WarpMatchScoreFunctionND::setPattern"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::WarpMatchScoreFunction\lND::setPattern",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::Pattern2D::assign\lPattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1Pattern2D.html#ad6571d4fb94ac5f5b8fee6bec446f918",tooltip="Assigns new raster and blob info for this pattern. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uriVL::PatternMatcher2D\l::getBaseMatcherType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternMatcher2D.html#a3feec33c88cddf85b281cf2848e17afc",tooltip="If the matcher is one of the basic types, indicates which. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uriVL::RasterImage\l::getBaseRasterType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a68815937f6a787e4541a33b108198baf",tooltip="Returns the image&#39;s base raster type. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uriVL::PatternMatcher2D\l::setPattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1PatternMatcher2D.html#a0d72af670468967dfa349913580a7983",tooltip="Called to define the pattern used for subsequent covariance calculations. "];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

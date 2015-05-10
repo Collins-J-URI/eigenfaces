@@ -1,0 +1,9 @@
+digraph "uriVL::RasterImage_gray_F::deleteRaster2D_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uriVL::RasterImage\l_gray_F::deleteRaster2D_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="uriVL::RasterImage\l::setHasFloatRaster_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classuriVL_1_1RasterImage.html#a7b1e966f2fee0837e2d1f9c454ea9046",tooltip="Called by a derived class to indicate whether one of its instances has a float raster (false by defau..."];
+}
