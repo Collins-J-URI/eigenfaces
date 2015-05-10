@@ -1,0 +1,171 @@
+// !$*UTF8*$!
+{
+	16D8EB1A0B8A76F300916EFD /* Framework - QT */ = {
+		activeExec = 0;
+		executables = (
+			93AA0A9317E1252C00020FE2 /* Framework - QT */,
+		);
+	};
+	16D8EB240B8A773C00916EFD /* Framework - generic */ = {
+		activeExec = 0;
+		executables = (
+			93AA0A9417E1252C00020FE2 /* Framework - generic */,
+		);
+	};
+	16DBAF5C0B7CFEE30027A882 /* Source - generic */ = {
+		activeExec = 0;
+		executables = (
+			93AA0A9217E1252C00020FE2 /* Source - generic */,
+		);
+	};
+	20286C28FDCF999611CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 93AA0A9217E1252C00020FE2 /* Source - generic */;
+		activeTarget = 16DBAF5C0B7CFEE30027A882 /* Source - generic */;
+		codeSenseManager = 93AA0AAB17E1254C00020FE2 /* Code sense */;
+		executables = (
+			93AA0A9117E1252C00020FE2 /* Source - QT */,
+			93AA0A9217E1252C00020FE2 /* Source - generic */,
+			93AA0A9317E1252C00020FE2 /* Framework - QT */,
+			93AA0A9417E1252C00020FE2 /* Framework - generic */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 400631084;
+			PBXWorkspaceStateSaveDate = 400631084;
+		};
+		sourceControlManager = 93AA0AAA17E1254C00020FE2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D0C4E890486CD37000505A6 /* Source - QT */ = {
+		activeExec = 0;
+		executables = (
+			93AA0A9117E1252C00020FE2 /* Source - QT */,
+		);
+	};
+	93AA0A9117E1252C00020FE2 /* Source - QT */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Source - QT";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	93AA0A9217E1252C00020FE2 /* Source - generic */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Source - generic";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	93AA0A9317E1252C00020FE2 /* Framework - QT */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Framework - QT";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	93AA0A9417E1252C00020FE2 /* Framework - generic */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Framework - generic";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	93AA0AAA17E1254C00020FE2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				../../../../../../.. = "";
+			};
+		};
+	};
+	93AA0AAB17E1254C00020FE2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

@@ -1,0 +1,1 @@
+This project demonstrate the use of the ColorGaussian and ColorMedian classes.

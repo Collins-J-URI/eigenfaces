@@ -1,0 +1,1 @@
+This project demonstrates how to create a blob pattern by grabbing into a raster imagethe pixels that correspond to a blob priorly detected in the image

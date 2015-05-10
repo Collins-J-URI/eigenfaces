@@ -1,0 +1,2 @@
+This project demonstrates the use of the basic linear algebra classes.
+I output the results to a text file that I can read in Mathematica, Maple, Matlab, Scilab, or any other fine application for doing Mathematics on a computer.

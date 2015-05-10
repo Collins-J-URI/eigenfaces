@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="../../ieHack.xsl"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+<title>Status of uriVL demos</title>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<meta name="generator" content="Alpha X" />
+
+<style type="text/css" media="screen">
+
+div.center {
+    text-align: center
+}
+td.demoName {
+  text-align: center;
+  width: 15%;
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoPurpose {
+  text-align: center;
+  width: 49%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoPlatform {
+  text-align: center;
+  width: 6%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.demoStatus {
+  text-align: center;
+  width: 6%;  
+  background-color: #999999;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.statusExplain {
+  text-align: center;
+  width: 30%;  
+  background-color: #FFFFFF;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.working {
+  text-align: center;
+  background-color: #00CC33;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.shouldWork {
+  text-align: center;
+  background-color: #00CCCC;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+}    
+td.glitches {
+  text-align: center;
+  background-color: #FFFF90;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.majorIssues {
+  text-align: center;
+  background-color: #DD9933;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.broken {
+  text-align: center;
+  background-color: #FF3333;
+  background-image: none;  
+  color: #000000;
+  font-weight: bold
+ }
+td.notImplemented {
+  text-align: center;
+  background-color: #CCCCCC;
+  background-image: none;  
+  color: #000000;
+ }
+</style>
+
+</head>
+
+
+
+<body>
+<p><b>Last modified:</b><br></br>&#160;&#160;&#160;
+		<!-- #lastmodified text="" form="abbrev,weekday,time" -->
+		           Fri, 13 Sep 2013 17:54
+		<!-- /#lastmodified -->
+</p>
+
+<h2>1. About this Document</h2>
+
+<p>This document lists all demonstration applications developed or under
+development for the uriVL library.</p>
+
+<h3>1.1 Platforms supported</h3>
+
+<p>The different platforms and IDEs currently supported to some degree to 
+build the demos are</p>
+
+<ul>
+	
+	<li>Mac OS X
+	
+	<ul>
+		
+		<li> Xcode 3.2 (Mac OS 10.6)</li>
+		
+		<li> Xcode 4.x (Mac OS 10.8)</li>
+		
+		<li> CMake with gcc</li>
+
+	</ul>
+	
+	</li>
+	
+	<li>Windows
+	
+	<ul>
+		
+		<li> Visual Studio 2008 and 2010 (Pro or Express)</li>
+		
+		<li> CMake with Visual Studio 2008 and 2010</li>
+		
+		<li> CMake with MinGW</li>
+		
+	</ul>
+	
+	</li>
+	
+	<li>Linux
+	
+	<ul>
+		
+		<li>CMake with gcc</li>
+		
+	</ul>
+	
+	</li>
+	
+</ul>
+
+<p>It is possible to use Eclipse as your IDE on top of the CMake building tree.  The demos and the library can 
+certainly be tweaked to work with other IDEs, but this may take a few edits in the main header file
+<tt>uriBase::uriVisionLib.h</tt>.</p>
+
+<h3>1.2 Different versions of the library</h3>
+
+<p>There are basically two different versions of the library:</p>
+
+<ul>
+	
+	<li>QuickTime version: This one uses Apple's QuickTime library for
+	internal storage, reading and writing of images, movie playing, and
+	access to a live camera.  This version is supported on Mac OS X and
+	Windows 2000 and XP. The uriVL SDK includes pre-built binaries of the
+	"QuickTime version of uriVL framework (for Mac OS X) and libraries (for
+	Windows).<br>
+	</br> At this point the version of QuickTime used for Mac OS X (and
+	obviously for Windows) is still the old Carbon library, the main
+	reasons for this being that QTKit still seems incomplete and buggy,
+	that I hate its Objective-C syntax, and that I have not time to to
+	master it. However, the writing is ominously on the wall, and I know
+	that a transition to QuickTimeX will be mandatory before too long.  I
+	expect work to that effect to start in Fall 2009 and be completed by
+	the end of Spring 2010.</li>
+	
+	<li>"Generic" version: This one uses generic C++ code and possibly 
+	some third-party open-source libraries for
+	importing and exporting media. It should run on all platforms.</li>	
+</ul>
+
+<p>There is nothing that prevents having a "Windows Media" version,
+	but I lack the time and interest to develop it.</p>
+
+<p>We don't distribute binaries of the "generic" version of the library 
+because there are simply too many possible combinations based on which 
+third-party libraries you may decide to use to build uriVL.  In all what 
+follows, we will assume that the version of uriVL that you compiled 
+provides support for the type of data I/O required by the demo.  For 
+example, for any demo that works with image files, your version of uriVL 
+must include one of the supported image I/O options.</p>
+
+<p>Once you have defined which variation of the library you wish to work 
+with, the code of all demos is exactly the same for all versions.</p>
+
+<h3>1.3 Notes about specific IDEs</h3>
+
+<h4>1.3.1 Xcode 3.2 and Xcode 4</h4>
+
+<p>All Xcode projects have the following 4 targets that allow to make the
+project under the following conditions</p>
+
+<ul>
+	<li>The source file is compiled directly against the source of the "QuickTime" version of
+	the library.  This is the mode I use to test/debug new classes.</li>
+	
+	<li>Compiled directly against the source of the "generic" version of
+	the library.</li>
+	
+	<li>The compiled source file is linked against the uriVisionLib-QT
+	framework (QuickTime version).</li>
+	
+	<li>The compiled source file is linked against the uriVisionLib-generic
+	framework.</li>
+	
+</ul>
+<p>In order for any of the Xcode projects to compile, the user needs to 
+define the following source trees (in the Xcode Preferences):</p>
+<ul>
+    <li><b>uriVisionLib</b> should point to the SDK folder within the 
+    uriVisionLib folder, <i>not</i> to the uriVisionLib folder itself.</li>
+
+  <li><b>macports</b> (presumably, the way you would install FreeImage, 
+  fftw, etc.) should point to /opt/local.</li>
+
+  <li><b>libquicktime</b> points to /opt/local.</li>
+
+</ul>
+
+
+<p><b>Xcode 4:</b> I am still in the process of making versions of the 
+demo projects for that piece of crap of an IDE. I don't deny that it can 
+be convenient for people who spend their time in InterfaceBuilder, but 
+for anything else I find it absolutely awful.</p>
+
+<h4>1.3.2 Visual Studio 2008 and 2010 (Visual 8 and 10, including Visual Studio Express)</h4>
+<p>
+In order to compile and run any demo's project correctly you need to first
+install <a href="http://www.quicktime.com">QuickTime</a> on your PC.
+</p>
+
+<p>Next you need to install a few SDKs.  You can either install them inside your
+MS Studio folder (MS-recommended solution) or create a folder named, say,
+SDKs at the root of your C: disk and copy all these SDKs there (our
+recommendation):</p>
+
+<ul>
+    <li>The <a
+    href="http://developer.apple.com/quicktime/download/">QuickTime SDK</a>
+    for Windows, from Apple's developer site.</li>
+    <li>The <a href="http://sourceware.org/pthreads-win32/">pthreads SDK</a>,</li>
+    <li>[optional] The <a href="http://www.fftw.org/">fftw3 SDK</a> for
+    Fast Fourier Transform computations,</li>
+    <li>The <a href="http://www.xmission.com/~nate/glut.html">glut SDK</a> 
+    for demos with a GUI.</li>
+</ul>
+
+<p>Finally, the following environmental variables must be defined: QT_SDK 
+or FREE_IMAGE_SDK,
+URIVL_SDK, GLUT_SDK, and PTHREADS_SDK.</p>
+
+<ul>
+    <li>The QT_SDK variable should point to the root directory of where ever
+    it is that you installed the QuickTime SDK.</li>
+    <li>The PTHREADS_SDK variable should point to the root directory of
+    wherever it is that you installed the pthreads SDK.</li>
+    <li>The GLUT variable should point to the root directory of
+    wherever it is that you installed the glut or FreeGlut SDK.</li>
+    <li>The URIVL_SDK variable must point to the SDK folder of the URI
+    Vision Library.  In order to accomplish this, there are two ways that I
+    am aware of:
+    
+    <ol>
+	<li>Create a global user defined environmental variable in the
+	windows system control panel.</li>
+	<li>Create a user defined environmental variable under the settings
+	of Visual Studio.</li>
+    </ol>
+    
+    In general the second option is preferrable to the first option as it
+    confines the scope of these variables to Visual Studio.</li>
+</ul>
+
+<p>One last thing: The uriVisionLib.h main header file contains for 
+the Visual Studio platform the precompiler instruction <tt>#include 
+&lt;gl/gl.h&gt;</tt>, so you need to create a folder named "gl" at the 
+root of your glut folder (the one your evironment variable GLUT points 
+to) and copy/move into that forlder the file glut.h.</p>
+
+<p><b>Visual Studio Express:</b> You can download VS Express from the 
+<a href="http://www.microsoft.com/express/download/default.aspx">Microsoft 
+web site</a> (VS Express will only work with XP and Vista).  To get OpenGL 
+you will probably have to instal the Windows SDK for or Windows Server 
+and .NET Framework 3.5.  You can dowload the SDK at this <a
+href="http://www.microsoft.com/downloads/details.aspx%3FFamilyID%3DE6E1C3DF-A74F-4207-8586-711EBE331CDC%26displaylang%3Den">URL</a>.
+
+The main difference between the "full" and "Express" versions of VS (from 
+the point of vie of compiling and running the demos) is that VS Express 
+projects do not include by default a number of Additional Dependencies.  I 
+am working my way through the demos to add a VS project when there is none 
+and fix the existing one.  If you compile a demo and get linker errors, 
+then verify the list of "Additional Dependencies" (Project Properties: 
+Linker".  If the follwing libraries are not listed:
+<ul>
+	<li> user32.lin</li>
+	<li>advapi32.lib</li>
+</ul>
+then add them (and please commit the project after that).</p>
+
+<b>Visual Studio 2010 note:</b> I ma currently in the process of updating 
+all demo projects to Visual Studio 2010 (should work fine with 2012).  
+When you build one of these projects, you have to select either the 
+uriVL_QT or uriVL_FreeImage configuration, depending on which version of 
+the library you built.
+
+<h4>1.3.3 CMake</h4>
+<p>When you ran the cmake script to build the library, that script also 
+generated make files for all supported demos.  Now all you have to do is 
+go into a demo's "Projects/CMake" folder and do "make".</p>
+
+<p><b>Note: gcc 4.2 issues</b> -- Parts of the library (linear algebra 
+classes in particular) currently don't compile with gcc 4.2, due to an 
+appearant problem in that version of the compiler's handling of 
+<i>friend</i> functions.  There have been posts about that problem on the 
+gcc boards.  Until that problem has been fixed, use gcc 4.0 to build the 
+library.</p>
+
+<h4><del>1.3.4 CodeWarrior 8.3</del></h4>
+
+<p>
+The library was originally developed using the The CodeWarrior IDE.  I 
+kept using CW for a long time after Metrowerks went belly up (thanks a 
+lot, Apple and Motorola!), both by inertia and because the graphical debugger worked 
+a lot better than the one Xcode was afflicted with at the time.  Now CW 
+does not work with Mac OS X 10.5 on Mactels (still works on Windows), so 
+it's more than time to let it go.  Good bye old friend!</p>
+
+<h3>1.4 About the demos</h3>
+
+<p>Each demo illustrates the proper use of a single class (or family of 
+classes, e.g. the <tt>ImageGradient</tt> family).  Of course, some of 
+these classes might rely on other classes (e.g, the 
+<tt>BlobPatternMatcher</tt> presented in the demo of that name relies on 
+the <tt>Blob</tt> and <tt>BlobFiller</tt> classes introduced in the 
+Blob_Filling demo).  The tables of demos that appear in this document list 
+the demos in order of dependence: Classes used in a demo never depend on 
+classes introduced in a demo listed below the first one.</p>
+
+
+<h3>1.5 GUI vs. no GUI</h3>
+
+<p>
+In order to make it possible for developers to see the results of the IP
+operations, all demos are provided with a simple glut-based GUI.  Now,
+because not everybody is familiar with glut, and the GUI code makes the
+application look a lot more complex than it really is, we have started
+(talking about) developing versions of the demos that do not include any
+GUI or display. These (will, when I get my act together and actually start
+writing them) get data from a <tt>VideoSource</tt> (say, an image file or a
+live camera) and write their results to a file.
+</p>
+
+<h3>1.6 Data Folder Path</h3>
+
+<p>All the demos get their data files from the <tt>Data_Samples</tt> 
+folder.  Different development platform had different locations for that 
+folder relative to the executable, so all demo source files started with 
+a block (at the time of this writing, many still do)
+</p>
+<pre>
+	#if URIVL_OS_MACOS
+	
+	#elif URIVL_OS_WIN32
+	
+	#elif URIVL_OS_UNIX
+	
+	#else
+		//problem
+</pre>
+
+<p>That defined the relative location of the data sample folder for each 
+OS.  Not pretty, but did the job.</p>
+		
+<p>This all change with the relase of the plague upon Mac developers, that is, with
+when Xcode 4 came out.  Now I had to deal with different relative paths depending on
+whether I was actually working (with Xcode 3) or just trying to 
+make a final build (Xcode 4).</p>
+		
+<p>To simplify all of that, all demo applications load the  header file 
+<tt>dataFolderPath.h</tt> (found in this folder as <tt>rename_dataFolderPath.h</tt>) in which the paths to the 
+data folders are defined.  Edit the file for your personal environment 
+(and don't commit your change back), then rename that file by removing the 
+<tt>rename_</tt> prefix.  And all updated demos should run fine.</p>
+
+
+<h2>2. The list</h2>
+
+<h3>2.1 How it is organized</h3>
+<p>We have broken the list into sections conforming to the folder hierarchy 
+(Basic, Image_Processing, Computer_Vision, Tracking).  For each demo we 
+give a short description of what it is supposed to do (there should be 
+more in the demo's Documentation folder) and a status with respect to the 
+various development platoforms.  The status is indicated, using the following color code</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="color coding for demos status report">
+	<tr>
+		<td class="working">Working</td>
+		<td class="shouldWork">Not tested (in a while)<br></br><i>should</i> work</td>
+		<td class="glitches">Minor issues (glitches)</td>
+		<td class="majorIssues">Compiles and runs, but<br></br>doesn't work properly</td>
+		<td class="broken">Broken</td>
+		<td class="notImplemented">Not implemented</td>
+	</tr>
+	
+</table>
+
+<p>for the following three configurations:</p>
+<div class="center">
+<img id="uriVL_demoTargets" src="./_images/uriVL_demoTargets.gif" alt="" 
+width="200" height="200"></img>
+</div>
+
+<p>So for example, the following 3 charts would correspond to</p>
+
+<table width="90%" cellpadding="8" cellspacing="1"
+summary="Demos status report example">
+
+<tr>
+    <td class="statusExplain"><img id="tri-status" src="./_images/wsb.gif" alt="" width="100"
+    height="100"></img></td>
+    <td class="statusExplain"><img src="./_images/wgm.gif" alt="" width="100"
+    height="100"></img></td>
+    <td class="statusExplain"><img src="./_images/wgu.gif" alt="" width="100"
+    height="100"></img></td>
+</tr>
+<tr>
+    <td><ul><li>QuickTime + glut GUI version works</li>
+    <li>Generic  + glut GUI version should work (not tested lately)</li>
+    <li>Terminal version is broken</li></ul></td>
+    
+    <td><ul><li>QuickTime + glut GUI version works</li>
+    <li>Generic  + glut GUI version has glitches</li>
+    <li>Terminal version has major issues</li></ul></td>
+    
+    <td><ul><li>QuickTime + glut GUI version works</li>
+    <li>Generic  + glut GUI version has glitches</li>
+    <li>There is no terminal version (yet)</li></ul></td>
+</tr>
+</table>
+
+
+<h3>2.2 Basic demos</h3>
+<p>These demos show how to access and manipulate objects of the 
+fundamental classes of the librarie: images, movies, 3D meshes, 
+histograms.</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="Basic demos status report">
+<tr>
+    <th rowspan="2" >Demo</th>
+    <th rowspan="2" >What it does</th>
+    <th rowspan="2" >Mac<br></br>XC</th>
+    <th rowspan="2" >Win<br></br>VS8</th>
+    <th colspan="4">CMake</th>
+</tr>
+<tr>
+    <th>Mac<br></br>gcc</th>
+    <th>Win<br></br>VS8</th>
+    <th>Win<br></br>MinGW</th>
+    <th>Linux</th>
+</tr>
+
+<tr>
+	<td>Simple_IO</td>
+	<td>Demonstrates how to initialize a RasterImage by reading it from
+	a file (ImageReader), writing values directly into its raster, or
+	cloning another RasterImage, It also shows how to output an image
+	to a file by use of the ImageWriter class.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Scaling</td>
+	<td>Shows how a RasterImage can be displayed at different scales</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/ugu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Raster_Rectangles</td>
+	<td>Displays the bounding rectangle and valid data
+	rectangle of a raster image or vector field</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/ugu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Simple_IP</td>
+	<td>Demonstrate trivial image processing operations through direct
+	manipulation of a RasterImage's base raster. Also demonstrates the use
+	of the VectorField class and the combination of bitmap and vector
+	graphics in a window.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Binary_Image</td>
+	<td>Illustrates the peculiarities of the RasterImage_binary class.  It
+	shows how one can access the images "gray" raster for direct IP
+	calculations and get the binary image to display properly</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/buu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/buu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Sprite_Overlay</td>
+	<td>Illustrates the use of the grab and writeInto functions of the
+	RasterImage class.  A new image can be grabbed within an existing
+	image by specifying a grabbing rectangle.  It can also be written
+	into a destination image (overwriting that part of the destination
+	image) by specifying an origin for the overwrite.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Image_Histogram</td>
+	<td>Demonstrates the use of the ImageHistogram class, which operates 
+	on gray-level images.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Play_Movie</td>
+	<td>Demonstrates how to play a movie file directly
+     into a RasterImage object, for subsequent IP (see 
+	 Image-processing/Movie_Processing demo).</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Video_Grabbing</td>
+	<td>Demonstrates the use of the FrameGrabber class, which grabs 
+	live video directly into a RasterImage object.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uuu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Stereo_Viewer</td>
+	<td>Demonstrates how to load stereo disparity data and display them
+	either as a gray-level imge or as an elevation surface (mesh).</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+
+<tr>
+	<td>Graphic_Objects</td>
+	<td>Should demonstrate the use of basic graphic object classes</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+</tr>
+
+</table>
+
+<h3>2.3 Image_Processing demos</h3>
+<p>These demos illustrate the use of the main ImageOperator and 
+VectorOperator classes (filter application, gradient computation, 
+thresholding, etc.).   Note that some operations usually thought of as 
+image processing are demonstrated in the Computer_Vision section (not 
+always for particularly good reasons).</p>
+
+<p>Things are not as bad as they look.  Most demos will switch to green in 
+the 3 left columns as soon as I have a few hours to go through the tedium 
+of generating new Xcode projects for them.  I erred on the side of 
+caution in my labeling.</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="Image Processing demos status report">
+<tr>
+    <th rowspan="2" >Demo</th>
+    <th rowspan="2" >What it does</th>
+    <th rowspan="2" >Mac<br></br>XC</th>
+    <th rowspan="2" >Win<br></br>VS8</th>
+    <th colspan="4">CMake</th>
+</tr>
+<tr>
+    <th>Mac<br></br>gcc</th>
+    <th>Win<br></br>VS8</th>
+    <th>Win<br></br>MinGW</th>
+    <th>Linux</th>
+</tr>
+
+
+<tr>
+	<td>Image_Difference</td>
+	<td>[Used to be Background_Remover but the name was not realy 
+	appropriate] Demonstrates the use of the difference function of the 
+	ImageArithmetics class.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Gray_Thresholder</td>
+	<td>Shows how gray-level ranges can be defined and the image searched for
+	pixels whose intensity fall within these regions</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Color_Thresholder</td>
+	<td>Shows how color regions in the HSV space can be defined and the
+	image searched for pixels whose color fall within these regions</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Blob_Filler</td>
+	<td>Shows how the output of a color thresholding process
+	can be used to detect "blobs" whose color matches
+	those sought.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Gaussian_and_Median</td>
+	<td>Demonstrates the use of the Gaussian and Median ImageOperator
+        classes.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Color_Gaussian_and_Median</td>
+	<td>Demonstrates the use of the Color Gaussian and Median ImageOperator
+        classes applied to RGBa images.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Image_Gradients</td>
+	<td>Demonstrates the use of the ImageGradient_xxx subclasses of
+			            VectorOperator (return a VectorField)</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Color_Image_Gradients</td>
+	<td>Demonstrates the use of the ColorImageGradient_xxx subclasses of
+	VectorOperator (return a VectorField) on color RGBA images. 
+	Compares gradients of the color image and its conversion to gray.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Edge_Pixels</td>
+	<td>Demonstrates the use of some IP classes for detecting edge pixels
+	These are the basic components of some of the clasic Edge detectors of
+	the Edge Detectors demo.  You can use them if you want to develop your
+	own edge detector.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Color_Edge_Pixels</td>
+	<td>Demonstrates the use of some IP classes for detecting edge pixels 
+	in color RGBa images.
+	These are the basic components of some of the clasic Edge detectors of
+	the Edge Detectors demo.  You can use them if you want to develop your
+	own edge detector.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<!--
+ | <tr>
+ |     <td>Edge_Detector_Canny</td>
+ |     <td>I suspect the Canny Edge detector is not working as advertised.  
+ |     This demo needs complete cleanup and showcase other edge detectors as 
+ |     well (Marr-Hildreth, Shen-Castan).</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ | </tr>
+-->
+<tr>
+	<td>Blob_Pattern_Creation</td>
+	<td>Shows how to define a blob pattern in an image (for use in 
+	pattern matching).<br></br>
+	<b>Currently broken</b> while parts of the Blob class are being 
+	rewritten to reflect the new definition of the "contour of a blob"</td>
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Rectangular_Pattern_Matching</td>
+	<td>Shows how to use a PatternMatcher object to find a match for a 
+	rectangular pattern in an image.  Note that not all the PatternMatcher 
+	subclasses that appear in the demo (and all of which should be 
+	implementing a different matching algorithm) are working.  I say that 
+	the demo "works" because it has the desired behavior for the one 
+	completely implemented matcher (basic correlation).</td>
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>*Matching*</td>
+	<td>All the other matching demos are being reorganized/rewritten.  Don't 
+	waste any time in there.</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+</tr>
+<tr>
+	<td>Movie_Processing</td>
+	<td>Demonstrates how to process data read from a movie file.<br></br>
+	Applies a gradient filter and a color thresholder to the current 
+	frame.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Video_Blob_Finder</td>
+	<td>Demonstrates the use of the BlobFiller class for simple tracking 
+	tasks on live video (and soon, canned video as well).</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+	<td>Image_Warping</td>
+	<td>Demonstrates the use of an ImageWarper_GL object. There are a few 
+	issues when the dimensions of the grid are changed.  I am 
+	not sure whether this is purely a glut display problem (I hope) or a 
+	problem with rendering (OpenGL).  The latter would be a lot more 
+	problematic.</td>
+	<td><img src="./_images/ggu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/guu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/ggu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/usu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<!--
+ | <tr>
+ |     <td>Warping Match Score Function ND</td>
+ |     <td>Should not be a demo (too specific to a particular project).</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ | </tr>
+ | <tr>
+ |     <td>Warping_Mosaic</td>
+ |     <td>Incomplete. Should not be a demo (too specific to a particular project).</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ |     <td class="noCompile">-</td>
+ | </tr>
+ | <tr>
+ |     <td>*Sticher*</td>
+ |     <td>1,$ s/Stitcher/Stinker</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ | </tr>
+ | <tr>
+ |     <td>Morphological_Operators</td>
+ |     <td>Vaporware.  Should be branched out.</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ |     <td class="broken">-</td>
+ | </tr>
+-->
+</table>
+
+<h3>2.4 Computer_Vision demos</h3>
+<p>These demos illustrate the use of some classical computer vision 
+operations: normal flow computation, stereo matching. etc.</p>
+
+<p>Most of these demos have not been tested in a while so I don't really 
+know whether they still work.  In any case they are all closer to 
+debugging code than to a proper demo (how to use a given class).</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="Computer Vision demos status report">
+<tr>
+    <th rowspan="2" >Demo</th>
+    <th rowspan="2" >What it does</th>
+    <th rowspan="2" >Mac<br></br>XC</th>
+    <th rowspan="2" >Win<br></br>VS8</th>
+    <th colspan="4">CMake</th>
+</tr>
+<tr>
+    <th>Mac<br></br>gcc</th>
+    <th>Win<br></br>VS8</th>
+    <th>Win<br></br>MinGW</th>
+    <th>Linux</th>
+</tr>
+
+
+
+<tr>
+    <td>Background_Update</td>
+    <td>Should show how a dynamic background updater works (works from a 
+	movie file)</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="broken">-</td>
+</tr>
+
+<tr>
+    <td>Video_Difference</td>
+    <td>Computes a simple difference between consecutive frames and 
+	applies a threshold and blob detection to the output.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+    <td>Video_Blob_Detect</td>
+    <td>Not even sure what this is supposed to do.</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="broken">-</td>
+</tr>
+<tr>
+    <td>Video_Normal_Flow</td>
+    <td>Shows how to compute the normal flow using a movie file as input 
+	data. Applies a threshold and blob detection to the output.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/wuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/wwu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/suu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uwu.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+<tr>
+    <td>Virtual_Object_Loader</td>
+    <td>Probably related to iterposition in Augmented Reality projects.  
+	Probably hopelessly broken at this point.</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+	<td class="noCompile">-</td>
+</tr>
+</table>
+
+
+<h3>2.5 Tracking demos</h3>
+<p>These demos are pretty rough.  They are really close to raw debugging 
+code for the preliminaries to a research project. etc.</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="Basic demos status report">
+<tr>
+    <th rowspan="2" >Demo</th>
+    <th rowspan="2" >What it does</th>
+    <th rowspan="2" >Mac<br></br>XC</th>
+    <th rowspan="2" >Win<br></br>VS8</th>
+    <th colspan="4">CMake</th>
+</tr>
+<tr>
+    <th>Mac<br></br>gcc</th>
+    <th>Win<br></br>VS8</th>
+    <th>Win<br></br>MinGW</th>
+    <th>Linux</th>
+</tr>
+
+</table>
+
+
+<h3>2.6 Numerical demos</h3>
+<p>The library contains a few classes that perform basic numerical 
+calculations (solve a system of linear equations, optimize a function of n 
+variables, etc.).  These are used internally, e.g. for registration or 
+best fit computations.  These demos show how to use some of the numerical 
+classes in case you want to use them.  For heavy-duty numerical 
+calculations, though, I advise using a reputable, dedicated numerical 
+computations library instead.</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="1" 
+summary="Basic demos status report">
+<tr>
+    <th rowspan="2" >Demo</th>
+    <th rowspan="2" >What it does</th>
+    <th rowspan="2" >Mac<br></br>XC</th>
+    <th rowspan="2" >Win<br></br>VS8</th>
+    <th colspan="4">CMake</th>
+</tr>
+<tr>
+    <th>Mac<br></br>gcc</th>
+    <th>Win<br></br>VS8</th>
+    <th>Win<br></br>MinGW</th>
+    <th>Linux</th>
+</tr>
+
+<tr>
+    <td>Basic_Linear_Algebra</td>
+    <td>Shows how to create and manipulate<tt>Matrix</tt> and <tt>Vector</tt> 
+	(row and column) objects.  Terminal application only .</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/uuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+
+<tr>
+    <td>SLE_Solver</td>
+    <td>Shows how to setup and solve a System of Linear equations (square 
+	or overdetermined). Terminal application only .</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/uuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+
+<tr>
+    <td>Basic_Calculus</td>
+    <td>Shows how to create <tt>Function1D</tt> and <tt>FunctionND</tt> 
+	objects, and evaluate them and their derivative (gradient) at a 
+	particular location.  Terminal application only.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/uuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+
+<tr>
+    <td>Optimization</td>
+    <td>Shows how to setup and solve a 1D or n-D nonlinear optimization problem.  
+	Terminal application only.</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/uuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+
+<tr>
+    <td>Random_Generator</td>
+    <td>Shows how to setup and use a random number generator. Terminal application only .</td>
+	<!-- Mac Xcode -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Visual8 -->
+	<td><img src="./_images/uuu.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Mac CMake-gcc -->
+	<td><img src="./_images/uuw.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-VS8 -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Win Cmake-MinGW -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+	<!-- Linux Cmake-gcc -->
+	<td><img src="./_images/uus.gif" alt="" width="40"
+    		height="40"></img></td>
+</tr>
+
+</table>
+
+
+<p><br></br></p>
+<hr></hr>
+<p>
+<a href="http://validator.w3.org/"><img style="border:0;width:88px;height:31px"
+src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" /></a>
+
+<a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+</a>
+</p>
+
+</body>
+
+</html>
+

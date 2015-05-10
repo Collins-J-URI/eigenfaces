@@ -1,0 +1,1 @@
+This project shows the difference between bounding rect and valid data rectangle, and how todisplay them for a drawable

@@ -1,0 +1,1 @@
+This demo shows how to "open" a QuickTime Sequence Grabber to get video from a camera.

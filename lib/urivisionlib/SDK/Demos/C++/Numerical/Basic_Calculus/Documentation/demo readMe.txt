@@ -1,0 +1,2 @@
+This project demonstrates the use of the basic calculus classes: Function1D, FunctionND, etc.
+I output the results to a text file that I can read in Mathematica, Maple, Matlab, Scilab, or any other fine application for doing Mathematics on a computer.

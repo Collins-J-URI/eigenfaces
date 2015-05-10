@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0413D0FC0C69B0D300C73F02 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0413CF630C69B00D00C73F02 /* OpenGL.framework */; };
+		0413D0FD0C69B0D300C73F02 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0413CF640C69B00D00C73F02 /* GLUT.framework */; };
+		0413D0FE0C69B0D300C73F02 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0413CF650C69B00D00C73F02 /* QuickTime.framework */; };
+		0413D0FF0C69B0D300C73F02 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		0413D1140C69B1DE00C73F02 /* binaryImage_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0413CF670C69B04400C73F02 /* binaryImage_main.cpp */; };
+		0413D17D0C69BA5C00C73F02 /* uriVisionLib-QT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0413D17C0C69BA5C00C73F02 /* uriVisionLib-QT.framework */; };
+		0413D18B0C69BB6800C73F02 /* uriVisionLib-QT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0413D17C0C69BA5C00C73F02 /* uriVisionLib-QT.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0413D17A0C69B9E800C73F02 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0413D18B0C69BB6800C73F02 /* uriVisionLib-QT.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0413CF630C69B00D00C73F02 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../../../../../../../Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = SOURCE_ROOT; };
+		0413CF640C69B00D00C73F02 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../../../../../../../Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = SOURCE_ROOT; };
+		0413CF650C69B00D00C73F02 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = ../../../../../../../../../../../Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/QuickTime.framework; sourceTree = SOURCE_ROOT; };
+		0413CF670C69B04400C73F02 /* binaryImage_main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = binaryImage_main.cpp; path = "../../C++/Basic/Binary_Image/binaryImage_main.cpp"; sourceTree = SOURCE_ROOT; };
+		0413CF6C0C69B05500C73F02 /* binaryImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = binaryImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0413CF750C69B08500C73F02 /* ColorImageHistogram.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageHistogram.h; path = ../../../Headers/uriBase/ColorImageHistogram.h; sourceTree = SOURCE_ROOT; };
+		0413CF760C69B08500C73F02 /* DrawableObject2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DrawableObject2D.h; path = ../../../Headers/uriBase/DrawableObject2D.h; sourceTree = SOURCE_ROOT; };
+		0413CF770C69B08500C73F02 /* ErrorReport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ErrorReport.h; path = ../../../Headers/uriBase/ErrorReport.h; sourceTree = SOURCE_ROOT; };
+		0413CF780C69B08500C73F02 /* GraphWorld.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GraphWorld.h; path = ../../../Headers/uriBase/GraphWorld.h; sourceTree = SOURCE_ROOT; };
+		0413CF790C69B08500C73F02 /* GraphWorld_gen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GraphWorld_gen.h; path = ../../../Headers/uriBase/GraphWorld_gen.h; sourceTree = SOURCE_ROOT; };
+		0413CF7A0C69B08500C73F02 /* GraphWorld_QT.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GraphWorld_QT.h; path = ../../../Headers/uriBase/GraphWorld_QT.h; sourceTree = SOURCE_ROOT; };
+		0413CF7B0C69B08500C73F02 /* Histogram.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Histogram.h; path = ../../../Headers/uriBase/Histogram.h; sourceTree = SOURCE_ROOT; };
+		0413CF7C0C69B08500C73F02 /* ImageHistogram.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageHistogram.h; path = ../../../Headers/uriBase/ImageHistogram.h; sourceTree = SOURCE_ROOT; };
+		0413CF7D0C69B08500C73F02 /* ImagePoint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImagePoint.h; path = ../../../Headers/uriBase/ImagePoint.h; sourceTree = SOURCE_ROOT; };
+		0413CF7E0C69B08500C73F02 /* ImagePoint_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImagePoint_F.h; path = ../../../Headers/uriBase/ImagePoint_F.h; sourceTree = SOURCE_ROOT; };
+		0413CF7F0C69B08500C73F02 /* ImageRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageRect.h; path = ../../../Headers/uriBase/ImageRect.h; sourceTree = SOURCE_ROOT; };
+		0413CF800C69B08500C73F02 /* RasterImage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage.h; path = ../../../Headers/uriBase/RasterImage.h; sourceTree = SOURCE_ROOT; };
+		0413CF810C69B08500C73F02 /* RasterImage_aRGB16.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_aRGB16.h; path = ../../../Headers/uriBase/RasterImage_aRGB16.h; sourceTree = SOURCE_ROOT; };
+		0413CF820C69B08500C73F02 /* RasterImage_binary.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_binary.h; path = ../../../Headers/uriBase/RasterImage_binary.h; sourceTree = SOURCE_ROOT; };
+		0413CF830C69B08500C73F02 /* RasterImage_gray.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_gray.h; path = ../../../Headers/uriBase/RasterImage_gray.h; sourceTree = SOURCE_ROOT; };
+		0413CF840C69B08500C73F02 /* RasterImage_gray_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_gray_F.h; path = ../../../Headers/uriBase/RasterImage_gray_F.h; sourceTree = SOURCE_ROOT; };
+		0413CF850C69B08500C73F02 /* RasterImage_HSV.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_HSV.h; path = ../../../Headers/uriBase/RasterImage_HSV.h; sourceTree = SOURCE_ROOT; };
+		0413CF860C69B08500C73F02 /* RasterImage_HSV24.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_HSV24.h; path = ../../../Headers/uriBase/RasterImage_HSV24.h; sourceTree = SOURCE_ROOT; };
+		0413CF870C69B08500C73F02 /* RasterImage_Lab.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_Lab.h; path = ../../../Headers/uriBase/RasterImage_Lab.h; sourceTree = SOURCE_ROOT; };
+		0413CF880C69B08500C73F02 /* RasterImage_RGB.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_RGB.h; path = ../../../Headers/uriBase/RasterImage_RGB.h; sourceTree = SOURCE_ROOT; };
+		0413CF890C69B08500C73F02 /* RasterImage_RGBa.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_RGBa.h; path = ../../../Headers/uriBase/RasterImage_RGBa.h; sourceTree = SOURCE_ROOT; };
+		0413CF8A0C69B08500C73F02 /* RasterImage_RGBa_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RasterImage_RGBa_F.h; path = ../../../Headers/uriBase/RasterImage_RGBa_F.h; sourceTree = SOURCE_ROOT; };
+		0413CF8B0C69B08500C73F02 /* uriVisionLib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = uriVisionLib.h; path = ../../../Headers/uriBase/uriVisionLib.h; sourceTree = SOURCE_ROOT; };
+		0413CF8C0C69B08500C73F02 /* VectorField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VectorField.h; path = ../../../Headers/uriBase/VectorField.h; sourceTree = SOURCE_ROOT; };
+		0413CF8D0C69B08500C73F02 /* VectorField_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VectorField_F.h; path = ../../../Headers/uriBase/VectorField_F.h; sourceTree = SOURCE_ROOT; };
+		0413CF8E0C69B08500C73F02 /* VectorField_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VectorField_I.h; path = ../../../Headers/uriBase/VectorField_I.h; sourceTree = SOURCE_ROOT; };
+		0413CF900C69B08500C73F02 /* BackgroundRemover.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BackgroundRemover.h; path = ../../../Headers/uriComputerVision/BackgroundRemover.h; sourceTree = SOURCE_ROOT; };
+		0413CF910C69B08500C73F02 /* BackgroundRemover_dynamic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BackgroundRemover_dynamic.h; path = ../../../Headers/uriComputerVision/BackgroundRemover_dynamic.h; sourceTree = SOURCE_ROOT; };
+		0413CF920C69B08500C73F02 /* BackgroundRemover_dynamic_MW.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BackgroundRemover_dynamic_MW.h; path = ../../../Headers/uriComputerVision/BackgroundRemover_dynamic_MW.h; sourceTree = SOURCE_ROOT; };
+		0413CF930C69B08500C73F02 /* BackgroundRemover_static.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BackgroundRemover_static.h; path = ../../../Headers/uriComputerVision/BackgroundRemover_static.h; sourceTree = SOURCE_ROOT; };
+		0413CF940C69B08500C73F02 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../../Headers/uriComputerVision/Camera.h; sourceTree = SOURCE_ROOT; };
+		0413CF950C69B08500C73F02 /* DepthMap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DepthMap.h; path = ../../../Headers/uriComputerVision/DepthMap.h; sourceTree = SOURCE_ROOT; };
+		0413CF960C69B08500C73F02 /* Disparity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Disparity.h; path = ../../../Headers/uriComputerVision/Disparity.h; sourceTree = SOURCE_ROOT; };
+		0413CF970C69B08500C73F02 /* Disparity_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Disparity_F.h; path = ../../../Headers/uriComputerVision/Disparity_F.h; sourceTree = SOURCE_ROOT; };
+		0413CF980C69B08500C73F02 /* ElevationMap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ElevationMap.h; path = ../../../Headers/uriComputerVision/ElevationMap.h; sourceTree = SOURCE_ROOT; };
+		0413CF990C69B08500C73F02 /* Entity3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Entity3D.h; path = ../../../Headers/uriComputerVision/Entity3D.h; sourceTree = SOURCE_ROOT; };
+		0413CF9A0C69B08500C73F02 /* IntrinsicParameters.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = IntrinsicParameters.h; path = ../../../Headers/uriComputerVision/IntrinsicParameters.h; sourceTree = SOURCE_ROOT; };
+		0413CF9B0C69B08500C73F02 /* IntrinsicParameters_CCD.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = IntrinsicParameters_CCD.h; path = ../../../Headers/uriComputerVision/IntrinsicParameters_CCD.h; sourceTree = SOURCE_ROOT; };
+		0413CF9C0C69B08500C73F02 /* IntrinsicParameters_pinhole.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = IntrinsicParameters_pinhole.h; path = ../../../Headers/uriComputerVision/IntrinsicParameters_pinhole.h; sourceTree = SOURCE_ROOT; };
+		0413CF9D0C69B08500C73F02 /* IntrinsicParameters_TsaiW.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = IntrinsicParameters_TsaiW.h; path = ../../../Headers/uriComputerVision/IntrinsicParameters_TsaiW.h; sourceTree = SOURCE_ROOT; };
+		0413CF9E0C69B08500C73F02 /* NormalFlowCalculator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NormalFlowCalculator.h; path = ../../../Headers/uriComputerVision/NormalFlowCalculator.h; sourceTree = SOURCE_ROOT; };
+		0413CF9F0C69B08500C73F02 /* Object3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Object3D.h; path = ../../../Headers/uriComputerVision/Object3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFA00C69B08500C73F02 /* OrthographicCamera.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OrthographicCamera.h; path = ../../../Headers/uriComputerVision/OrthographicCamera.h; sourceTree = SOURCE_ROOT; };
+		0413CFA10C69B08500C73F02 /* PerspectiveCamera.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PerspectiveCamera.h; path = ../../../Headers/uriComputerVision/PerspectiveCamera.h; sourceTree = SOURCE_ROOT; };
+		0413CFA20C69B08500C73F02 /* Point3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Point3D.h; path = ../../../Headers/uriComputerVision/Point3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFA30C69B08500C73F02 /* RangeMap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RangeMap.h; path = ../../../Headers/uriComputerVision/RangeMap.h; sourceTree = SOURCE_ROOT; };
+		0413CFA40C69B08500C73F02 /* RectifiedStereoDisparity_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RectifiedStereoDisparity_F.h; path = ../../../Headers/uriComputerVision/RectifiedStereoDisparity_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFA50C69B08500C73F02 /* RectifiedStereoMatch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RectifiedStereoMatch.h; path = ../../../Headers/uriComputerVision/RectifiedStereoMatch.h; sourceTree = SOURCE_ROOT; };
+		0413CFA60C69B08500C73F02 /* RectifiedStereoMatcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RectifiedStereoMatcher.h; path = ../../../Headers/uriComputerVision/RectifiedStereoMatcher.h; sourceTree = SOURCE_ROOT; };
+		0413CFA70C69B08500C73F02 /* RectifiedStereoMatcher_corr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RectifiedStereoMatcher_corr.h; path = ../../../Headers/uriComputerVision/RectifiedStereoMatcher_corr.h; sourceTree = SOURCE_ROOT; };
+		0413CFA80C69B08500C73F02 /* RectifiedStereoMatcher_JJL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RectifiedStereoMatcher_JJL.h; path = ../../../Headers/uriComputerVision/RectifiedStereoMatcher_JJL.h; sourceTree = SOURCE_ROOT; };
+		0413CFA90C69B08500C73F02 /* RectifiedStereoPair.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RectifiedStereoPair.h; path = ../../../Headers/uriComputerVision/RectifiedStereoPair.h; sourceTree = SOURCE_ROOT; };
+		0413CFAA0C69B08500C73F02 /* ReferenceFrame3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ReferenceFrame3D.h; path = ../../../Headers/uriComputerVision/ReferenceFrame3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFAB0C69B08500C73F02 /* RigidTransformation3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RigidTransformation3D.h; path = ../../../Headers/uriComputerVision/RigidTransformation3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFAC0C69B08500C73F02 /* Rotation3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Rotation3D.h; path = ../../../Headers/uriComputerVision/Rotation3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFAD0C69B08500C73F02 /* StereoDisparity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = StereoDisparity.h; path = ../../../Headers/uriComputerVision/StereoDisparity.h; sourceTree = SOURCE_ROOT; };
+		0413CFAE0C69B08500C73F02 /* StereoDisparity_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = StereoDisparity_F.h; path = ../../../Headers/uriComputerVision/StereoDisparity_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFAF0C69B08500C73F02 /* StereoMatcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = StereoMatcher.h; path = ../../../Headers/uriComputerVision/StereoMatcher.h; sourceTree = SOURCE_ROOT; };
+		0413CFB00C69B08500C73F02 /* StereoMatchRecord.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = StereoMatchRecord.h; path = ../../../Headers/uriComputerVision/StereoMatchRecord.h; sourceTree = SOURCE_ROOT; };
+		0413CFB10C69B08500C73F02 /* StereoPair.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = StereoPair.h; path = ../../../Headers/uriComputerVision/StereoPair.h; sourceTree = SOURCE_ROOT; };
+		0413CFB20C69B08500C73F02 /* Transformation3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Transformation3D.h; path = ../../../Headers/uriComputerVision/Transformation3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFB30C69B08500C73F02 /* Translation3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Translation3D.h; path = ../../../Headers/uriComputerVision/Translation3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFB40C69B08500C73F02 /* Vector3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Vector3D.h; path = ../../../Headers/uriComputerVision/Vector3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFB50C69B08500C73F02 /* VirtualFace3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VirtualFace3D.h; path = ../../../Headers/uriComputerVision/VirtualFace3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFB60C69B08500C73F02 /* VirtualObject3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VirtualObject3D.h; path = ../../../Headers/uriComputerVision/VirtualObject3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFB70C69B08500C73F02 /* VirtualObjectLoader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VirtualObjectLoader.h; path = ../../../Headers/uriComputerVision/VirtualObjectLoader.h; sourceTree = SOURCE_ROOT; };
+		0413CFB80C69B08500C73F02 /* VirtualPart3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VirtualPart3D.h; path = ../../../Headers/uriComputerVision/VirtualPart3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFB90C69B08500C73F02 /* VirtualPoint3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VirtualPoint3D.h; path = ../../../Headers/uriComputerVision/VirtualPoint3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFBA0C69B08500C73F02 /* WeakPerspectiveCamera.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = WeakPerspectiveCamera.h; path = ../../../Headers/uriComputerVision/WeakPerspectiveCamera.h; sourceTree = SOURCE_ROOT; };
+		0413CFBC0C69B08500C73F02 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Box.h; path = ../../../Headers/uriGraphics/Box.h; sourceTree = SOURCE_ROOT; };
+		0413CFBD0C69B08500C73F02 /* Cone.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Cone.h; path = ../../../Headers/uriGraphics/Cone.h; sourceTree = SOURCE_ROOT; };
+		0413CFBE0C69B08500C73F02 /* Cylinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Cylinder.h; path = ../../../Headers/uriGraphics/Cylinder.h; sourceTree = SOURCE_ROOT; };
+		0413CFBF0C69B08500C73F02 /* GlUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GlUtils.h; path = ../../../Headers/uriGraphics/GlUtils.h; sourceTree = SOURCE_ROOT; };
+		0413CFC00C69B08500C73F02 /* GraphicComponent3D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GraphicComponent3D.h; path = ../../../Headers/uriGraphics/GraphicComponent3D.h; sourceTree = SOURCE_ROOT; };
+		0413CFC10C69B08500C73F02 /* HalfCone.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HalfCone.h; path = ../../../Headers/uriGraphics/HalfCone.h; sourceTree = SOURCE_ROOT; };
+		0413CFC20C69B08500C73F02 /* HalfCylinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HalfCylinder.h; path = ../../../Headers/uriGraphics/HalfCylinder.h; sourceTree = SOURCE_ROOT; };
+		0413CFC30C69B08500C73F02 /* ObjectLoader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ObjectLoader.h; path = ../../../Headers/uriGraphics/ObjectLoader.h; sourceTree = SOURCE_ROOT; };
+		0413CFC40C69B08500C73F02 /* ObjectLoader_3jy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ObjectLoader_3jy.h; path = ../../../Headers/uriGraphics/ObjectLoader_3jy.h; sourceTree = SOURCE_ROOT; };
+		0413CFC50C69B08500C73F02 /* ObjectLoader_obj.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ObjectLoader_obj.h; path = ../../../Headers/uriGraphics/ObjectLoader_obj.h; sourceTree = SOURCE_ROOT; };
+		0413CFC60C69B08500C73F02 /* ObjectParser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ObjectParser.h; path = ../../../Headers/uriGraphics/ObjectParser.h; sourceTree = SOURCE_ROOT; };
+		0413CFC70C69B08500C73F02 /* PolyMesh.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PolyMesh.h; path = ../../../Headers/uriGraphics/PolyMesh.h; sourceTree = SOURCE_ROOT; };
+		0413CFC80C69B08500C73F02 /* Prism.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Prism.h; path = ../../../Headers/uriGraphics/Prism.h; sourceTree = SOURCE_ROOT; };
+		0413CFC90C69B08500C73F02 /* TubularSection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TubularSection.h; path = ../../../Headers/uriGraphics/TubularSection.h; sourceTree = SOURCE_ROOT; };
+		0413CFCB0C69B08500C73F02 /* ActvContourDetector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ActvContourDetector.h; path = ../../../Headers/uriImageProcessing/ActvContourDetector.h; sourceTree = SOURCE_ROOT; };
+		0413CFCC0C69B08500C73F02 /* ActvContourDetector_balloon.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ActvContourDetector_balloon.h; path = ../../../Headers/uriImageProcessing/ActvContourDetector_balloon.h; sourceTree = SOURCE_ROOT; };
+		0413CFCD0C69B08500C73F02 /* ActvContourDetector_GVF.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ActvContourDetector_GVF.h; path = ../../../Headers/uriImageProcessing/ActvContourDetector_GVF.h; sourceTree = SOURCE_ROOT; };
+		0413CFCE0C69B08500C73F02 /* Blob.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Blob.h; path = ../../../Headers/uriImageProcessing/Blob.h; sourceTree = SOURCE_ROOT; };
+		0413CFCF0C69B08500C73F02 /* BlobFinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BlobFinder.h; path = ../../../Headers/uriImageProcessing/BlobFinder.h; sourceTree = SOURCE_ROOT; };
+		0413CFD00C69B08500C73F02 /* Cluster.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Cluster.h; path = ../../../Headers/uriImageProcessing/Cluster.h; sourceTree = SOURCE_ROOT; };
+		0413CFD10C69B08500C73F02 /* ColorGaussianFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorGaussianFilter.h; path = ../../../Headers/uriImageProcessing/ColorGaussianFilter.h; sourceTree = SOURCE_ROOT; };
+		0413CFD20C69B08500C73F02 /* ColorGaussianFilter_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorGaussianFilter_F.h; path = ../../../Headers/uriImageProcessing/ColorGaussianFilter_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFD30C69B08500C73F02 /* ColorGaussianFilter_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorGaussianFilter_I.h; path = ../../../Headers/uriImageProcessing/ColorGaussianFilter_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFD40C69B08500C73F02 /* ColorImageGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageGradient.h; path = ../../../Headers/uriImageProcessing/ColorImageGradient.h; sourceTree = SOURCE_ROOT; };
+		0413CFD50C69B08500C73F02 /* ColorImageGradient_Gaussian_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageGradient_Gaussian_F.h; path = ../../../Headers/uriImageProcessing/ColorImageGradient_Gaussian_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFD60C69B08500C73F02 /* ColorImageGradient_Gaussian_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageGradient_Gaussian_I.h; path = ../../../Headers/uriImageProcessing/ColorImageGradient_Gaussian_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFD70C69B08500C73F02 /* ColorImageGradient_Sobel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageGradient_Sobel.h; path = ../../../Headers/uriImageProcessing/ColorImageGradient_Sobel.h; sourceTree = SOURCE_ROOT; };
+		0413CFD80C69B08500C73F02 /* ColorImageLaplacian.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageLaplacian.h; path = ../../../Headers/uriImageProcessing/ColorImageLaplacian.h; sourceTree = SOURCE_ROOT; };
+		0413CFD90C69B08500C73F02 /* ColorImageLaplacian_Gaussian_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageLaplacian_Gaussian_F.h; path = ../../../Headers/uriImageProcessing/ColorImageLaplacian_Gaussian_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFDA0C69B08500C73F02 /* ColorImageLaplacian_Gaussian_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageLaplacian_Gaussian_I.h; path = ../../../Headers/uriImageProcessing/ColorImageLaplacian_Gaussian_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFDB0C69B08500C73F02 /* ColorImageLaplacian_Sobel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorImageLaplacian_Sobel.h; path = ../../../Headers/uriImageProcessing/ColorImageLaplacian_Sobel.h; sourceTree = SOURCE_ROOT; };
+		0413CFDC0C69B08500C73F02 /* ColorInverseThresholdLabeler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorInverseThresholdLabeler.h; path = ../../../Headers/uriImageProcessing/ColorInverseThresholdLabeler.h; sourceTree = SOURCE_ROOT; };
+		0413CFDD0C69B08500C73F02 /* ColorMedianFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorMedianFilter.h; path = ../../../Headers/uriImageProcessing/ColorMedianFilter.h; sourceTree = SOURCE_ROOT; };
+		0413CFDE0C69B08500C73F02 /* ColorMedianFilter_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorMedianFilter_F.h; path = ../../../Headers/uriImageProcessing/ColorMedianFilter_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFDF0C69B08500C73F02 /* ColorMedianFilter_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorMedianFilter_I.h; path = ../../../Headers/uriImageProcessing/ColorMedianFilter_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFE00C69B08500C73F02 /* ColorRegions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorRegions.h; path = ../../../Headers/uriImageProcessing/ColorRegions.h; sourceTree = SOURCE_ROOT; };
+		0413CFE10C69B08500C73F02 /* ColorSegParams.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorSegParams.h; path = ../../../Headers/uriImageProcessing/ColorSegParams.h; sourceTree = SOURCE_ROOT; };
+		0413CFE20C69B08500C73F02 /* ColorThresholdLabeler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColorThresholdLabeler.h; path = ../../../Headers/uriImageProcessing/ColorThresholdLabeler.h; sourceTree = SOURCE_ROOT; };
+		0413CFE30C69B08500C73F02 /* Contour.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Contour.h; path = ../../../Headers/uriImageProcessing/Contour.h; sourceTree = SOURCE_ROOT; };
+		0413CFE40C69B08500C73F02 /* Contour_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Contour_F.h; path = ../../../Headers/uriImageProcessing/Contour_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFE50C69B08500C73F02 /* Contour_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Contour_I.h; path = ../../../Headers/uriImageProcessing/Contour_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFE60C69B08500C73F02 /* ContourDetector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ContourDetector.h; path = ../../../Headers/uriImageProcessing/ContourDetector.h; sourceTree = SOURCE_ROOT; };
+		0413CFE70C69B08500C73F02 /* ContourForce.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ContourForce.h; path = ../../../Headers/uriImageProcessing/ContourForce.h; sourceTree = SOURCE_ROOT; };
+		0413CFE80C69B08500C73F02 /* Corner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Corner.h; path = ../../../Headers/uriImageProcessing/Corner.h; sourceTree = SOURCE_ROOT; };
+		0413CFE90C69B08500C73F02 /* EdgeDetector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = EdgeDetector.h; path = ../../../Headers/uriImageProcessing/EdgeDetector.h; sourceTree = SOURCE_ROOT; };
+		0413CFEA0C69B08500C73F02 /* EdgeDetector_Canny_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = EdgeDetector_Canny_F.h; path = ../../../Headers/uriImageProcessing/EdgeDetector_Canny_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFEB0C69B08500C73F02 /* EdgeDetector_Canny_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = EdgeDetector_Canny_I.h; path = ../../../Headers/uriImageProcessing/EdgeDetector_Canny_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFEC0C69B08500C73F02 /* FeatureDetector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FeatureDetector.h; path = ../../../Headers/uriImageProcessing/FeatureDetector.h; sourceTree = SOURCE_ROOT; };
+		0413CFED0C69B08500C73F02 /* GaussianFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GaussianFilter.h; path = ../../../Headers/uriImageProcessing/GaussianFilter.h; sourceTree = SOURCE_ROOT; };
+		0413CFEE0C69B08500C73F02 /* GaussianFilter_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GaussianFilter_F.h; path = ../../../Headers/uriImageProcessing/GaussianFilter_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFEF0C69B08500C73F02 /* GaussianFilter_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GaussianFilter_I.h; path = ../../../Headers/uriImageProcessing/GaussianFilter_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFF00C69B08500C73F02 /* GrayThresholdLabeler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GrayThresholdLabeler.h; path = ../../../Headers/uriImageProcessing/GrayThresholdLabeler.h; sourceTree = SOURCE_ROOT; };
+		0413CFF10C69B08500C73F02 /* HistogramCalculator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HistogramCalculator.h; path = ../../../Headers/uriImageProcessing/HistogramCalculator.h; sourceTree = SOURCE_ROOT; };
+		0413CFF20C69B08500C73F02 /* ImageArithmetics.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageArithmetics.h; path = ../../../Headers/uriImageProcessing/ImageArithmetics.h; sourceTree = SOURCE_ROOT; };
+		0413CFF30C69B08500C73F02 /* ImageFeature.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageFeature.h; path = ../../../Headers/uriImageProcessing/ImageFeature.h; sourceTree = SOURCE_ROOT; };
+		0413CFF40C69B08500C73F02 /* ImageGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageGradient.h; path = ../../../Headers/uriImageProcessing/ImageGradient.h; sourceTree = SOURCE_ROOT; };
+		0413CFF50C69B08500C73F02 /* ImageGradient_Gaussian_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageGradient_Gaussian_F.h; path = ../../../Headers/uriImageProcessing/ImageGradient_Gaussian_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFF60C69B08500C73F02 /* ImageGradient_Gaussian_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageGradient_Gaussian_I.h; path = ../../../Headers/uriImageProcessing/ImageGradient_Gaussian_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFF70C69B08500C73F02 /* ImageGradient_Sobel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageGradient_Sobel.h; path = ../../../Headers/uriImageProcessing/ImageGradient_Sobel.h; sourceTree = SOURCE_ROOT; };
+		0413CFF80C69B08500C73F02 /* ImageLaplacian.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageLaplacian.h; path = ../../../Headers/uriImageProcessing/ImageLaplacian.h; sourceTree = SOURCE_ROOT; };
+		0413CFF90C69B08500C73F02 /* ImageLaplacian_Gaussian_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageLaplacian_Gaussian_F.h; path = ../../../Headers/uriImageProcessing/ImageLaplacian_Gaussian_F.h; sourceTree = SOURCE_ROOT; };
+		0413CFFA0C69B08500C73F02 /* ImageLaplacian_Gaussian_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageLaplacian_Gaussian_I.h; path = ../../../Headers/uriImageProcessing/ImageLaplacian_Gaussian_I.h; sourceTree = SOURCE_ROOT; };
+		0413CFFB0C69B08500C73F02 /* ImageLaplacian_Sobel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageLaplacian_Sobel.h; path = ../../../Headers/uriImageProcessing/ImageLaplacian_Sobel.h; sourceTree = SOURCE_ROOT; };
+		0413CFFC0C69B08500C73F02 /* ImageOperator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageOperator.h; path = ../../../Headers/uriImageProcessing/ImageOperator.h; sourceTree = SOURCE_ROOT; };
+		0413CFFD0C69B08500C73F02 /* ImagePyramid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImagePyramid.h; path = ../../../Headers/uriImageProcessing/ImagePyramid.h; sourceTree = SOURCE_ROOT; };
+		0413CFFE0C69B08500C73F02 /* ImageStitcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageStitcher.h; path = ../../../Headers/uriImageProcessing/ImageStitcher.h; sourceTree = SOURCE_ROOT; };
+		0413CFFF0C69B08500C73F02 /* ImageWarper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageWarper.h; path = ../../../Headers/uriImageProcessing/ImageWarper.h; sourceTree = SOURCE_ROOT; };
+		0413D0000C69B08500C73F02 /* ImageWarper_GL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageWarper_GL.h; path = ../../../Headers/uriImageProcessing/ImageWarper_GL.h; sourceTree = SOURCE_ROOT; };
+		0413D0010C69B08500C73F02 /* Labeler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Labeler.h; path = ../../../Headers/uriImageProcessing/Labeler.h; sourceTree = SOURCE_ROOT; };
+		0413D0020C69B08500C73F02 /* LabelRaster.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LabelRaster.h; path = ../../../Headers/uriImageProcessing/LabelRaster.h; sourceTree = SOURCE_ROOT; };
+		0413D0030C69B08500C73F02 /* ManualStitcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ManualStitcher.h; path = ../../../Headers/uriImageProcessing/ManualStitcher.h; sourceTree = SOURCE_ROOT; };
+		0413D0040C69B08500C73F02 /* MedianFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MedianFilter.h; path = ../../../Headers/uriImageProcessing/MedianFilter.h; sourceTree = SOURCE_ROOT; };
+		0413D0050C69B08500C73F02 /* MedianFilter_F.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MedianFilter_F.h; path = ../../../Headers/uriImageProcessing/MedianFilter_F.h; sourceTree = SOURCE_ROOT; };
+		0413D0060C69B08500C73F02 /* MedianFilter_I.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MedianFilter_I.h; path = ../../../Headers/uriImageProcessing/MedianFilter_I.h; sourceTree = SOURCE_ROOT; };
+		0413D0070C69B08500C73F02 /* NonMaximumSuppressor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonMaximumSuppressor.h; path = ../../../Headers/uriImageProcessing/NonMaximumSuppressor.h; sourceTree = SOURCE_ROOT; };
+		0413D0080C69B08500C73F02 /* Pattern2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Pattern2D.h; path = ../../../Headers/uriImageProcessing/Pattern2D.h; sourceTree = SOURCE_ROOT; };
+		0413D0090C69B08500C73F02 /* Pattern2DMatchRecord.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Pattern2DMatchRecord.h; path = ../../../Headers/uriImageProcessing/Pattern2DMatchRecord.h; sourceTree = SOURCE_ROOT; };
+		0413D00A0C69B08500C73F02 /* Pattern2DMatchRecord_part.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Pattern2DMatchRecord_part.h; path = ../../../Headers/uriImageProcessing/Pattern2DMatchRecord_part.h; sourceTree = SOURCE_ROOT; };
+		0413D00B0C69B08500C73F02 /* Pattern2DMatchRecord_scale.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Pattern2DMatchRecord_scale.h; path = ../../../Headers/uriImageProcessing/Pattern2DMatchRecord_scale.h; sourceTree = SOURCE_ROOT; };
+		0413D00C0C69B08500C73F02 /* Pattern2DMatchRecord_warp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Pattern2DMatchRecord_warp.h; path = ../../../Headers/uriImageProcessing/Pattern2DMatchRecord_warp.h; sourceTree = SOURCE_ROOT; };
+		0413D00D0C69B08500C73F02 /* PatternMatcher2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternMatcher2D.h; path = ../../../Headers/uriImageProcessing/PatternMatcher2D.h; sourceTree = SOURCE_ROOT; };
+		0413D00E0C69B08500C73F02 /* PatternMatcher2D_corr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternMatcher2D_corr.h; path = ../../../Headers/uriImageProcessing/PatternMatcher2D_corr.h; sourceTree = SOURCE_ROOT; };
+		0413D00F0C69B08500C73F02 /* PatternMatcher2D_medianDiff.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternMatcher2D_medianDiff.h; path = ../../../Headers/uriImageProcessing/PatternMatcher2D_medianDiff.h; sourceTree = SOURCE_ROOT; };
+		0413D0100C69B08500C73F02 /* PatternMatcher2D_partCorr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternMatcher2D_partCorr.h; path = ../../../Headers/uriImageProcessing/PatternMatcher2D_partCorr.h; sourceTree = SOURCE_ROOT; };
+		0413D0110C69B08500C73F02 /* PatternMatcher2D_scaledDiff.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternMatcher2D_scaledDiff.h; path = ../../../Headers/uriImageProcessing/PatternMatcher2D_scaledDiff.h; sourceTree = SOURCE_ROOT; };
+		0413D0120C69B08500C73F02 /* PatternMatcher2D_warp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternMatcher2D_warp.h; path = ../../../Headers/uriImageProcessing/PatternMatcher2D_warp.h; sourceTree = SOURCE_ROOT; };
+		0413D0130C69B08500C73F02 /* Registration2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Registration2D.h; path = ../../../Headers/uriImageProcessing/Registration2D.h; sourceTree = SOURCE_ROOT; };
+		0413D0140C69B08500C73F02 /* Registration2D_ICP.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Registration2D_ICP.h; path = ../../../Headers/uriImageProcessing/Registration2D_ICP.h; sourceTree = SOURCE_ROOT; };
+		0413D0150C69B08500C73F02 /* Registration2D_LMICP.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Registration2D_LMICP.h; path = ../../../Headers/uriImageProcessing/Registration2D_LMICP.h; sourceTree = SOURCE_ROOT; };
+		0413D0160C69B08500C73F02 /* Registration2D_LPCD.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Registration2D_LPCD.h; path = ../../../Headers/uriImageProcessing/Registration2D_LPCD.h; sourceTree = SOURCE_ROOT; };
+		0413D0170C69B08500C73F02 /* RigidTransformation2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RigidTransformation2D.h; path = ../../../Headers/uriImageProcessing/RigidTransformation2D.h; sourceTree = SOURCE_ROOT; };
+		0413D0180C69B08500C73F02 /* Rotation2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Rotation2D.h; path = ../../../Headers/uriImageProcessing/Rotation2D.h; sourceTree = SOURCE_ROOT; };
+		0413D0190C69B08500C73F02 /* Segment.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Segment.h; path = ../../../Headers/uriImageProcessing/Segment.h; sourceTree = SOURCE_ROOT; };
+		0413D01A0C69B08500C73F02 /* SegmentDetector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SegmentDetector.h; path = ../../../Headers/uriImageProcessing/SegmentDetector.h; sourceTree = SOURCE_ROOT; };
+		0413D01B0C69B08500C73F02 /* Segmenter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Segmenter.h; path = ../../../Headers/uriImageProcessing/Segmenter.h; sourceTree = SOURCE_ROOT; };
+		0413D01C0C69B08500C73F02 /* ThresholdLabeler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ThresholdLabeler.h; path = ../../../Headers/uriImageProcessing/ThresholdLabeler.h; sourceTree = SOURCE_ROOT; };
+		0413D01D0C69B08500C73F02 /* Transformation2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Transformation2D.h; path = ../../../Headers/uriImageProcessing/Transformation2D.h; sourceTree = SOURCE_ROOT; };
+		0413D01E0C69B08500C73F02 /* Translation2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Translation2D.h; path = ../../../Headers/uriImageProcessing/Translation2D.h; sourceTree = SOURCE_ROOT; };
+		0413D01F0C69B08500C73F02 /* VectorOperator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VectorOperator.h; path = ../../../Headers/uriImageProcessing/VectorOperator.h; sourceTree = SOURCE_ROOT; };
+		0413D0200C69B08500C73F02 /* WarpMatchScoreFunctionND.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = WarpMatchScoreFunctionND.h; path = ../../../Headers/uriImageProcessing/WarpMatchScoreFunctionND.h; sourceTree = SOURCE_ROOT; };
+		0413D0210C69B08500C73F02 /* ZeroCrossingDetector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ZeroCrossingDetector.h; path = ../../../Headers/uriImageProcessing/ZeroCrossingDetector.h; sourceTree = SOURCE_ROOT; };
+		0413D0230C69B08500C73F02 /* ImageWriter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageWriter.h; path = ../../../Headers/uriMovieEditing/ImageWriter.h; sourceTree = SOURCE_ROOT; };
+		0413D0240C69B08500C73F02 /* ImageWriter_gen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageWriter_gen.h; path = ../../../Headers/uriMovieEditing/ImageWriter_gen.h; sourceTree = SOURCE_ROOT; };
+		0413D0250C69B08500C73F02 /* ImageWriter_QT.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageWriter_QT.h; path = ../../../Headers/uriMovieEditing/ImageWriter_QT.h; sourceTree = SOURCE_ROOT; };
+		0413D0260C69B08500C73F02 /* VideoDestination.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VideoDestination.h; path = ../../../Headers/uriMovieEditing/VideoDestination.h; sourceTree = SOURCE_ROOT; };
+		0413D0280C69B08500C73F02 /* ColumnVector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ColumnVector.h; path = ../../../Headers/uriNumerical/ColumnVector.h; sourceTree = SOURCE_ROOT; };
+		0413D0290C69B08500C73F02 /* ConfidenceRecord.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ConfidenceRecord.h; path = ../../../Headers/uriNumerical/ConfidenceRecord.h; sourceTree = SOURCE_ROOT; };
+		0413D02A0C69B08500C73F02 /* Function1D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Function1D.h; path = ../../../Headers/uriNumerical/Function1D.h; sourceTree = SOURCE_ROOT; };
+		0413D02B0C69B08500C73F02 /* Function1D_D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Function1D_D.h; path = ../../../Headers/uriNumerical/Function1D_D.h; sourceTree = SOURCE_ROOT; };
+		0413D02C0C69B08500C73F02 /* FunctionND.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FunctionND.h; path = ../../../Headers/uriNumerical/FunctionND.h; sourceTree = SOURCE_ROOT; };
+		0413D02D0C69B08500C73F02 /* FunctionND_D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FunctionND_D.h; path = ../../../Headers/uriNumerical/FunctionND_D.h; sourceTree = SOURCE_ROOT; };
+		0413D02E0C69B08500C73F02 /* FunctionNDSection1D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FunctionNDSection1D.h; path = ../../../Headers/uriNumerical/FunctionNDSection1D.h; sourceTree = SOURCE_ROOT; };
+		0413D02F0C69B08500C73F02 /* FunctionNDSection1D_D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FunctionNDSection1D_D.h; path = ../../../Headers/uriNumerical/FunctionNDSection1D_D.h; sourceTree = SOURCE_ROOT; };
+		0413D0300C69B08500C73F02 /* HomogeneousMatrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HomogeneousMatrix.h; path = ../../../Headers/uriNumerical/HomogeneousMatrix.h; sourceTree = SOURCE_ROOT; };
+		0413D0310C69B08500C73F02 /* IterationStatus.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = IterationStatus.h; path = ../../../Headers/uriNumerical/IterationStatus.h; sourceTree = SOURCE_ROOT; };
+		0413D0320C69B08500C73F02 /* LinearSolver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LinearSolver.h; path = ../../../Headers/uriNumerical/LinearSolver.h; sourceTree = SOURCE_ROOT; };
+		0413D0330C69B08500C73F02 /* LinearSolver_Cholesky.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LinearSolver_Cholesky.h; path = ../../../Headers/uriNumerical/LinearSolver_Cholesky.h; sourceTree = SOURCE_ROOT; };
+		0413D0340C69B08500C73F02 /* LinearSolver_LU.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LinearSolver_LU.h; path = ../../../Headers/uriNumerical/LinearSolver_LU.h; sourceTree = SOURCE_ROOT; };
+		0413D0350C69B08500C73F02 /* LinearSolver_QR.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LinearSolver_QR.h; path = ../../../Headers/uriNumerical/LinearSolver_QR.h; sourceTree = SOURCE_ROOT; };
+		0413D0360C69B08500C73F02 /* LinearSolver_SVD.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LinearSolver_SVD.h; path = ../../../Headers/uriNumerical/LinearSolver_SVD.h; sourceTree = SOURCE_ROOT; };
+		0413D0370C69B08500C73F02 /* LinearSolverRecord.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LinearSolverRecord.h; path = ../../../Headers/uriNumerical/LinearSolverRecord.h; sourceTree = SOURCE_ROOT; };
+		0413D0380C69B08500C73F02 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = ../../../Headers/uriNumerical/Matrix.h; sourceTree = SOURCE_ROOT; };
+		0413D0390C69B08500C73F02 /* NonlinearOptimizer1D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizer1D.h; path = ../../../Headers/uriNumerical/NonlinearOptimizer1D.h; sourceTree = SOURCE_ROOT; };
+		0413D03A0C69B08500C73F02 /* NonlinearOptimizer1D_Brent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizer1D_Brent.h; path = ../../../Headers/uriNumerical/NonlinearOptimizer1D_Brent.h; sourceTree = SOURCE_ROOT; };
+		0413D03B0C69B08500C73F02 /* NonlinearOptimizer1D_gss.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizer1D_gss.h; path = ../../../Headers/uriNumerical/NonlinearOptimizer1D_gss.h; sourceTree = SOURCE_ROOT; };
+		0413D03C0C69B08500C73F02 /* NonlinearOptimizer1D_parab.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizer1D_parab.h; path = ../../../Headers/uriNumerical/NonlinearOptimizer1D_parab.h; sourceTree = SOURCE_ROOT; };
+		0413D03D0C69B08500C73F02 /* NonlinearOptimizerND.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizerND.h; path = ../../../Headers/uriNumerical/NonlinearOptimizerND.h; sourceTree = SOURCE_ROOT; };
+		0413D03E0C69B08500C73F02 /* NonlinearOptimizerND_conjDir.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizerND_conjDir.h; path = ../../../Headers/uriNumerical/NonlinearOptimizerND_conjDir.h; sourceTree = SOURCE_ROOT; };
+		0413D03F0C69B08500C73F02 /* NonlinearOptimizerND_conjDir_Powell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NonlinearOptimizerND_conjDir_Powell.h; path = ../../../Headers/uriNumerical/NonlinearOptimizerND_conjDir_Powell.h; sourceTree = SOURCE_ROOT; };
+		0413D0400C69B08500C73F02 /* OptimizerRecord1D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OptimizerRecord1D.h; path = ../../../Headers/uriNumerical/OptimizerRecord1D.h; sourceTree = SOURCE_ROOT; };
+		0413D0410C69B08500C73F02 /* OptimizerRecordND.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OptimizerRecordND.h; path = ../../../Headers/uriNumerical/OptimizerRecordND.h; sourceTree = SOURCE_ROOT; };
+		0413D0420C69B08500C73F02 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Quaternion.h; path = ../../../Headers/uriNumerical/Quaternion.h; sourceTree = SOURCE_ROOT; };
+		0413D0430C69B08500C73F02 /* RandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RandomGenerator.h; path = ../../../Headers/uriNumerical/RandomGenerator.h; sourceTree = SOURCE_ROOT; };
+		0413D0440C69B08500C73F02 /* RandomGenerator_C.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RandomGenerator_C.h; path = ../../../Headers/uriNumerical/RandomGenerator_C.h; sourceTree = SOURCE_ROOT; };
+		0413D0450C69B08500C73F02 /* RandomGenerator_Knuth.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RandomGenerator_Knuth.h; path = ../../../Headers/uriNumerical/RandomGenerator_Knuth.h; sourceTree = SOURCE_ROOT; };
+		0413D0460C69B08500C73F02 /* RandomGenerator_MT.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RandomGenerator_MT.h; path = ../../../Headers/uriNumerical/RandomGenerator_MT.h; sourceTree = SOURCE_ROOT; };
+		0413D0470C69B08500C73F02 /* RandomGenerator_R250_521.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RandomGenerator_R250_521.h; path = ../../../Headers/uriNumerical/RandomGenerator_R250_521.h; sourceTree = SOURCE_ROOT; };
+		0413D0480C69B08500C73F02 /* RowVector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = RowVector.h; path = ../../../Headers/uriNumerical/RowVector.h; sourceTree = SOURCE_ROOT; };
+		0413D0490C69B08500C73F02 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ../../../Headers/uriNumerical/Vector.h; sourceTree = SOURCE_ROOT; };
+		0413D04B0C69B08500C73F02 /* BlobTracker2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BlobTracker2D.h; path = ../../../Headers/uriTracking/BlobTracker2D.h; sourceTree = SOURCE_ROOT; };
+		0413D04C0C69B08500C73F02 /* BlobTracker2DController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BlobTracker2DController.h; path = ../../../Headers/uriTracking/BlobTracker2DController.h; sourceTree = SOURCE_ROOT; };
+		0413D04D0C69B08500C73F02 /* BlobTrackingState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BlobTrackingState.h; path = ../../../Headers/uriTracking/BlobTrackingState.h; sourceTree = SOURCE_ROOT; };
+		0413D04E0C69B08500C73F02 /* CornerTrackingState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CornerTrackingState.h; path = ../../../Headers/uriTracking/CornerTrackingState.h; sourceTree = SOURCE_ROOT; };
+		0413D04F0C69B08500C73F02 /* PatternTracker2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternTracker2D.h; path = ../../../Headers/uriTracking/PatternTracker2D.h; sourceTree = SOURCE_ROOT; };
+		0413D0500C69B08500C73F02 /* PatternTracker2DController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternTracker2DController.h; path = ../../../Headers/uriTracking/PatternTracker2DController.h; sourceTree = SOURCE_ROOT; };
+		0413D0510C69B08500C73F02 /* PatternTrackingState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PatternTrackingState.h; path = ../../../Headers/uriTracking/PatternTrackingState.h; sourceTree = SOURCE_ROOT; };
+		0413D0520C69B08500C73F02 /* SegmentTrackingState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SegmentTrackingState.h; path = ../../../Headers/uriTracking/SegmentTrackingState.h; sourceTree = SOURCE_ROOT; };
+		0413D0530C69B08500C73F02 /* ShapeTrackingState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ShapeTrackingState.h; path = ../../../Headers/uriTracking/ShapeTrackingState.h; sourceTree = SOURCE_ROOT; };
+		0413D0540C69B08500C73F02 /* Tracker2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Tracker2D.h; path = ../../../Headers/uriTracking/Tracker2D.h; sourceTree = SOURCE_ROOT; };
+		0413D0550C69B08500C73F02 /* Tracker2D_PID.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Tracker2D_PID.h; path = ../../../Headers/uriTracking/Tracker2D_PID.h; sourceTree = SOURCE_ROOT; };
+		0413D0560C69B08500C73F02 /* Tracker2DController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Tracker2DController.h; path = ../../../Headers/uriTracking/Tracker2DController.h; sourceTree = SOURCE_ROOT; };
+		0413D0570C69B08500C73F02 /* TrackingState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TrackingState.h; path = ../../../Headers/uriTracking/TrackingState.h; sourceTree = SOURCE_ROOT; };
+		0413D0590C69B08500C73F02 /* BufferRing.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BufferRing.h; path = ../../../Headers/uriVideoSources/BufferRing.h; sourceTree = SOURCE_ROOT; };
+		0413D05A0C69B08500C73F02 /* FrameGrabber.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FrameGrabber.h; path = ../../../Headers/uriVideoSources/FrameGrabber.h; sourceTree = SOURCE_ROOT; };
+		0413D05B0C69B08500C73F02 /* FrameGrabber_gen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FrameGrabber_gen.h; path = ../../../Headers/uriVideoSources/FrameGrabber_gen.h; sourceTree = SOURCE_ROOT; };
+		0413D05C0C69B08500C73F02 /* FrameGrabber_QT.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FrameGrabber_QT.h; path = ../../../Headers/uriVideoSources/FrameGrabber_QT.h; sourceTree = SOURCE_ROOT; };
+		0413D05D0C69B08500C73F02 /* ImageReader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageReader.h; path = ../../../Headers/uriVideoSources/ImageReader.h; sourceTree = SOURCE_ROOT; };
+		0413D05E0C69B08500C73F02 /* ImageReader_gen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageReader_gen.h; path = ../../../Headers/uriVideoSources/ImageReader_gen.h; sourceTree = SOURCE_ROOT; };
+		0413D05F0C69B08500C73F02 /* ImageReader_QT.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ImageReader_QT.h; path = ../../../Headers/uriVideoSources/ImageReader_QT.h; sourceTree = SOURCE_ROOT; };
+		0413D0600C69B08500C73F02 /* MoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MoviePlayer.h; path = ../../../Headers/uriVideoSources/MoviePlayer.h; sourceTree = SOURCE_ROOT; };
+		0413D0610C69B08500C73F02 /* MoviePlayer_gen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MoviePlayer_gen.h; path = ../../../Headers/uriVideoSources/MoviePlayer_gen.h; sourceTree = SOURCE_ROOT; };
+		0413D0620C69B08500C73F02 /* MoviePlayer_QT.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MoviePlayer_QT.h; path = ../../../Headers/uriVideoSources/MoviePlayer_QT.h; sourceTree = SOURCE_ROOT; };
+		0413D0630C69B08500C73F02 /* SequenceGrabber.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SequenceGrabber.h; path = ../../../Headers/uriVideoSources/SequenceGrabber.h; sourceTree = SOURCE_ROOT; };
+		0413D0640C69B08500C73F02 /* VideoSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VideoSource.h; path = ../../../Headers/uriVideoSources/VideoSource.h; sourceTree = SOURCE_ROOT; };
+		0413D0650C69B0AD00C73F02 /* uriVisionLib_QT_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = uriVisionLib_QT_Prefix.pch; sourceTree = "<group>"; };
+		0413D0660C69B0AD00C73F02 /* uriVisionLib_generic_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = uriVisionLib_generic_Prefix.pch; sourceTree = "<group>"; };
+		0413D17C0C69BA5C00C73F02 /* uriVisionLib-QT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "uriVisionLib-QT.framework"; path = "../../../Libraries/Mac OS/Frameworks/uriVisionLib-QT.framework"; sourceTree = SOURCE_ROOT; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0413CF6A0C69B05500C73F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0413D0FC0C69B0D300C73F02 /* OpenGL.framework in Frameworks */,
+				0413D0FD0C69B0D300C73F02 /* GLUT.framework in Frameworks */,
+				0413D0FE0C69B0D300C73F02 /* QuickTime.framework in Frameworks */,
+				0413D0FF0C69B0D300C73F02 /* Carbon.framework in Frameworks */,
+				0413D17D0C69BA5C00C73F02 /* uriVisionLib-QT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0413CF660C69B02000C73F02 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF670C69B04400C73F02 /* binaryImage_main.cpp */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		0413CF730C69B08500C73F02 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF740C69B08500C73F02 /* uriBase */,
+				0413CF8F0C69B08500C73F02 /* uriComputerVision */,
+				0413CFBB0C69B08500C73F02 /* uriGraphics */,
+				0413CFCA0C69B08500C73F02 /* uriImageProcessing */,
+				0413D0220C69B08500C73F02 /* uriMovieEditing */,
+				0413D0270C69B08500C73F02 /* uriNumerical */,
+				0413D04A0C69B08500C73F02 /* uriTracking */,
+				0413D0580C69B08500C73F02 /* uriVideoSources */,
+			);
+			name = Headers;
+			path = ../../../Headers;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413CF740C69B08500C73F02 /* uriBase */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF750C69B08500C73F02 /* ColorImageHistogram.h */,
+				0413CF760C69B08500C73F02 /* DrawableObject2D.h */,
+				0413CF770C69B08500C73F02 /* ErrorReport.h */,
+				0413CF780C69B08500C73F02 /* GraphWorld.h */,
+				0413CF790C69B08500C73F02 /* GraphWorld_gen.h */,
+				0413CF7A0C69B08500C73F02 /* GraphWorld_QT.h */,
+				0413CF7B0C69B08500C73F02 /* Histogram.h */,
+				0413CF7C0C69B08500C73F02 /* ImageHistogram.h */,
+				0413CF7D0C69B08500C73F02 /* ImagePoint.h */,
+				0413CF7E0C69B08500C73F02 /* ImagePoint_F.h */,
+				0413CF7F0C69B08500C73F02 /* ImageRect.h */,
+				0413CF800C69B08500C73F02 /* RasterImage.h */,
+				0413CF810C69B08500C73F02 /* RasterImage_aRGB16.h */,
+				0413CF820C69B08500C73F02 /* RasterImage_binary.h */,
+				0413CF830C69B08500C73F02 /* RasterImage_gray.h */,
+				0413CF840C69B08500C73F02 /* RasterImage_gray_F.h */,
+				0413CF850C69B08500C73F02 /* RasterImage_HSV.h */,
+				0413CF860C69B08500C73F02 /* RasterImage_HSV24.h */,
+				0413CF870C69B08500C73F02 /* RasterImage_Lab.h */,
+				0413CF880C69B08500C73F02 /* RasterImage_RGB.h */,
+				0413CF890C69B08500C73F02 /* RasterImage_RGBa.h */,
+				0413CF8A0C69B08500C73F02 /* RasterImage_RGBa_F.h */,
+				0413CF8B0C69B08500C73F02 /* uriVisionLib.h */,
+				0413CF8C0C69B08500C73F02 /* VectorField.h */,
+				0413CF8D0C69B08500C73F02 /* VectorField_F.h */,
+				0413CF8E0C69B08500C73F02 /* VectorField_I.h */,
+			);
+			name = uriBase;
+			path = ../../../Headers/uriBase;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413CF8F0C69B08500C73F02 /* uriComputerVision */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF900C69B08500C73F02 /* BackgroundRemover.h */,
+				0413CF910C69B08500C73F02 /* BackgroundRemover_dynamic.h */,
+				0413CF920C69B08500C73F02 /* BackgroundRemover_dynamic_MW.h */,
+				0413CF930C69B08500C73F02 /* BackgroundRemover_static.h */,
+				0413CF940C69B08500C73F02 /* Camera.h */,
+				0413CF950C69B08500C73F02 /* DepthMap.h */,
+				0413CF960C69B08500C73F02 /* Disparity.h */,
+				0413CF970C69B08500C73F02 /* Disparity_F.h */,
+				0413CF980C69B08500C73F02 /* ElevationMap.h */,
+				0413CF990C69B08500C73F02 /* Entity3D.h */,
+				0413CF9A0C69B08500C73F02 /* IntrinsicParameters.h */,
+				0413CF9B0C69B08500C73F02 /* IntrinsicParameters_CCD.h */,
+				0413CF9C0C69B08500C73F02 /* IntrinsicParameters_pinhole.h */,
+				0413CF9D0C69B08500C73F02 /* IntrinsicParameters_TsaiW.h */,
+				0413CF9E0C69B08500C73F02 /* NormalFlowCalculator.h */,
+				0413CF9F0C69B08500C73F02 /* Object3D.h */,
+				0413CFA00C69B08500C73F02 /* OrthographicCamera.h */,
+				0413CFA10C69B08500C73F02 /* PerspectiveCamera.h */,
+				0413CFA20C69B08500C73F02 /* Point3D.h */,
+				0413CFA30C69B08500C73F02 /* RangeMap.h */,
+				0413CFA40C69B08500C73F02 /* RectifiedStereoDisparity_F.h */,
+				0413CFA50C69B08500C73F02 /* RectifiedStereoMatch.h */,
+				0413CFA60C69B08500C73F02 /* RectifiedStereoMatcher.h */,
+				0413CFA70C69B08500C73F02 /* RectifiedStereoMatcher_corr.h */,
+				0413CFA80C69B08500C73F02 /* RectifiedStereoMatcher_JJL.h */,
+				0413CFA90C69B08500C73F02 /* RectifiedStereoPair.h */,
+				0413CFAA0C69B08500C73F02 /* ReferenceFrame3D.h */,
+				0413CFAB0C69B08500C73F02 /* RigidTransformation3D.h */,
+				0413CFAC0C69B08500C73F02 /* Rotation3D.h */,
+				0413CFAD0C69B08500C73F02 /* StereoDisparity.h */,
+				0413CFAE0C69B08500C73F02 /* StereoDisparity_F.h */,
+				0413CFAF0C69B08500C73F02 /* StereoMatcher.h */,
+				0413CFB00C69B08500C73F02 /* StereoMatchRecord.h */,
+				0413CFB10C69B08500C73F02 /* StereoPair.h */,
+				0413CFB20C69B08500C73F02 /* Transformation3D.h */,
+				0413CFB30C69B08500C73F02 /* Translation3D.h */,
+				0413CFB40C69B08500C73F02 /* Vector3D.h */,
+				0413CFB50C69B08500C73F02 /* VirtualFace3D.h */,
+				0413CFB60C69B08500C73F02 /* VirtualObject3D.h */,
+				0413CFB70C69B08500C73F02 /* VirtualObjectLoader.h */,
+				0413CFB80C69B08500C73F02 /* VirtualPart3D.h */,
+				0413CFB90C69B08500C73F02 /* VirtualPoint3D.h */,
+				0413CFBA0C69B08500C73F02 /* WeakPerspectiveCamera.h */,
+			);
+			name = uriComputerVision;
+			path = ../../../Headers/uriComputerVision;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413CFBB0C69B08500C73F02 /* uriGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				0413CFBC0C69B08500C73F02 /* Box.h */,
+				0413CFBD0C69B08500C73F02 /* Cone.h */,
+				0413CFBE0C69B08500C73F02 /* Cylinder.h */,
+				0413CFBF0C69B08500C73F02 /* GlUtils.h */,
+				0413CFC00C69B08500C73F02 /* GraphicComponent3D.h */,
+				0413CFC10C69B08500C73F02 /* HalfCone.h */,
+				0413CFC20C69B08500C73F02 /* HalfCylinder.h */,
+				0413CFC30C69B08500C73F02 /* ObjectLoader.h */,
+				0413CFC40C69B08500C73F02 /* ObjectLoader_3jy.h */,
+				0413CFC50C69B08500C73F02 /* ObjectLoader_obj.h */,
+				0413CFC60C69B08500C73F02 /* ObjectParser.h */,
+				0413CFC70C69B08500C73F02 /* PolyMesh.h */,
+				0413CFC80C69B08500C73F02 /* Prism.h */,
+				0413CFC90C69B08500C73F02 /* TubularSection.h */,
+			);
+			name = uriGraphics;
+			path = ../../../Headers/uriGraphics;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413CFCA0C69B08500C73F02 /* uriImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				0413CFCB0C69B08500C73F02 /* ActvContourDetector.h */,
+				0413CFCC0C69B08500C73F02 /* ActvContourDetector_balloon.h */,
+				0413CFCD0C69B08500C73F02 /* ActvContourDetector_GVF.h */,
+				0413CFCE0C69B08500C73F02 /* Blob.h */,
+				0413CFCF0C69B08500C73F02 /* BlobFinder.h */,
+				0413CFD00C69B08500C73F02 /* Cluster.h */,
+				0413CFD10C69B08500C73F02 /* ColorGaussianFilter.h */,
+				0413CFD20C69B08500C73F02 /* ColorGaussianFilter_F.h */,
+				0413CFD30C69B08500C73F02 /* ColorGaussianFilter_I.h */,
+				0413CFD40C69B08500C73F02 /* ColorImageGradient.h */,
+				0413CFD50C69B08500C73F02 /* ColorImageGradient_Gaussian_F.h */,
+				0413CFD60C69B08500C73F02 /* ColorImageGradient_Gaussian_I.h */,
+				0413CFD70C69B08500C73F02 /* ColorImageGradient_Sobel.h */,
+				0413CFD80C69B08500C73F02 /* ColorImageLaplacian.h */,
+				0413CFD90C69B08500C73F02 /* ColorImageLaplacian_Gaussian_F.h */,
+				0413CFDA0C69B08500C73F02 /* ColorImageLaplacian_Gaussian_I.h */,
+				0413CFDB0C69B08500C73F02 /* ColorImageLaplacian_Sobel.h */,
+				0413CFDC0C69B08500C73F02 /* ColorInverseThresholdLabeler.h */,
+				0413CFDD0C69B08500C73F02 /* ColorMedianFilter.h */,
+				0413CFDE0C69B08500C73F02 /* ColorMedianFilter_F.h */,
+				0413CFDF0C69B08500C73F02 /* ColorMedianFilter_I.h */,
+				0413CFE00C69B08500C73F02 /* ColorRegions.h */,
+				0413CFE10C69B08500C73F02 /* ColorSegParams.h */,
+				0413CFE20C69B08500C73F02 /* ColorThresholdLabeler.h */,
+				0413CFE30C69B08500C73F02 /* Contour.h */,
+				0413CFE40C69B08500C73F02 /* Contour_F.h */,
+				0413CFE50C69B08500C73F02 /* Contour_I.h */,
+				0413CFE60C69B08500C73F02 /* ContourDetector.h */,
+				0413CFE70C69B08500C73F02 /* ContourForce.h */,
+				0413CFE80C69B08500C73F02 /* Corner.h */,
+				0413CFE90C69B08500C73F02 /* EdgeDetector.h */,
+				0413CFEA0C69B08500C73F02 /* EdgeDetector_Canny_F.h */,
+				0413CFEB0C69B08500C73F02 /* EdgeDetector_Canny_I.h */,
+				0413CFEC0C69B08500C73F02 /* FeatureDetector.h */,
+				0413CFED0C69B08500C73F02 /* GaussianFilter.h */,
+				0413CFEE0C69B08500C73F02 /* GaussianFilter_F.h */,
+				0413CFEF0C69B08500C73F02 /* GaussianFilter_I.h */,
+				0413CFF00C69B08500C73F02 /* GrayThresholdLabeler.h */,
+				0413CFF10C69B08500C73F02 /* HistogramCalculator.h */,
+				0413CFF20C69B08500C73F02 /* ImageArithmetics.h */,
+				0413CFF30C69B08500C73F02 /* ImageFeature.h */,
+				0413CFF40C69B08500C73F02 /* ImageGradient.h */,
+				0413CFF50C69B08500C73F02 /* ImageGradient_Gaussian_F.h */,
+				0413CFF60C69B08500C73F02 /* ImageGradient_Gaussian_I.h */,
+				0413CFF70C69B08500C73F02 /* ImageGradient_Sobel.h */,
+				0413CFF80C69B08500C73F02 /* ImageLaplacian.h */,
+				0413CFF90C69B08500C73F02 /* ImageLaplacian_Gaussian_F.h */,
+				0413CFFA0C69B08500C73F02 /* ImageLaplacian_Gaussian_I.h */,
+				0413CFFB0C69B08500C73F02 /* ImageLaplacian_Sobel.h */,
+				0413CFFC0C69B08500C73F02 /* ImageOperator.h */,
+				0413CFFD0C69B08500C73F02 /* ImagePyramid.h */,
+				0413CFFE0C69B08500C73F02 /* ImageStitcher.h */,
+				0413CFFF0C69B08500C73F02 /* ImageWarper.h */,
+				0413D0000C69B08500C73F02 /* ImageWarper_GL.h */,
+				0413D0010C69B08500C73F02 /* Labeler.h */,
+				0413D0020C69B08500C73F02 /* LabelRaster.h */,
+				0413D0030C69B08500C73F02 /* ManualStitcher.h */,
+				0413D0040C69B08500C73F02 /* MedianFilter.h */,
+				0413D0050C69B08500C73F02 /* MedianFilter_F.h */,
+				0413D0060C69B08500C73F02 /* MedianFilter_I.h */,
+				0413D0070C69B08500C73F02 /* NonMaximumSuppressor.h */,
+				0413D0080C69B08500C73F02 /* Pattern2D.h */,
+				0413D0090C69B08500C73F02 /* Pattern2DMatchRecord.h */,
+				0413D00A0C69B08500C73F02 /* Pattern2DMatchRecord_part.h */,
+				0413D00B0C69B08500C73F02 /* Pattern2DMatchRecord_scale.h */,
+				0413D00C0C69B08500C73F02 /* Pattern2DMatchRecord_warp.h */,
+				0413D00D0C69B08500C73F02 /* PatternMatcher2D.h */,
+				0413D00E0C69B08500C73F02 /* PatternMatcher2D_corr.h */,
+				0413D00F0C69B08500C73F02 /* PatternMatcher2D_medianDiff.h */,
+				0413D0100C69B08500C73F02 /* PatternMatcher2D_partCorr.h */,
+				0413D0110C69B08500C73F02 /* PatternMatcher2D_scaledDiff.h */,
+				0413D0120C69B08500C73F02 /* PatternMatcher2D_warp.h */,
+				0413D0130C69B08500C73F02 /* Registration2D.h */,
+				0413D0140C69B08500C73F02 /* Registration2D_ICP.h */,
+				0413D0150C69B08500C73F02 /* Registration2D_LMICP.h */,
+				0413D0160C69B08500C73F02 /* Registration2D_LPCD.h */,
+				0413D0170C69B08500C73F02 /* RigidTransformation2D.h */,
+				0413D0180C69B08500C73F02 /* Rotation2D.h */,
+				0413D0190C69B08500C73F02 /* Segment.h */,
+				0413D01A0C69B08500C73F02 /* SegmentDetector.h */,
+				0413D01B0C69B08500C73F02 /* Segmenter.h */,
+				0413D01C0C69B08500C73F02 /* ThresholdLabeler.h */,
+				0413D01D0C69B08500C73F02 /* Transformation2D.h */,
+				0413D01E0C69B08500C73F02 /* Translation2D.h */,
+				0413D01F0C69B08500C73F02 /* VectorOperator.h */,
+				0413D0200C69B08500C73F02 /* WarpMatchScoreFunctionND.h */,
+				0413D0210C69B08500C73F02 /* ZeroCrossingDetector.h */,
+			);
+			name = uriImageProcessing;
+			path = ../../../Headers/uriImageProcessing;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413D0220C69B08500C73F02 /* uriMovieEditing */ = {
+			isa = PBXGroup;
+			children = (
+				0413D0230C69B08500C73F02 /* ImageWriter.h */,
+				0413D0240C69B08500C73F02 /* ImageWriter_gen.h */,
+				0413D0250C69B08500C73F02 /* ImageWriter_QT.h */,
+				0413D0260C69B08500C73F02 /* VideoDestination.h */,
+			);
+			name = uriMovieEditing;
+			path = ../../../Headers/uriMovieEditing;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413D0270C69B08500C73F02 /* uriNumerical */ = {
+			isa = PBXGroup;
+			children = (
+				0413D0280C69B08500C73F02 /* ColumnVector.h */,
+				0413D0290C69B08500C73F02 /* ConfidenceRecord.h */,
+				0413D02A0C69B08500C73F02 /* Function1D.h */,
+				0413D02B0C69B08500C73F02 /* Function1D_D.h */,
+				0413D02C0C69B08500C73F02 /* FunctionND.h */,
+				0413D02D0C69B08500C73F02 /* FunctionND_D.h */,
+				0413D02E0C69B08500C73F02 /* FunctionNDSection1D.h */,
+				0413D02F0C69B08500C73F02 /* FunctionNDSection1D_D.h */,
+				0413D0300C69B08500C73F02 /* HomogeneousMatrix.h */,
+				0413D0310C69B08500C73F02 /* IterationStatus.h */,
+				0413D0320C69B08500C73F02 /* LinearSolver.h */,
+				0413D0330C69B08500C73F02 /* LinearSolver_Cholesky.h */,
+				0413D0340C69B08500C73F02 /* LinearSolver_LU.h */,
+				0413D0350C69B08500C73F02 /* LinearSolver_QR.h */,
+				0413D0360C69B08500C73F02 /* LinearSolver_SVD.h */,
+				0413D0370C69B08500C73F02 /* LinearSolverRecord.h */,
+				0413D0380C69B08500C73F02 /* Matrix.h */,
+				0413D0390C69B08500C73F02 /* NonlinearOptimizer1D.h */,
+				0413D03A0C69B08500C73F02 /* NonlinearOptimizer1D_Brent.h */,
+				0413D03B0C69B08500C73F02 /* NonlinearOptimizer1D_gss.h */,
+				0413D03C0C69B08500C73F02 /* NonlinearOptimizer1D_parab.h */,
+				0413D03D0C69B08500C73F02 /* NonlinearOptimizerND.h */,
+				0413D03E0C69B08500C73F02 /* NonlinearOptimizerND_conjDir.h */,
+				0413D03F0C69B08500C73F02 /* NonlinearOptimizerND_conjDir_Powell.h */,
+				0413D0400C69B08500C73F02 /* OptimizerRecord1D.h */,
+				0413D0410C69B08500C73F02 /* OptimizerRecordND.h */,
+				0413D0420C69B08500C73F02 /* Quaternion.h */,
+				0413D0430C69B08500C73F02 /* RandomGenerator.h */,
+				0413D0440C69B08500C73F02 /* RandomGenerator_C.h */,
+				0413D0450C69B08500C73F02 /* RandomGenerator_Knuth.h */,
+				0413D0460C69B08500C73F02 /* RandomGenerator_MT.h */,
+				0413D0470C69B08500C73F02 /* RandomGenerator_R250_521.h */,
+				0413D0480C69B08500C73F02 /* RowVector.h */,
+				0413D0490C69B08500C73F02 /* Vector.h */,
+			);
+			name = uriNumerical;
+			path = ../../../Headers/uriNumerical;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413D04A0C69B08500C73F02 /* uriTracking */ = {
+			isa = PBXGroup;
+			children = (
+				0413D04B0C69B08500C73F02 /* BlobTracker2D.h */,
+				0413D04C0C69B08500C73F02 /* BlobTracker2DController.h */,
+				0413D04D0C69B08500C73F02 /* BlobTrackingState.h */,
+				0413D04E0C69B08500C73F02 /* CornerTrackingState.h */,
+				0413D04F0C69B08500C73F02 /* PatternTracker2D.h */,
+				0413D0500C69B08500C73F02 /* PatternTracker2DController.h */,
+				0413D0510C69B08500C73F02 /* PatternTrackingState.h */,
+				0413D0520C69B08500C73F02 /* SegmentTrackingState.h */,
+				0413D0530C69B08500C73F02 /* ShapeTrackingState.h */,
+				0413D0540C69B08500C73F02 /* Tracker2D.h */,
+				0413D0550C69B08500C73F02 /* Tracker2D_PID.h */,
+				0413D0560C69B08500C73F02 /* Tracker2DController.h */,
+				0413D0570C69B08500C73F02 /* TrackingState.h */,
+			);
+			name = uriTracking;
+			path = ../../../Headers/uriTracking;
+			sourceTree = SOURCE_ROOT;
+		};
+		0413D0580C69B08500C73F02 /* uriVideoSources */ = {
+			isa = PBXGroup;
+			children = (
+				0413D0590C69B08500C73F02 /* BufferRing.h */,
+				0413D05A0C69B08500C73F02 /* FrameGrabber.h */,
+				0413D05B0C69B08500C73F02 /* FrameGrabber_gen.h */,
+				0413D05C0C69B08500C73F02 /* FrameGrabber_QT.h */,
+				0413D05D0C69B08500C73F02 /* ImageReader.h */,
+				0413D05E0C69B08500C73F02 /* ImageReader_gen.h */,
+				0413D05F0C69B08500C73F02 /* ImageReader_QT.h */,
+				0413D0600C69B08500C73F02 /* MoviePlayer.h */,
+				0413D0610C69B08500C73F02 /* MoviePlayer_gen.h */,
+				0413D0620C69B08500C73F02 /* MoviePlayer_QT.h */,
+				0413D0630C69B08500C73F02 /* SequenceGrabber.h */,
+				0413D0640C69B08500C73F02 /* VideoSource.h */,
+			);
+			name = uriVideoSources;
+			path = ../../../Headers/uriVideoSources;
+			sourceTree = SOURCE_ROOT;
+		};
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF6C0C69B05500C73F02 /* binaryImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* uriDemos */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF730C69B08500C73F02 /* Headers */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = uriDemos;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0413CF660C69B02000C73F02 /* Basic */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0413D0650C69B0AD00C73F02 /* uriVisionLib_QT_Prefix.pch */,
+				0413D0660C69B0AD00C73F02 /* uriVisionLib_generic_Prefix.pch */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0413D17C0C69BA5C00C73F02 /* uriVisionLib-QT.framework */,
+				0413CF630C69B00D00C73F02 /* OpenGL.framework */,
+				0413CF640C69B00D00C73F02 /* GLUT.framework */,
+				0413CF650C69B00D00C73F02 /* QuickTime.framework */,
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0413CF6B0C69B05500C73F02 /* binaryImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0413CF6F0C69B05600C73F02 /* Build configuration list for PBXNativeTarget "binaryImage" */;
+			buildPhases = (
+				0413CF680C69B05500C73F02 /* Resources */,
+				0413CF690C69B05500C73F02 /* Sources */,
+				0413CF6A0C69B05500C73F02 /* Frameworks */,
+				0413D17A0C69B9E800C73F02 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = binaryImage;
+			productName = binaryImage;
+			productReference = 0413CF6C0C69B05500C73F02 /* binaryImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "uriDemos" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 20286C29FDCF999611CA2CEA /* uriDemos */;
+			projectDirPath = "";
+			projectRoot = ../../../..;
+			targets = (
+				0413CF6B0C69B05500C73F02 /* binaryImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0413CF680C69B05500C73F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0413CF690C69B05500C73F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0413D1140C69B1DE00C73F02 /* binaryImage_main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0413CF700C69B05600C73F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../../Libraries/Mac OS/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = uriVisionLib_generic_Prefix.pch;
+				INFOPLIST_FILE = "binaryImage-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = binaryImage;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		0413CF710C69B05600C73F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../../../Libraries/Mac OS/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = uriVisionLib_generic_Prefix.pch;
+				INFOPLIST_FILE = "binaryImage-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = binaryImage;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C0E91ACA08A95435008D54AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C0E91ACB08A95435008D54AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0413CF6F0C69B05600C73F02 /* Build configuration list for PBXNativeTarget "binaryImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0413CF700C69B05600C73F02 /* Debug */,
+				0413CF710C69B05600C73F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "uriDemos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E91ACA08A95435008D54AB /* Debug */,
+				C0E91ACB08A95435008D54AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

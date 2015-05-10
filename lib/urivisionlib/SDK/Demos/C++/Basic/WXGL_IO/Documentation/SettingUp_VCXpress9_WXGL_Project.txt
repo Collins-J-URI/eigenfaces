@@ -1,0 +1,95 @@
+This document describes how to use VisualStudioExpress9 with wxWidgets
+
+SVN:
+
+Add the following global definitions (all three lines merged into one) to the start of the SVN Global ignore pattern
+RtClk\TortiseSVN\Settings...Subversion...Global ignore pattern
+
+*.aux *.dvi *.idx *.ilg *.ind *.log *.lof *.lot *.out *.toc 
+*.ilk *.user *.manifest mt.dep *.pdb *.idb *.obj *.lib *.exe BuildLog.htm
+*.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.rej *~ #*# .#* .*.swp .DS_Store
+
+Install VisualStudioExpress9 for VC.
+{Microsoft Platform SDK for Windows Server 2003 R2 had been needed for VSE8-2005 but does not seem to be needed now:)
+
+Add xxxBase variables to Environment Variables (CtlPanel->System->Advanced::EnvironmentVariables)
+--- add these to System variables
+--- seems like it works better to put trailing '\' in the variable definition
+--- must restart VCexpress after adding these vars:(
+UriVisionBase == C:\uriVisionLib\
+WxWidgetsBase == C:\wxWidgets-2.8.10\
+ProjectsBase  == C:\Projects\
+GLutBase      == C:\Projects\glut-3.7.6\
+WinPSdkBase   == C:\???
+
+Setup wxWidgets for OpenGL support
+
+Set 
+// Recommended setting: 1 if you intend to use OpenGL, 0 otherwise
+#define wxUSE_GLCANVAS       1
+in file C:\wxWidgets-2.8.10\include\wx\msw\setup.h
+{there is same setting in C:\wxWidgets-2.8.10\include\wx\setup_inc.h but it appears that the file C:\wxWidgets-2.8.10\include\wx\setup_redirect.h points MSW to use the directory C:\wxWidgets-2.8.10\include\wx\msw\}
+
+then recompile wx libraries using C:\wxWidgets-2.8.10\build\msw\wx.dsw
+rebuild 
+{let VC convert them since these are prior to VC9}
+
+
+For each project
+
+Start VCexpress
+Create: Project --> Visual C++ ... emptyproj
+Enter name: fred, Location C:\Projects, Solution Name: fred, Check create dir for soln
+
+Create dir C:\Projects\fred\Sources  
+< just copy MonoSim_Base\Docs, MonoSim_Base\Resources, & MonoSim_Base\Sources to new dir, then rename files
+
+base files are
+
+MonoSim_App.cpp,.h
+MonoSim_canvas.cpp,.h
+MonoSim_frame.cpp,.h
+MonoSim_menus.cpp,.h
+
+expect to rename all MonoSim_xxx to NEW_PROJ_xxx; do the classes too:)
+<Use NotePad++ to rename all BOM_Formatter to newname>
+
+edit add files and change names there too.
+
+put .cpp and .h files in \Sources to keep them separate from other junk VCx creates in ...\fred
+
+add .cpp files to Source Files folder in project, .h files to Header Files folder
+>
+
+Create dir C:\Projects\fred\Resources
+pur any .rc file in \Resources
+put .XPM type files in in \Resources
+
+DO THIS FOR BOTH THE DEBUG AND RELEASE CONFIGURATIONS
+<\start set properties>
+Right click on FRED --> Properties <Linker::Input::Additional Dependencies>
+For Win32 Platform SDK, add libraries 
+comctl32.lib
+rpcrt4.lib
+shell32.lib
+gdi32.lib
+kernel32.lib
+user32.lib
+comdlg32.lib
+ole32.lib
+oleaut32.lib
+advapi32.lib
+
+For wxWidgets projects:
+Add $(WxWidgetsBase)include;$(WxWidgetsBase)include\msvc to C++ includes list <C/C++::Additional Include Directories>
+Add $(WxWidgetsBase)lib\vc_lib; to linker search list <Linker::General:::Additional Library Directories>
+
+For OpenGL projects
+Add $(GLutBase)include to C++ includes list <C/C++::Additional Include Directories>
+Add $(GLutBase)lib to linker search list <Linker::General::Additional Library Directories>
+
+
+For uriVisionLib projects:
+Add ...tbd...
+
+<\end set properties>

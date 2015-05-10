@@ -1,0 +1,1 @@
+This demo shows how to play a QuickTime movie

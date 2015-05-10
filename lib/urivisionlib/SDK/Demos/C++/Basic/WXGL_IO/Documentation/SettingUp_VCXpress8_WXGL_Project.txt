@@ -1,0 +1,79 @@
+Add xxxBase variables to Environment Variables (CtlPanel->System->Advanced::EnvironmentVariables)
+--- add these to System variables
+--- seems like it works better to put trailing '\' in the variable definition
+--- must restart VCexpress after adding these vars:(
+UriVisionBase == C:\uriVisionLib\
+WxWidgetsBase == C:\wxWidgets-2.8.4\
+ProjectsBase  == C:\Projects\
+WinPSdkBase   == C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\
+GLutBase      == C:\Projects\glut-3.7.6\
+
+Setup wxWidgets for OpenGL support
+
+Set 
+// Recommended setting: 1 if you intend to use OpenGL, 0 otherwise
+#define wxUSE_GLCANVAS       1
+in files
+C:\wxWidgets-2.8.4\include\wx\msw\setup.h
+{\not in 
+C:\wxWidgets-2.8.4\lib\vc_lib\msw\wx\setup.h
+C:\wxWidgets-2.8.4\lib\vc_lib\mswd\wx\setup.h
+because these get copied over from C:\wxWidgets-2.8.4\include\wx\msw\setup.h}
+
+then recompile wx libraries
+
+
+For each project
+
+Start VCexpress
+Create: Project --> Visual C++ ... emptyproj
+Enter name: fred, Location C:\Projects, Solution Name: fred, Check create dir for soln
+
+Create dir C:\Projects\fred\Sources  
+< just copy CVPD_WXGL_Base\Docs, CVPD_WXGL_Base\Resources, & CVPD_WXGL_Base\Sources to new dir, then rename files
+
+base files are
+
+CVPD_WXGL_App.cpp,.h
+CVPD_WXGL_canvas.cpp,.h
+CVPD_WXGL_frame.cpp,.h
+CVPD_WXGL_menus.cpp,.h
+
+expect to rename all CVPD_WXGL_xxx to NEW_PROJ_xxx; do the classes too:)
+
+edit add files and change names there too.
+
+put .cpp and .h files in \Sources to keep them separate from other junk VCx creates in ...\fred
+
+add .cpp files to Source Files folder in project, .h files to Header Files folder
+>
+
+Create dir C:\Projects\fred\Resources
+pur any .rc file in \Resources
+put .XPM type files in in \Resources
+
+
+Right click on FRED --> Properties <Linker::Input::Additional Dependencies>
+For Win32 Platform SDK, add libraries 
+comctl32.lib
+rpcrt4.lib
+shell32.lib
+gdi32.lib
+kernel32.lib
+user32.lib
+comdlg32.lib
+ole32.lib
+oleaut32.lib
+advapi32.lib
+
+For wxWidgets projects:
+Add $(WxWidgetsBase)include;$(WxWidgetsBase)include\msvc to C++ includes list <C/C++::Additional Include Directories>
+Add $(WxWidgetsBase)lib\vc_lib; $(WinPSdkBase)lib to linker search list <Linker::Additional Library Directories>
+
+For OpenGL projects
+Add $(GLutBase)include to C++ includes list <C/C++::Additional Include Directories>
+Add $(GLutBase)lib to linker search list <Linker::Additional Library Directories>
+
+
+For uriVisionLib projects:
+Add ...tbd...

@@ -1,0 +1,1 @@
+This demo shows how to setup and play a QuickTime movie for image processing purposes

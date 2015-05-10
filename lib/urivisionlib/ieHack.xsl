@@ -1,0 +1,1 @@
+<!-- Hack required for IE Explorer to open and display XHTML code --><stylesheet version="1.0"     xmlns="http://www.w3.org/1999/XSL/Transform">    <template match="/">        <copy-of select="."/>    </template></stylesheet>

@@ -1,0 +1,13 @@
+A simple combination of the VideoGrabbing and BlobFilling demos.
+
+	The upper-left quadrant shows the original image						
+	The upper-right subwindow shows the results of a color thresholding		
+		operation (with saturated colors for matched areas and a gray-level	
+		copy of the image elsewhere											
+	The lower-left quadrant shows the result of a "find all blobs"			
+		operation (the right-click menus allows to change blob min size),	
+		with the blobs displayed over a gray-level copy of the image.		
+	The lower-right quadrant shows the blobs found, over a black background	
+																			
+	The user can increase or decrease the min blob size by using the keys	
+		',' [for decrease] and '.' [for increase].							

@@ -1,0 +1,121 @@
+Getting SVN info for source code files.
+W. Lewis Collier
+as of 07 April 2011
+
+Note:  See the documentation for package svn-multi if you need revision information in a LaTeX file.
+
+Summary: You need a template file with one or more SVN keywords. SVN is then used to get the info from the files, change the template(s), and save the template file as a new file that has the correct info. Thus, you need to run an SVN utility to do this before creating a final build. MS-Visual Studio has a way to run programs before (and after) the build process so this is fairly easy to do in MSVS; if there is a makefile, then the step needs to be added befor ethe build steps. (No clue for Paradigm:)
+
+The MS-Windows utility to use is SubWCRev.exe. It comes with TortiseSVN. It is a cmdline application so run it to get all the options (or go to http://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-subwcrev.html) for the formal help.
+
+We are mainly concerned with the latest commit revision so we use $WCREV$. Eventually I'll build a revision object that does ALL of the keywords, I'm just not there yet. And it gets tricky with cross-project linking, etc. Later...
+
+The template file can be of any name since the utility to fill in the templates creates a new file, which can be .h or .cpp. <<< directly from the help file: A file like this (.h or .cpp) will be included in the build so you would expect it to be versioned. Be sure to version the template file, not the generated file, otherwise each time you regenerate the version file you need to commit the change, which in turn means the version file needs to be updated. >>>
+
+Whilte there are about 10 different tags, the template file needs a line of the form
+
+char *Revision = "$WCREV$";
+
+In this case, $WCREV$ will be replaced by a string that represents the overall repository version number (e.g. "305"). Since this is an ever increasing number, we use this as a build number. Thus, we can revision each project in the repository in the form Major.Minor.Build. So the first release of a program might be 1.0.305. We just need a way to get this string.
+
+The template file should also have lines of the form
+
+char *MajorRevision = "1";
+char *MinorRevision = "0";
+char *BuildRevision = "$WCREV$";
+
+Thus, then the major or minor revision number is updated, the template file (which is also under revision control) will need to be updated, so the build revision will automatically be updated upon comit and update.
+
+So the quicky solution is this:
+
+PROJECT_Revision.h [just needed for the get_PROJECT_revision() prototype] looks like
+//---------------------------------------------------------------------------------------------
+int get_PROJECT_revision(char *pszString, int nLen);
+//---------------------------------------------------------------------------------------------
+
+PROJECT_revision.c__  (the template file) looks like
+
+//---------------------------------------------------------------------------------------------
+//
+// file to get project revision number stirng
+//
+#include <string.h>
+
+// use static variables to make them private to this file so there are no cross-project issues
+static char *MajorRevision = "1";
+static char *MinorRevision = "0";
+static char *BuildRevision = "$WCREV$";
+
+// change "project" to "real name of project" to prevent cross-project issues
+
+//
+// file to get MonoSim project revision number stirng
+//
+#include <string.h>
+
+// use static variables to make them private to this file so there are no cross-project issues
+static char *MajorRevision = "1";
+static char *MinorRevision = "0";
+static char *BuildRevision = "$WCREV$";
+
+// change "PROJECT" to "real name of project" to prevent cross-project issues
+int get_PROJECT_revision(char *pszString, int nLen)
+{
+	*pszString = 0; // just to make sure it's clean to add to
+	
+	 if ( (nLen - strlen(MajorRevision)) <= 0) return -1; // string not big enough
+     strncpy(&pszString[strlen(pszString)],MajorRevision,nLen);
+	 nLen -= strlen(MajorRevision);
+	 
+	 if ( (nLen - strlen(".")) <= 0) return -1; // string not big enough
+     strncpy(&pszString[strlen(pszString)],".",nLen);
+	 nLen -= strlen(".");	 
+	 
+	 if ( (nLen - strlen(MinorRevision)) <= 0) return -1; // string not big enough
+     strncpy(&pszString[strlen(pszString)],MinorRevision,nLen);
+	 nLen -= strlen(MinorRevision);
+	 
+	 if ( (nLen - strlen(".")) <= 0) return -1; // string not big enough
+     strncpy(&pszString[strlen(pszString)],".",nLen);
+	 nLen -= strlen(".");	
+
+	 if ( (nLen - strlen(BuildRevision)) <= 0) return -1; // string not big enough	 
+     strncpy(&pszString[strlen(pszString)],BuildRevision,nLen);
+	 
+	 return 0;
+} // end get_PROJECT_revision()
+//---------------------------------------------------------------------------------------------
+
+Put the .h and the .c__ files in the sources file (do an SVN add) since these are the file you want to have in version control.
+
+Run the dos command line program "CMD" and CD to the source directory.
+
+Update the file with the command
+> SubWCRev.exe . PROJECT_revision.c__ PROJECT_revision.cpp
+
+Now that you have the .cpp file, add PROJECT_revision.cpp to the SVN IGNORE list.
+
+Next step is to add PROJECT_revision.cpp, PROJECT_revision.h, and the SubWCRev.exe command to VisualStudio.
+
+* Add .cpp file as an existing file to the "Sources Files" list for the project
+* Add .h   file as an existing file to the "Header Files" list for the project
+
+Now for the hard part. Adding the Pre Build event to MSVS
+ !!! Do this for BOTH the Debug and Release versions !!!
+ Rt click on bold PROJECT name and select properties
+ Select "Build Events :: Pre-Build Event"
+ Command Line is :  SubWCRev.exe . ../Sources/PROJECT_Revision.c__ ../Sources/PROJECT_Revision.cpp
+  Description is :  SubWCRev.exe (Get and Update SVN Revision)
+  
+where PROJECT is the name of your project.
+  
+!!! Note the ../Sources for the filenames. SubWCRev.exe seems to run in the  C:/projects/PROJECT/Release folder so the "." is needed to tie it to the current working dirrectory and the ../Sources lets it find the files in the sources folder where they want to be. !!!
+
+Just remember to SVN update, commit, thenupdate again to get the latest build number.
+
+
+
+
+
+
+

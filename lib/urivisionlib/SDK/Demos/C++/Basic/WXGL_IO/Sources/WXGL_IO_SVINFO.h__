@@ -1,0 +1,65 @@
+/////////////////////////////////////////////////////////////////////////////
+// Name:        WXGL_IO_SVINFO.h
+// Purpose:     The WXGL_IO_SVINFO.h__ file will be converted in the
+//				pre-build step into WXGL_IO_SVINFO.h. WXGL_IO_SVINFO.h__
+//				acts as a template for SubWCRev.exe to build off of.
+//---------------------------------------------------------------------------
+// Author:      Jacob Rooney
+// Created:     16 April 2012
+// Copyright:   (c) 2012, 3D Group for Interactive Visualization
+//                        University of Rhode Island.
+//
+//        Licensed under the Academic Free License - v. 3.0
+//        For more information see http://opensource.org/licenses/academic.php
+//---------------------------------------------------------------------------
+// Modification on: 
+// Modified by: 
+// Modification: 
+//---------------------------------------------------------------------------
+// Modification on: 
+// Modified by: 
+// Modification: 
+/////////////////////////////////////////////////////////////////////////////
+#if USE_SVNINFO
+#include "SVINFO.h" 
+
+/////////////////////////////////////////////////////////////////////////
+//		Here we manually define the Major.Minor.Patch
+/////////////////////////////////////////////////////////////////////////
+
+#define WXGL_IO_SVINFO_VERSION_MAJOR 1
+#define WXGL_IO_SVINFO_VERSION_MINOR 2
+#define WXGL_IO_SVINFO_VERSION_PATCH 0
+
+
+/////////////////////////////////////////////////////////////////////////
+//		Version History
+/////////////////////////////////////////////////////////////////////////
+//Version: 1.2.0.325
+//Date Comitted: 6/21/11
+//Updated By: Jacob Rooney
+//Major Changes: Integrated SVINFO
+//
+//
+//////////////////////////////////////////////////////////////////////////
+//Version:1.1.0.xx
+//Date Commited: ??
+//Updated By: ??
+//Major Changes: Done before version-ing
+//
+//
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+//		Upon build SubWCRev.exe will populate the below portion with
+//		with values and generate the PROJECT_SVINFO.h file from 
+//		PROJECT_SVINFO.h__
+//////////////////////////////////////////////////////////////////////////
+
+t_SVINFO WXGL_IO_RevInfo={	/*WCREV$,  */ 		_T("$WCREV$"), 
+								/*WCDATE$, */ 		_T("$WCDATE$"), 
+								/*WCNOW$,  */ 		_T("$WCNOW$"), 
+								/*WCRANGE$,*/		_T("$WCRANGE$"), 
+								/*WCURL$   */		_T("$WCURL$")
+													};
+#endif // USE_SVNINFO
