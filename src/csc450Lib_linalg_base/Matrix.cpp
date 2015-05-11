@@ -156,6 +156,15 @@ ColumnVector* Matrix::column(const Matrix *matA) {
     return column;
 }
 
+Matrix* Matrix::matrix(const ColumnVector *vecA, int nbCols) {
+    int nbRows = vecA->rows()/nbCols;
+    Matrix *mat = new Matrix(nbRows, nbCols);
+    for (int i = 0; i < vecA->rows(); i++) {
+            mat->set(i / nbCols, i % nbCols, vecA->get(i));
+    }
+    return mat;
+}
+
 Matrix* Matrix::deflate(const Matrix *matA,
                        const ColumnVector *eigenvector,
                        float eigenvalue) {
