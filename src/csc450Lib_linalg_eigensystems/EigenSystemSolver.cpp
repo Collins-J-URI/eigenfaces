@@ -141,15 +141,16 @@ const EigenSystem* EigenSystemSolver::solve(void) const {
     for (int i = 0; i < size; i++) {
         init = MatrixGenerator::getRandomColumn(size);
         
-        currentSystem = power(deflated, init, 500, 0.001);
+        currentSystem = power(deflated, init, 500, 0.00001);
         currentSystem = rayleigh(a, currentSystem->getEigenVector(0),
-                               currentSystem->getEigenValue(0),
-                               10, 0.000001);
+                                 currentSystem->getEigenValue(0),
+                                 10, 0.000001);
         
         vectors[i] = currentSystem->getEigenVector(0);
         values[i] = currentSystem->getEigenValue(0);
         
         deflated = deflate(deflated, vectors[i], values[i]);
+        
     }
     
     ColumnVector *l = new ColumnVector(size, values);
