@@ -20,7 +20,7 @@ using namespace csc450Lib_linalg_eigensystems;
 int main() {
     srand ( unsigned ( std::time(0) ) );
     string base = "/Users/Christopher/Desktop/CSC 450 Coursework/eigenfaces/";
-
+    
     string facedir = base + "doc/facetext/";
     string file = "subject01.txt";
     string path = facedir + file;
@@ -48,7 +48,7 @@ int main() {
      ********************************************/
     
     int numImages = files.size();
-    numImages = 10;
+    numImages = 20;
     int imageWidth = 243;
     
     // Seed the random matrix generator
@@ -173,9 +173,9 @@ int main() {
     cout << diffmatrix->toString("",""," ",true);
     cout << "\n\n";
     
-    cout << "First eigenface: \n";
-    cout << first->toString("{","}",",",false);
-    cout << "\n\n";
+    //cout << "First eigenface: \n";
+    //cout << first->toString("{","}",",",false);
+    //cout << "\n\n";
     
     //cout << "EIGENFACES: \n";
     //cout << eigenfaces->toString("",""," ",true);
@@ -184,50 +184,17 @@ int main() {
     /********************************************
      *              WRITE TO FILE               *
      ********************************************/
-    /*
+    
     ofstream myfile;
-    myfile.open ("output/output.txt");
-    
-    myfile << len << '\n';
-    
-    for (int i = 0; i < len; i++) {
-        myfile << xvals->get(i) << ' ' << b->get(i) << '\n';
+    int mprime = 10;
+    Matrix *current;
+    for (int i = 0; i < mprime; i++) {
+        myfile.open ("output/eigenface" + to_string(i) + ".txt");
+        
+        current = Matrix::matrix(eigenfaces->getColumn(i), imageWidth);
+        myfile << current->toString("{","}",",",false);
+        
+        // Close file
+        myfile.close();
     }
-    
-    // Display a little more than the lefmost and rightmost values
-    int numpts = (int)((max - min) / 0.001);
-    
-    // Write number of points
-    myfile << numpts << '\n';
-    float xval = min;
-    
-    // Write each coordinate
-    for (int i = 0; i < numpts; i++) {
-        myfile << xval << ' ' << f1->func(xval) << '\n';
-        xval+=0.001;
-    }
-    
-    // Write number of points
-    myfile << numpts << '\n';
-    xval = min;
-    
-    // Write each coordinate
-    for (int i = 0; i < numpts; i++) {
-        myfile << xval << ' ' << f2->func(xval) << '\n';
-        xval+=0.001;
-    }
-    
-    // Write number of points
-    myfile << numpts << '\n';
-    xval = min;
-    
-    // Write each coordinate
-    for (int i = 0; i < numpts; i++) {
-        myfile << xval << ' ' << f3->func(xval) << '\n';
-        xval+=0.001;
-    }
-    
-    // Close file
-    myfile.close();
-    */
 }
