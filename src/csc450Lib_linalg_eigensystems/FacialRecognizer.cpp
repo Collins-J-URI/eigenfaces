@@ -14,32 +14,77 @@
 using namespace csc450Lib_linalg_base;
 using namespace csc450Lib_linalg_eigensystems;
 
-    private:
-        
-        const csc450Lib_linalg_base::Matrix *faceclasses;
-        const csc450Lib_linalg_base::Matrix *eigenfaces;
-        const csc450Lib_linalg_base::ColumnVector *averageFace;
-        const csc450Lib_linalg_base::ColumnVector *input;
-        const csc450Lib_linalg_base::ColumnVector *weights;
-        
-    public:
-        
-        FacialRecognizer(void);
-        FacialRecognizer(const csc450Lib_linalg_base::Matrix *faceclasses,
-                         const csc450Lib_linalg_base::Matrix *eigenfaces,
-                         const csc450Lib_linalg_base::ColumnVector *averageFace);
-        FacialRecognizer(const csc450Lib_linalg_base::Matrix *faceclasses,
-                         const csc450Lib_linalg_base::Matrix *eigenfaces,
-                         const csc450Lib_linalg_base::ColumnVector *averageFace,
-                         const csc450Lib_linalg_base::ColumnVector *input);
-        ~FacialRecognizer(void);
-        
-        bool nearFaceSpace(void) const;
-        bool nearFaceSpace(csc450Lib_linalg_base::ColumnVector *input);
-        
-        bool nearFaceClass(void) const;
-        bool nearFaceClass(const csc450Lib_linalg_base::ColumnVector *input);
-        
-        csc450Lib_linalg_base::ColumnVector* faceClass(void) const;
-        csc450Lib_linalg_base::ColumnVector* faceClass(const csc450Lib_linalg_base::ColumnVector *input) const;
+
+FacialRecognizer::FacialRecognizer(void) {}
+
+FacialRecognizer::FacialRecognizer(const Matrix *faceclasses,
+                 const Matrix *eigenfaces,
+                 const ColumnVector *averageFace) {
+    this->faceclasses = faceclasses;
+    this->eigenfaces = eigenfaces;
+    this->averageFace = averageFace;
+}
+
+FacialRecognizer::FacialRecognizer(const Matrix *faceclasses,
+                 const Matrix *eigenfaces,
+                 const ColumnVector *averageFace,
+                 const ColumnVector *input) {
+    this->faceclasses = faceclasses;
+    this->eigenfaces = eigenfaces;
+    this->averageFace = averageFace;
+    this->input = (ColumnVector*)Matrix::copyOf(input);
+}
+
+FacialRecognizer::~FacialRecognizer(void) {
     
+}
+
+ColumnVector* FacialRecognizer::getWeights(const ColumnVector *input) const {
+    ColumnVector* weights = new ColumnVector(eigenfaces->cols());
+    for (int i = 0; i < eigenfaces->cols(); i++) {
+        weights->set(i,Matrix::multiply(Matrix::transpose(eigenfaces->getColumn(i)),
+                                        Matrix::subtract(input, averageFace))->get(0,0));
+    }
+    return weights;
+}
+
+bool FacialRecognizer::nearFaceSpace(float tol) const {
+    ColumnVector *weights = getWeights(input);
+    
+}
+
+bool FacialRecognizer::nearFaceSpace(const ColumnVector *input, float tol) {
+    this->input = (ColumnVector*)Matrix::copyOf(input);
+    return nearFaceSpace(tol);
+}
+
+bool FacialRecognizer::nearFaceClass(float tol) const {
+    ColumnVector *weights = getWeights(input);
+    
+}
+
+bool FacialRecognizer::nearFaceClass(const ColumnVector *input, float tol) {
+    this->input = (ColumnVector*)Matrix::copyOf(input);
+    return nearFaceClass(tol);
+}
+
+ColumnVector* FacialRecognizer::faceClass(void) const {
+    ColumnVector *weights = getWeights(input);
+    ColumnVector *currentweights;
+    ColumnVector *ret;
+    float dist = 0;
+    float currentdist;
+    for (int i = 0; i < eigenfaces->cols(); i++) {
+        currentweights = getWeights(faceclasses->getColumn(i));
+        currentdist = ((ColumnVector*)Matrix::subtract(weights,currentweights))->norm2();
+        if (currentdist > dist)
+            ret = faceclasses->getColumn(i);
+    }
+    return ret;
+}
+
+ColumnVector* FacialRecognizer::faceClass(const ColumnVector *input) {
+    this->input = (ColumnVector*)Matrix::copyOf(input);
+    return faceClass();
+    
+}
