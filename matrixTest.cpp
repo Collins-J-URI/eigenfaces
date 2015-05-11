@@ -10,19 +10,46 @@
 #include "MatrixGenerator.h"
 #include "EigenSystem.h"
 #include "EigenSystemSolver.h"
+#include "GetPixels.h"
+#include <regex>
 using namespace csc450Lib_calc_base;
 using namespace csc450Lib_linalg_base;
 using namespace csc450Lib_linalg_sle;
 using namespace csc450Lib_linalg_eigensystems;
 
 int main() {
+    srand ( unsigned ( std::time(0) ) );
+    string base = "/Users/Christopher/Desktop/CSC 450 Coursework/eigenfaces/";
+
+    string facedir = base + "doc/facetext/";
+    string file = "subject01.txt";
+    string path = facedir + file;
+    
+    vector<string> files = vector<string>();
+    GetPixels::getdir(facedir, files);
+    
+    files.erase(files.begin(),files.begin()+3);
+    
+    for (int i = 0; i < files.size(); i++) {
+        files[i] = facedir + files[i];
+        cout << files[i] << "\n";
+    }
+    
+    random_shuffle(files.begin(), files.end());
+    
+    float** pixels = GetPixels::getPixelSquare(path);
+    int imagewidth = 320;
+    int imageheight = 243;
+    Matrix* image = new Matrix(imageheight, imageheight, pixels);
+    ColumnVector *imagecol = Matrix::column(image);
     
     /********************************************
      *              DECLARATIONS                *
      ********************************************/
     
-    int numImages = 8;
-    int imageWidth = 32;
+    int numImages = files.size();
+    numImages = 10;
+    int imageWidth = 243;
     
     // Seed the random matrix generator
     MatrixGenerator::seed();
@@ -32,9 +59,14 @@ int main() {
     // Image vectors
     ColumnVector *gamma[numImages];
     for (int i = 0; i < numImages; i++) {
+        cout << "Adding Gamma " << i << "\n";
         mat = MatrixGenerator::getRandom(imageWidth,imageWidth);
+        mat = new Matrix(imageWidth, imageWidth,
+                         GetPixels::getPixelSquare(files[i]));
         gamma[i] = Matrix::column(mat);
     }
+    
+    cout << "Done loading images\n";
     
     // Matrix of image vectors
     Matrix *gammas = gamma[0];
@@ -44,6 +76,7 @@ int main() {
     
     // The average face
     const ColumnVector *psi = gammas->averageColumn();
+    cout << "Got average face\n";
     
     // Matrix of differences between image vectors and the average face
     Matrix *A = Matrix::subtract(gamma[0], psi);
@@ -53,49 +86,28 @@ int main() {
         A->addColumn(phi[i]);
     }
     
+    cout << "A created\n";
+    
+    cout << "A size: " << A->rows() << "x" << A->cols() << "\n";
+    
     Matrix *L = Matrix::multiply(Matrix::transpose(A), A);
     Matrix *deflated = Matrix::copyOf(L);
     ColumnVector *eigenvectors[numImages];
     ColumnVector *diffs[numImages];
     float eigenvalues[numImages];
     
+    cout << "L size: " << L->rows() << "x" << L->cols() << "\n";
+    cout << "Done with declarations\n";
+    
     /********************************************
      *              COMPUTATION                 *
      ********************************************/
-    /*
-    ColumnVector* init = MatrixGenerator::getRandomColumn(numImages);
-    
-    ColumnVector *eigenvector = deflated->eigenvector(init, 1000000, 0.0001);
-    float eigenvalue = deflated->eigenvalue(init, 1000000, 0.0001);
-    
-    //ColumnVector *diff = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, eigenvector),ColumnVector::multiply(eigenvalue, eigenvector));
-    
-    //Matrix *delatedL = Matrix::deflate(L, eigenvector, eigenvalue);
-    
-    //ColumnVector *eigenvector2 = delatedL->eigenvector(init, 1000000000, 0.001);
-    //float eigenvalue2 = delatedL->eigenvalue(init, 1000000000, 0.001);
-    
-    //ColumnVector *diff2 = (ColumnVector*)Matrix::subtract(Matrix::multiply(delatedL, eigenvector2),ColumnVector::multiply(eigenvalue2, eigenvector2));
-    
-    for (int i = 0; i < numImages; i++) {
-        cout << "Calculating eigenvector " << i << "\n";
-        eigenvectors[i] = deflated->eigenvector(init, 1000000, 0.0001);
-        cout << "Calculating eigenvalue " << i << "\n";
-        eigenvalues[i] = deflated->eigenvalue(init, 1000000, 0.0001);
-        
-        diffs[i] = (ColumnVector*)Matrix::subtract(Matrix::multiply(deflated, eigenvectors[i]),Matrix::multiply(eigenvalues[i], eigenvectors[i]));
-        
-        deflated = Matrix::deflate(deflated, eigenvectors[i], eigenvalues[i]);
-        init = MatrixGenerator::getRandomColumn(numImages);
-    }
-    
-    ColumnVector *eigenvaluevector = new ColumnVector(numImages, eigenvalues);
-    Matrix *eigenvectormatrix = eigenvectors[0];
-     */
     
     
     EigenSystemSolver *solver = new EigenSystemSolver(L);
     const EigenSystem *system = solver->solve();
+    
+    cout << "Eigensystem solved\n";
     
     ColumnVector *faces[numImages];
     for (int l = 0; l < numImages; l++) {
@@ -113,6 +125,8 @@ int main() {
         eigenfaces->addColumn(faces[i]);
     }
     
+    cout << "Eigenfaces calculated\n";
+    
     Matrix *diffmatrix = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, system->getEigenVector(0)),Matrix::multiply(system->getEigenValue(0), system->getEigenVector(0)));
     for (int i = 1; i < numImages; i++) {
         diffs[i] = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, system->getEigenVector(i)),Matrix::multiply(system->getEigenValue(i), system->getEigenVector(i)));
@@ -120,6 +134,13 @@ int main() {
     for (int i = 1; i < numImages; i++) {
         diffmatrix->addColumn(diffs[i]);
     }
+    
+    
+    Matrix *first = Matrix::matrix(eigenfaces->getColumn(0),243);
+    
+    
+    
+    cout << "Calculations complete\n";
     
     /********************************************
      *          COMMAND LINE OUTPUT             *
@@ -150,6 +171,10 @@ int main() {
     
     cout << "diffs: \n";
     cout << diffmatrix->toString("",""," ",true);
+    cout << "\n\n";
+    
+    cout << "First eigenface: \n";
+    cout << first->toString("{","}",",",false);
     cout << "\n\n";
     
     //cout << "EIGENFACES: \n";
