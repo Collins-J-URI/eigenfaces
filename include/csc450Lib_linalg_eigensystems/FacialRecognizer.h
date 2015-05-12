@@ -33,6 +33,7 @@ namespace csc450Lib_linalg_eigensystems {
     class FacialRecognizer {
     private:
         
+        int numFaceClasses;
         const csc450Lib_linalg_base::Subject **faceclasses;
         const csc450Lib_linalg_base::Matrix *eigenfaces;
         const csc450Lib_linalg_base::ColumnVector *averageFace;
@@ -43,14 +44,19 @@ namespace csc450Lib_linalg_eigensystems {
     public:
         
         FacialRecognizer(void);
-        FacialRecognizer(const csc450Lib_linalg_base::Subject **faceclasses,
+        FacialRecognizer(int numFaceClasses,
+                         const csc450Lib_linalg_base::Subject *faceclasses[],
                          const csc450Lib_linalg_base::Matrix *eigenfaces,
                          const csc450Lib_linalg_base::ColumnVector *averageFace);
-        FacialRecognizer(const csc450Lib_linalg_base::Matrix *faceclasses,
+        FacialRecognizer(int numFaceClasses,
+                         const csc450Lib_linalg_base::Subject *faceclasses[],
                          const csc450Lib_linalg_base::Matrix *eigenfaces,
                          const csc450Lib_linalg_base::ColumnVector *averageFace,
                          const csc450Lib_linalg_base::ColumnVector *input);
         ~FacialRecognizer(void);
+        
+        float distFromFaceSpace(void) const;
+        float distFromFaceClass(const csc450Lib_linalg_base::Subject *subject) const;
         
         bool nearFaceSpace(float tol) const;
         bool nearFaceSpace(const csc450Lib_linalg_base::ColumnVector *input,
@@ -60,8 +66,8 @@ namespace csc450Lib_linalg_eigensystems {
         bool nearFaceClass(const csc450Lib_linalg_base::ColumnVector *input,
                            float tol);
         
-        csc450Lib_linalg_base::ColumnVector* faceClass(void) const;
-        csc450Lib_linalg_base::ColumnVector* faceClass(const csc450Lib_linalg_base::ColumnVector *input);
+        const csc450Lib_linalg_base::Subject* faceClass(void) const;
+        const csc450Lib_linalg_base::Subject* faceClass(const csc450Lib_linalg_base::ColumnVector *input);
     };
 }
 #endif /* defined(____FacialRecognizer_included__) */

@@ -35,7 +35,7 @@ namespace csc450Lib_linalg_base {
         Matrix* getImages(void) const;
         ColumnVector* getImage(int index) const;
         const ColumnVector* calculateClassVector(const Matrix *eigenfaces,
-                                           const ColumnVector *averageFace);
+                                           const ColumnVector *averageFace) const;
         
 	};
 

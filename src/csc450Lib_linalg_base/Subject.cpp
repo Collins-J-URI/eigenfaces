@@ -29,7 +29,7 @@ ColumnVector* Subject::getImage(int index) const {
 }
 
 const ColumnVector* Subject::calculateClassVector(const Matrix *eigenfaces,
-                                            const ColumnVector *averageFace) {
+                                            const ColumnVector *averageFace) const {
     ColumnVector *input = images->getColumn(0);
     ColumnVector *weights = new ColumnVector(eigenfaces->cols());
     for (int j = 0; j < eigenfaces->cols(); j++) {
