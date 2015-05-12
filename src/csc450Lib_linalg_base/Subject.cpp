@@ -47,7 +47,6 @@ const ColumnVector* Subject::calculateClassVector(const Matrix *eigenfaces,
         }
         patternVectors->addColumn(weights);
     }
-    
     return patternVectors->averageColumn();
     
 }

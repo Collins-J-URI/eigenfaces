@@ -11,7 +11,8 @@
 #include "EigenSystem.h"
 #include "EigenSystemSolver.h"
 #include "GetPixels.h"
-#include <regex>
+#include "Subject.h"
+#include "FacialRecognizer.h"
 using namespace csc450Lib_calc_base;
 using namespace csc450Lib_linalg_base;
 using namespace csc450Lib_linalg_sle;
@@ -32,48 +33,59 @@ int main() {
     
     for (int i = 0; i < files.size(); i++) {
         files[i] = facedir + files[i];
-        cout << files[i] << "\n";
     }
     
 	//images per person collected
 	int ipp = 11;
-	int subjectid = 1;
+	int subjectid = 0;
 	int count = 0;
 	int imagewidth = 320;
 	int imageheight = 243;
 	//Create our Subjects
-	Subject *subjects = new Subject[files.size() % ipp];
+    const Subject *subjects[files.size() / ipp];
 	
 	Matrix* temp;
 	//for every picture
-	for (int i = 0;i < files.size();i++) {
+    cout << "Creating subjects";
+    int i = 0;
+	while (i <= files.size() && subjectid < files.size() / ipp) {
 
 		//if it is the first time running for this subject
 		if (count == 0) {
 			//then initialize the first column of their vector
-			float ** imagePix = GetPixels::getPixels(files[i]);
-			Matrix* imageMat = new Matrix(imageheight, imagewidth, imagePix);
-			ColumnVector *imagevect = Matrix::column(imageMat);
-			temp = new Matrix(imageVect->rows(),imageVect->cols(),Matrix::copyOf(imageVect));
+			float ** imagePix = GetPixels::getPixelSquare(files[i]);
+			Matrix* imageMat = new Matrix(imageheight, imageheight, imagePix);
+			ColumnVector *imageVect = Matrix::column(imageMat);
+			temp = Matrix::copyOf(imageVect);
+            count++;
+            i++;
 		}
-		else if (count > ipp) { //else if we are done gathering data for the subject
+		else if (count >= ipp) { //else if we are done gathering data for the subject
 			//officially create the subject, reset counters
-			subjects[subjectid] = new Subject(Matrix::copyOf(temp), subjectid);
-
+			subjects[subjectid] = new Subject(Matrix::copyOf(temp), subjectid+1);
+            //if(subjectid >=subjects.size())
 			count = 0;
 			subjectid++;
 
 		}
 		else {
-			float ** imagePix = GetPixels::getPixels(files[i]);
-			Matrix* imageMat = new Matrix(imageheight, imagewidth, imagePix);
-			ColumnVector *imagevect = Matrix::column(imageMat);
-			temp->addColumn(Matrix::copyOf(imageVect));
+			float ** imagePix = GetPixels::getPixelSquare(files[i]);
+			Matrix* imageMat = new Matrix(imageheight, imageheight, imagePix);
+			ColumnVector *imageVect = Matrix::column(imageMat);
+			temp->addColumn((ColumnVector*)Matrix::copyOf(imageVect));
 			count++;
+            i++;
 		}
+        if (i % (files.size()/5) == 0) {
+            cout << ".";
+            cout.flush();
+        }
 	}
-
-	//Put out pictures in random order
+    delete temp;
+    temp = 0;
+    cout << " Done.\n";
+    
+	//Put our pictures in random order
     for (int i = 0; i < files.size(); i++) {
         int rand = std::rand() % files.size();
         string temp = files[i];
@@ -91,7 +103,7 @@ int main() {
      ********************************************/
     
     int numImages = files.size();
-    numImages = 20;
+    numImages = 40;
     int imageWidth = 243;
     
     // Seed the random matrix generator
@@ -99,16 +111,21 @@ int main() {
     
     Matrix *mat;
     
+    cout << "Loading images";
+    
     // Image vectors
     ColumnVector *gamma[numImages];
     for (int i = 0; i < numImages; i++) {
-        cout << "Adding Gamma " << i << "\n";
         mat = new Matrix(imageWidth, imageWidth,
                          GetPixels::getPixelSquare(files[i]));
         gamma[i] = Matrix::column(mat);
+        if (i % (numImages/3)==0) {
+            cout << ".";
+            cout.flush();
+        }
     }
     
-    cout << "Done loading images\n";
+    cout << " Done.\n";
     
     // Matrix of image vectors
     Matrix *gammas = gamma[0];
@@ -118,28 +135,26 @@ int main() {
     
     // The average face
     const ColumnVector *psi = gammas->averageColumn();
-    cout << "Got average face\n";
     
+    cout << "Creating A";
     // Matrix of differences between image vectors and the average face
     Matrix *A = Matrix::subtract(gamma[0], psi);
     ColumnVector *phi[numImages];
     for (int i = 1; i < numImages; i++) {
         phi[i] = (ColumnVector*)Matrix::subtract(gamma[i], psi);
         A->addColumn(phi[i]);
+        if (i % (numImages/3)==0) {
+            cout << ".";
+            cout.flush();
+        }
     }
-    
-    cout << "A created\n";
-    
-    cout << "A size: " << A->rows() << "x" << A->cols() << "\n";
+    cout << " Done.\n\n";
     
     Matrix *L = Matrix::multiply(Matrix::transpose(A), A);
     Matrix *deflated = Matrix::copyOf(L);
     ColumnVector *eigenvectors[numImages];
     ColumnVector *diffs[numImages];
     float eigenvalues[numImages];
-    
-    cout << "L size: " << L->rows() << "x" << L->cols() << "\n";
-    cout << "Done with declarations\n";
     
     /********************************************
      *              COMPUTATION                 *
@@ -169,6 +184,14 @@ int main() {
     
     cout << "Eigenfaces calculated\n";
     
+    FacialRecognizer *recognizer = new FacialRecognizer(15,
+                                                        subjects,
+                                                        eigenfaces,
+                                                        psi,
+                                                        gammas->getColumn(0));
+    const Subject *recognizedSubject = recognizer->faceClass();
+    cout << "\n\n\nRECOGNIZED SUBJECT AS SUBJECT " << recognizedSubject->getID() << "\n\n\n";
+    
     Matrix *diffmatrix = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, system->getEigenVector(0)),Matrix::multiply(system->getEigenValue(0), system->getEigenVector(0)));
     for (int i = 1; i < numImages; i++) {
         diffs[i] = (ColumnVector*)Matrix::subtract(Matrix::multiply(L, system->getEigenVector(i)),Matrix::multiply(system->getEigenValue(i), system->getEigenVector(i)));
@@ -182,32 +205,32 @@ int main() {
     /********************************************
      *          COMMAND LINE OUTPUT             *
      ********************************************/
-    cout << "\n\n";
+    //cout << "\n\n";
     
-    cout << "L: \n";
-    cout << L->toString("",""," ",true);
-    cout << "\n\n";
+    //cout << "L: \n";
+    //cout << L->toString("",""," ",true);
+    //cout << "\n\n";
     
-    cout << "Enter into Mathematica to obtain\n";
-    cout << "\t{{eigenvalue, ...}, {eigenvector, ...}}\n";
-    cout << "Eigensystem[";
-    cout << L->toString("{","}",",",false);
-    cout << "]//N\n\n";
+    //cout << "Enter into Mathematica to obtain\n";
+    //cout << "\t{{eigenvalue, ...}, {eigenvector, ...}}\n";
+    //cout << "Eigensystem[";
+    //cout << L->toString("{","}",",",false);
+    //cout << "]//N\n\n";
     
     //cout << "eigenvalues: \n";
     //cout << eigenvaluevector->toString("{","}",",",false);
     //cout << "\n";
-    cout << system->getEigenValues()->toString("{","}",",",false);
-    cout << "\n\n";
+    //cout << system->getEigenValues()->toString("{","}",",",false);
+    //cout << "\n\n";
     
     //cout << "eigenvectors: \n";
     //cout << eigenvectormatrix->toString("{","}",",",false);
     //cout << "\n";
-    cout << system->getEigenVectors()->toString("{","}",",",false);
-    cout << "\n\n";
+    //cout << system->getEigenVectors()->toString("{","}",",",false);
+    //cout << "\n\n";
     
-    cout << "diffs: \n";
-    cout << diffmatrix->toString("",""," ",true);
+    cout << "Norm of difference:: \n";
+    cout << diffmatrix->normInf();
     cout << "\n\n";
     
     //cout << "EIGENFACES: \n";
