@@ -170,8 +170,7 @@ namespace csc450Lib_linalg_base {
         static ColumnVector* column(const Matrix *matA);
         
         /**
-         * Creates the column vector of every element in the matrix, read left
-         *  to right, top to bottom
+         * Creates the matrix of every element in a column vector
          */
         static Matrix* matrix(const ColumnVector *vecA, int nbCols);
         

@@ -54,19 +54,31 @@ namespace csc450Lib_linalg_eigensystems {
                          const csc450Lib_linalg_base::ColumnVector *averageFace,
                          const csc450Lib_linalg_base::ColumnVector *input);
         ~FacialRecognizer(void);
-        
+
+		/** Calculates the distance from the Face Space */
         float distFromFaceSpace(void) const;
+
+		/** Calculates the distance from the given subject */
         float distFromFaceClass(const csc450Lib_linalg_base::Subject *subject) const;
-        
+
+		/** Calculates if a faces is within tolerance range */
         bool nearFaceSpace(float tol) const;
+
+		/**Determines if an inputed image is a face or not, or is within tolerance to be a face */
         bool nearFaceSpace(const csc450Lib_linalg_base::ColumnVector *input,
                            float tol);
         
+		/** Calculates if an image is of one of the subjects */
         bool nearFaceClass(float tol) const;
+
+		/** Calculates if the given input matches a Subject's known face*/
         bool nearFaceClass(const csc450Lib_linalg_base::ColumnVector *input,
                            float tol);
-        
+
+		/** */
         const csc450Lib_linalg_base::Subject* faceClass(void) const;
+
+		/** */
         const csc450Lib_linalg_base::Subject* faceClass(const csc450Lib_linalg_base::ColumnVector *input);
     };
 }

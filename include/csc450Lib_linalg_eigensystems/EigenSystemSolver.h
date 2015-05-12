@@ -41,14 +41,23 @@ namespace csc450Lib_linalg_eigensystems {
         EigenSystemSolver(const csc450Lib_linalg_base::Matrix *a);
         ~EigenSystemSolver(void);
         
+		/**
+		* Calculates an Eigensystem using power iteration
+		*/
         static EigenSystem* power(const csc450Lib_linalg_base::Matrix *a,
                                   const csc450Lib_linalg_base::ColumnVector *init,
                                   int iterations, float tol);
         
+		/**
+		* Calculates an EigenSystem using Rayleigh Quotient Iteration
+		*/
         static EigenSystem* rayleigh(const csc450Lib_linalg_base::Matrix *a,
                                     const csc450Lib_linalg_base::ColumnVector *v,
                                     float l, int iterations, float tol);
-        
+       
+		/**
+		* Calculates a deflated Matrix for the given EigenSystem
+		*/
         static csc450Lib_linalg_base::Matrix* deflate(const csc450Lib_linalg_base::Matrix *a,
                                                       const csc450Lib_linalg_base::ColumnVector *v,
                                                       float l);
