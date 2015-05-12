@@ -18,7 +18,7 @@ using namespace csc450Lib_linalg_sle;
 using namespace csc450Lib_linalg_eigensystems;
 
 int main() {
-    srand ( unsigned ( std::time(0) ) );
+    srand(time(NULL));
     string base = "/Users/Christopher/Desktop/CSC 450 Coursework/eigenfaces/";
     
     string facedir = base + "doc/facetext/";
@@ -35,7 +35,12 @@ int main() {
         cout << files[i] << "\n";
     }
     
-    random_shuffle(files.begin(), files.end());
+    for (int i = 0; i < files.size(); i++) {
+        int rand = std::rand() % files.size();
+        string temp = files[i];
+        files[i] = files[rand];
+        files[rand] = temp;
+    }
     
     float** pixels = GetPixels::getPixelSquare(path);
     int imagewidth = 320;
@@ -60,7 +65,6 @@ int main() {
     ColumnVector *gamma[numImages];
     for (int i = 0; i < numImages; i++) {
         cout << "Adding Gamma " << i << "\n";
-        mat = MatrixGenerator::getRandom(imageWidth,imageWidth);
         mat = new Matrix(imageWidth, imageWidth,
                          GetPixels::getPixelSquare(files[i]));
         gamma[i] = Matrix::column(mat);
@@ -135,11 +139,6 @@ int main() {
         diffmatrix->addColumn(diffs[i]);
     }
     
-    
-    Matrix *first = Matrix::matrix(eigenfaces->getColumn(0),243);
-    
-    
-    
     cout << "Calculations complete\n";
     
     /********************************************
@@ -173,10 +172,6 @@ int main() {
     cout << diffmatrix->toString("",""," ",true);
     cout << "\n\n";
     
-    //cout << "First eigenface: \n";
-    //cout << first->toString("{","}",",",false);
-    //cout << "\n\n";
-    
     //cout << "EIGENFACES: \n";
     //cout << eigenfaces->toString("",""," ",true);
     //cout << "\n\n";
@@ -189,9 +184,20 @@ int main() {
     int mprime = 10;
     Matrix *current;
     for (int i = 0; i < mprime; i++) {
+        cout << "Saving output/eigenface" + to_string(i) + ".txt\n";
         myfile.open ("output/eigenface" + to_string(i) + ".txt");
         
         current = Matrix::matrix(eigenfaces->getColumn(i), imageWidth);
+        myfile << current->toString("{","}",",",false);
+        
+        // Close file
+        myfile.close();
+    }
+    for (int i = 0; i < numImages; i++) {
+        cout << "Saving output/face" + to_string(i) + ".txt\n";
+        myfile.open ("output/face" + to_string(i) + ".txt");
+        
+        current = Matrix::matrix(gammas->getColumn(i), imageWidth);
         myfile << current->toString("{","}",",",false);
         
         // Close file

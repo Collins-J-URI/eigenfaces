@@ -249,22 +249,6 @@ float Matrix::norm1() const {
     return norm;
 }
 
-float Matrix::norm2() const {
-    float norm = 0;
-    float current;
-    
-    for (int i = 0; i < nbRows; i++) {
-        current = 0;
-        for (int j = 0; j < nbCols; j++) {
-            current += std::abs(a[i][j]);
-        }
-        if (current > norm)
-            norm = current;
-    }
-    
-    return norm;
-}
-
 float Matrix::normInf() const {
     float norm = 0;
     float current;

@@ -23,3 +23,4 @@ all: $(SOURCES)
 
 clean:
 	rm $(TARGET)
+	rm output/*.txt
