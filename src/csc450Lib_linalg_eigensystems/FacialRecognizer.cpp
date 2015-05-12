@@ -17,7 +17,7 @@ using namespace csc450Lib_linalg_eigensystems;
 
 FacialRecognizer::FacialRecognizer(void) {}
 
-FacialRecognizer::FacialRecognizer(const Matrix *faceclasses,
+FacialRecognizer::FacialRecognizer(const Subject **faceclasses,
                  const Matrix *eigenfaces,
                  const ColumnVector *averageFace) {
     this->faceclasses = faceclasses;

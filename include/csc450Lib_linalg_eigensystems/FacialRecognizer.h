@@ -23,6 +23,7 @@
 #include "ColumnVector.h"
 #include "RowVector.h"
 #include "EigenSystem.h"
+#include "Subject.h"
 
 namespace csc450Lib_linalg_eigensystems {
     
@@ -32,7 +33,7 @@ namespace csc450Lib_linalg_eigensystems {
     class FacialRecognizer {
     private:
         
-        const csc450Lib_linalg_base::Matrix *faceclasses;
+        const csc450Lib_linalg_base::Subject **faceclasses;
         const csc450Lib_linalg_base::Matrix *eigenfaces;
         const csc450Lib_linalg_base::ColumnVector *averageFace;
         csc450Lib_linalg_base::ColumnVector *input;
@@ -42,7 +43,7 @@ namespace csc450Lib_linalg_eigensystems {
     public:
         
         FacialRecognizer(void);
-        FacialRecognizer(const csc450Lib_linalg_base::Matrix *faceclasses,
+        FacialRecognizer(const csc450Lib_linalg_base::Subject **faceclasses,
                          const csc450Lib_linalg_base::Matrix *eigenfaces,
                          const csc450Lib_linalg_base::ColumnVector *averageFace);
         FacialRecognizer(const csc450Lib_linalg_base::Matrix *faceclasses,
