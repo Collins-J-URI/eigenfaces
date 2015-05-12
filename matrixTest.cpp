@@ -35,6 +35,45 @@ int main() {
         cout << files[i] << "\n";
     }
     
+	//images per person collected
+	int ipp = 11;
+	int subjectid = 1;
+	int count = 0;
+	int imagewidth = 320;
+	int imageheight = 243;
+	//Create our Subjects
+	Subject *subjects = new Subject[files.size() % ipp];
+	
+	Matrix* temp;
+	//for every picture
+	for (int i = 0;i < files.size();i++) {
+
+		//if it is the first time running for this subject
+		if (count == 0) {
+			//then initialize the first column of their vector
+			float ** imagePix = GetPixels::getPixels(files[i]);
+			Matrix* imageMat = new Matrix(imageheight, imagewidth, imagePix);
+			ColumnVector *imagevect = Matrix::column(imageMat);
+			temp = new Matrix(imageVect->rows(),imageVect->cols(),Matrix::copyOf(imageVect));
+		}
+		else if (count > ipp) { //else if we are done gathering data for the subject
+			//officially create the subject, reset counters
+			subjects[subjectid] = new Subject(Matrix::copyOf(temp), subjectid);
+
+			count = 0;
+			subjectid++;
+
+		}
+		else {
+			float ** imagePix = GetPixels::getPixels(files[i]);
+			Matrix* imageMat = new Matrix(imageheight, imagewidth, imagePix);
+			ColumnVector *imagevect = Matrix::column(imageMat);
+			temp->addColumn(Matrix::copyOf(imageVect));
+			count++;
+		}
+	}
+
+	//Put out pictures in random order
     for (int i = 0; i < files.size(); i++) {
         int rand = std::rand() % files.size();
         string temp = files[i];
@@ -43,8 +82,7 @@ int main() {
     }
     
     float** pixels = GetPixels::getPixelSquare(path);
-    int imagewidth = 320;
-    int imageheight = 243;
+
     Matrix* image = new Matrix(imageheight, imageheight, pixels);
     ColumnVector *imagecol = Matrix::column(image);
     
